@@ -1,0 +1,7 @@
+.box{
+    background: red;
+    margin:10px 0;
+}
+.box img{
+    max-height: 300px;
+}
