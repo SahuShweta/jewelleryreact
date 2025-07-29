@@ -27,7 +27,7 @@ const Header = () => {
                 <Col md={2}>
                   <img src={brandlogo} alt='' className='img-fluid'/>
                 </Col>
-                <Col md={7}>
+                <Col md={6}>
                 <div className='navbar'>
                   <ul>
                     <li><Link to="" className='customlink'>Home</Link></li>
@@ -39,7 +39,7 @@ const Header = () => {
                   </ul>
               </div>
               </Col>
-              <Col>
+              <Col md={4}>
               <Row>
                 <Col>
               <div className='navsearch'>

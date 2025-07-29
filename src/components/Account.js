@@ -6,18 +6,22 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
 
 
-const Login = () => {
+
+const Account = () => {
   return (
     <div>
+        <h1>ACCOUNT</h1>
 
-      <section className='loginpage'>
-        <Container>
-            <Row>
-                <Col>
+
+        <section>
+            <Container>
+                <Row>
+                    <Col>
+                    <h2>RETURNING CUSTOMER</h2>
                     <Card style={{ width: '28rem' }}>
       {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
       <Card.Body>
-        <Card.Title><h1>Customer Login</h1></Card.Title>
+        <Card.Title><h4>Incorrect email or password</h4></Card.Title>
         </Card.Body>
         <Card.Text>
             <h4>Enter your Email</h4>
@@ -34,13 +38,10 @@ const Login = () => {
               </div> 
         </ListGroup.Item>
         <ListGroup.Item>
-            <button><Link to="/Account" className='customlink'>LOGIN</Link></button>
+            <button>LOGIN</button>
         </ListGroup.Item>
         <ListGroup.Item>
-           <p><a href=''>Forgot your password? </a></p>     
-        </ListGroup.Item>
-        <ListGroup.Item>
-            <button>Create an Account</button>     
+           <p><a href=''>Forgot your password? or return to store </a></p>     
         </ListGroup.Item>
       </ListGroup>
       {/* <Card.Body>
@@ -48,12 +49,21 @@ const Login = () => {
         <Card.Link href="#">Another Link</Card.Link>
       </Card.Body> */}
     </Card>
-                </Col>
-            </Row>
-        </Container>
-      </section>
+                    </Col>
+                    <Col>
+                    <h2>NEW CUSTOMER</h2>
+
+                    <p>Register with us for faster checkout,</p>
+                    <p>to track the status of your order and more.</p>
+                    <button><Link to="/CreateAccount" className='customlink'>CREATE AN ACCOUNT</Link></button>
+                    </Col>
+
+                </Row>
+            </Container>
+        </section>
+      
     </div>
   )
 }
 
-export default Login
+export default Account

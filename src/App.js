@@ -13,6 +13,10 @@ import Jsr from './components/Jsr';
 import Buypage from './components/Buypage';
 import Ranchi from './components/Ranchi';
 import Login from './components/Login';
+import Account from './components/Account';
+import CreateAccount from './components/CreateAccount';
+
+
 
 
 function App() {
@@ -29,6 +33,10 @@ function App() {
       <Route path="/Buypage" element={<Buypage/>} />
       <Route path="/ranchi" element={<Ranchi />} />
       <Route path="/Login" element={<Login/>} />
+      <Route path="/Account" element={<Account/>} />
+      <Route path="/CreateAccount" element={<CreateAccount/>} />
+
+
 
       <Route path="*" element={<Home/>}/>
     </Routes>
