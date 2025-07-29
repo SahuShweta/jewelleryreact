@@ -108,6 +108,33 @@ const Home = () => {
     }
   ];
 
+  const products = [
+    {
+      "id": 1,
+      "productName": "xyz",
+      "productPrice": 1349,
+      "productCategory": "",
+      "productImages": [
+        "123imgae.jpg", "abc.jpg",
+      ],
+      "productForGender" : "Male"
+      // "totalOrderQuantity"
+
+    }
+  ]
+
+  const reviews = [
+    {
+      "id" : 1,
+      "reviewTitle" : "",
+      "review" : "xyz",
+      "reviewers" : {
+        "name" : "abc",
+        "photo" : ""
+      }
+    }
+  ]
+
 
   return (
     <div>
@@ -160,8 +187,8 @@ const Home = () => {
         <Container fluid>
           <Row>
             {
-              data.map((item)=>{
-                return(
+              data.map((item) => {
+                return (
                   <Col md={2}>
                     <div className='cat1'>
                       <img src={item.photo} alt='' className='img-fluid' />
@@ -173,7 +200,7 @@ const Home = () => {
 
               )
             }
-            
+
 
           </Row>
         </Container>
@@ -594,6 +621,39 @@ const Home = () => {
         </Container>
       </section>
 
+
+<section className='reviewarea'>
+        <Container>
+          <Row>
+            <Col md={3}>
+              <img src={rv1} alt='' className='img-fluid' />
+              <h6>In love...!!</h6>
+              <p>Quality is good...Well finished jewellery.in love with this earrings.</p>
+              {/* <FontAwesomeIcon icon={faCoffee}/> */}
+              {/* <i className="fas fa-home">like</i> */}
+              <h5>Kumkum</h5>
+            </Col>
+            <Col md={3}>
+              <img src={rv2} alt='' className='img-fluid' />
+              <h6>Very good quality..!</h6>
+              <p>Love the quality of products. All the product of bagh & Fiza collection bright and beautiful</p>
+              <h5>Srilina Basu Dutta</h5>
+            </Col>
+            <Col md={3}>
+              <img src={rv3} alt='' className='img-fluid' />
+              <h6>Awesome...</h6>
+              <p>Beautiful necklace love it!!!!</p>
+              <h5>Deepa Paul</h5>
+            </Col>
+            <Col md={3}>
+              <img src={rv4} alt='' className='img-fluid' />
+              <h6>Woww...!!</h6>
+              <p>Woww.. fully satisfied with this earrings loved it looks exactly same as shown in image and the main point is that very light weight andpackaging is also very good.</p>
+              <h5>Sheshadri</h5>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
     </div>
   )

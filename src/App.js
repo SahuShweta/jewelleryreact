@@ -15,6 +15,8 @@ import Ranchi from './components/Ranchi';
 import Login from './components/Login';
 import Account from './components/Account';
 import CreateAccount from './components/CreateAccount';
+import Payment from './components/Payment';
+
 
 
 
@@ -35,6 +37,8 @@ function App() {
       <Route path="/Login" element={<Login/>} />
       <Route path="/Account" element={<Account/>} />
       <Route path="/CreateAccount" element={<CreateAccount/>} />
+      <Route path="/Payment" element={<Payment/>} />
+
 
 
 
