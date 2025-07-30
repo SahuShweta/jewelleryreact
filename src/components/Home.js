@@ -117,7 +117,7 @@ const Home = () => {
       "productImages": [
         "123imgae.jpg", "abc.jpg",
       ],
-      "productForGender" : "Male"
+      "productForGender": "Male"
       // "totalOrderQuantity"
 
     }
@@ -125,15 +125,44 @@ const Home = () => {
 
   const reviews = [
     {
-      "id" : 1,
-      "reviewTitle" : "",
-      "review" : "xyz",
-      "reviewers" : {
-        "name" : "abc",
-        "photo" : ""
+      "id": 1,
+      "reviewTitle": "In love...!!",
+      "review": "Quality is good...Well finished jewellery.in love with this earrings.",
+      "reviewers": {
+        "name": "Kumkum",
+        "photo": "rv1.webp"
+        }
+      },
+      {
+      "id": 2,
+      "reviewTitle": "Very good quality..!",
+      "review": "Love the quality of products. All the product of bagh & Fiza collection bright and beautiful",
+      "reviewers": {
+        "name": "Srilina Basu Dutta",
+        "photo": "rv2.webp"
+        }
+      },
+
+      {
+      "id": 3,
+      "reviewTitle": "Awesome...",
+      "review": "Beautiful necklace love it!!!!",
+      "reviewers": {
+        "name": "Deepa Paul",
+        "photo": "rv3.webp"
+        }
+      },
+
+      {
+      "id": 4,
+      "reviewTitle": "Woww...!!",
+      "review": "Woww.. fully satisfied with this earrings loved it looks exactly same as shown in image and the main point is that very light weight andpackaging is also very good.",
+      "reviewers": {
+        "name": "Sheshadri",
+        "photo": "rv4.webp"
+        }
       }
-    }
-  ]
+   ];
 
 
   return (
@@ -622,35 +651,23 @@ const Home = () => {
       </section>
 
 
-<section className='reviewarea'>
+      <section className='reviewarea'>
         <Container>
           <Row>
-            <Col md={3}>
-              <img src={rv1} alt='' className='img-fluid' />
-              <h6>In love...!!</h6>
-              <p>Quality is good...Well finished jewellery.in love with this earrings.</p>
-              {/* <FontAwesomeIcon icon={faCoffee}/> */}
-              {/* <i className="fas fa-home">like</i> */}
-              <h5>Kumkum</h5>
-            </Col>
-            <Col md={3}>
-              <img src={rv2} alt='' className='img-fluid' />
-              <h6>Very good quality..!</h6>
-              <p>Love the quality of products. All the product of bagh & Fiza collection bright and beautiful</p>
-              <h5>Srilina Basu Dutta</h5>
-            </Col>
-            <Col md={3}>
-              <img src={rv3} alt='' className='img-fluid' />
-              <h6>Awesome...</h6>
-              <p>Beautiful necklace love it!!!!</p>
-              <h5>Deepa Paul</h5>
-            </Col>
-            <Col md={3}>
-              <img src={rv4} alt='' className='img-fluid' />
-              <h6>Woww...!!</h6>
-              <p>Woww.. fully satisfied with this earrings loved it looks exactly same as shown in image and the main point is that very light weight andpackaging is also very good.</p>
-              <h5>Sheshadri</h5>
-            </Col>
+            {
+              reviews.map((feedback) => {
+                return (
+                   <Col md={3}>
+                      <img src={feedback.reviewers.photo} alt='' className='img-fluid' />
+                      <h4>{feedback.reviewTitle}</h4>
+                      <p>{feedback.review}</p>
+                      <h4>{feedback.reviewers.name}</h4>
+                  </Col>
+                )
+              }
+
+              )
+            }
           </Row>
         </Container>
       </section>
