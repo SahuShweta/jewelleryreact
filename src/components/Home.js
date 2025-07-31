@@ -113,7 +113,19 @@ const Home = () => {
       "id": 1,
       "productName": "xyz",
       "productPrice": 1349,
-      "productCategory": "",
+      "productCategory": "boho-breeze",
+      "productImages": [
+        "123imgae.jpg", "abc.jpg",
+      ],
+      "productForGender": "Male"
+      // "totalOrderQuantity"
+
+    },
+    {
+      "id": 2,
+      "productName": "abc",
+      "productPrice": 1347,
+      "productCategory": "boho-breeze",
       "productImages": [
         "123imgae.jpg", "abc.jpg",
       ],
@@ -404,7 +416,7 @@ const Home = () => {
         <Container fluid>
           <Row>
             <Col md={3}>
-              <Link to="/Buypage">
+              <Link to={'/Buypage'}>
                 <div className='bimage1'></div>
                 <p>Fringes bloom in fringe statement choker set</p>
                 <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
@@ -432,6 +444,31 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+
+
+       <section className='bohoarea'>
+        <Container fluid>
+          <Row>
+            {products.map((product) =>{
+              return(
+                <Col md={3}>
+              <Link to={"/Buypage/"+product.id}>
+                <div className='bimage1'></div>
+                <p>{product.productName}</p>
+                <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+                <button>Add to Cart</button>
+              </Link>
+            </Col>
+              )
+            }
+
+            )}
+            
+
+          </Row>
+        </Container>
+      </section> 
 
       <section>
         <Container fluid className='linearea'>
@@ -617,15 +654,13 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className='reviewarea'>
+       {/* <section className='reviewarea'>
         <Container>
           <Row>
             <Col md={3}>
               <img src={rv1} alt='' className='img-fluid' />
               <h6>In love...!!</h6>
               <p>Quality is good...Well finished jewellery.in love with this earrings.</p>
-              {/* <FontAwesomeIcon icon={faCoffee}/> */}
-              {/* <i className="fas fa-home">like</i> */}
               <h5>Kumkum</h5>
             </Col>
             <Col md={3}>
@@ -648,7 +683,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
 
       <section className='reviewarea'>
@@ -659,7 +694,7 @@ const Home = () => {
                 return (
                    <Col md={3}>
                       <img src={feedback.reviewers.photo} alt='' className='img-fluid' />
-                      <h4>{feedback.reviewTitle}</h4>
+                      <h6>{feedback.reviewTitle}</h6>
                       <p>{feedback.review}</p>
                       <h4>{feedback.reviewers.name}</h4>
                   </Col>

@@ -46,7 +46,7 @@
 
 .category{
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
 }
 .cat1{
@@ -373,7 +373,7 @@
 .reviewarea img{
   box-shadow: 2px 2px 1px 1px gray;
 }
-.reviewarea h5{
+.reviewarea h4{
   color: green;
 }
 .reviewarea h6{
