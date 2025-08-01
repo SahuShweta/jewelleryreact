@@ -478,39 +478,6 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* <section className='bohoarea'>
-        <Container fluid>
-          <Row>
-            <Col md={3}>
-              <Link to={'/Buypage'}>
-                <div className='bimage1'></div>
-                <p>Fringes bloom in fringe statement choker set</p>
-                <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-                <button>Add to Cart</button>
-              </Link>
-            </Col>
-            <Col md={3}>
-              <div className='bimage2'></div>
-              <p>Fringes bloom in fringe statement choker set</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-              <button>Add to Cart</button>
-            </Col>
-            <Col md={3}>
-              <div className='bimage3'></div>
-              <p>Fringes bloom in fringe statement choker set</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-              <button>Add to Cart</button>
-            </Col>
-            <Col md={3}>
-              <div className='bimage4'></div>
-              <p>Fringes bloom in fringe statement choker set</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-              <button>Add to Cart</button>
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
-
 
 
        <section className='bohoarea'>
