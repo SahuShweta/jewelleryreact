@@ -111,27 +111,99 @@ const Home = () => {
   const products = [
     {
       "id": 1,
-      "productName": "xyz",
+      "productName": "Fringes bloom in fringe statement choker set",
       "productPrice": 1349,
       "productCategory": "boho-breeze",
       "productImages": [
-        "123imgae.jpg", "abc.jpg",
+        "photo1.webp", "photo11.webp",
       ],
-      "productForGender": "Male"
+      "productForGender": "Female"
       // "totalOrderQuantity"
 
     },
     {
       "id": 2,
-      "productName": "abc",
-      "productPrice": 1347,
+      "productName": "fringes stay connected statement rings",
+      "productPrice": 1647,
       "productCategory": "boho-breeze",
       "productImages": [
-        "123imgae.jpg", "abc.jpg",
+        "photo2.webp", "photo22.webp",
       ],
-      "productForGender": "Male"
+      "productForGender": "Female"
       // "totalOrderQuantity"
 
+    },
+    {
+      "id": 3,
+      "productName": "fringes stay connected statement rings",
+      "productPrice": 1647,
+      "productCategory": "boho-breeze",
+      "productImages": [
+        "photo3.webp", "photo33.webp",
+      ],
+      "productForGender": "Female"
+      // "totalOrderQuantity"
+
+    },
+    {
+      "id": 4,
+      "productName": "fringes stay connected statement rings",
+      "productPrice": 1647,
+      "productCategory": "boho-breeze",
+      "productImages": [
+        "photo4.webp", "photo44.webp",
+      ],
+      "productForGender": "Female"
+      // "totalOrderQuantity"
+
+    }
+  ]
+
+  const bestSellers = [
+    {
+      "id": 1,
+      "productName": "Aham bramhasmi moksh rudracks beads",
+      "productPrice": 647,
+      "productCategory": "bestProducts",
+      "productImages": [
+        "b1.webp", "b11.webp",
+      ],
+      "productForGender": "Female"
+      // "totalOrderQuantity"
+    },
+
+    {
+      "id": 1,
+      "productName": "Aham bramhasmi moksh rudracks beads",
+      "productPrice": 647,
+      "productCategory": "bestProducts",
+      "productImages": [
+        "b2.webp", "b22.webp",
+      ],
+      "productForGender": "Female"
+      // "totalOrderQuantity"
+    },
+    {
+      "id": 1,
+      "productName": "Aham bramhasmi moksh rudracks beads",
+      "productPrice": 647,
+      "productCategory": "bestProducts",
+      "productImages": [
+        "b3.webp", "b33.webp",
+      ],
+      "productForGender": "Female"
+      // "totalOrderQuantity"
+    },
+    {
+      "id": 4,
+      "productName": "Aham bramhasmi moksh rudracks beads",
+      "productPrice": 647,
+      "productCategory": "bestProducts",
+      "productImages": [
+        "b4.webp", "b44.webp",
+      ],
+      "productForGender": "Female"
+      // "totalOrderQuantity"
     }
   ]
 
@@ -350,20 +422,17 @@ const Home = () => {
               <img src={p2} alt='' className='img-fluid' />
               <Row className='panchi'>
                 <Col>
-                  <div className='tribe
-'>
+                  <div className='tribe'>
                     <img src={sp4} alt='' />
                   </div>
                 </Col>
                 <Col>
-                  <div className='tribe
-'>
+                  <div className='tribe'>
                     <img src={sp5} alt='' />
                   </div>
                 </Col>
                 <Col>
-                  <div className='tribe
-'>
+                  <div className='tribe'>
                     <img src={sp6} alt='' />
                   </div>
                 </Col>
@@ -373,20 +442,17 @@ const Home = () => {
               <img src={p3} alt='' className='img-fluid' />
               <Row className='panchi'>
                 <Col>
-                  <div className='tribe
-'>
+                  <div className='tribe'>
                     <img src={sp7} alt='' />
                   </div>
                 </Col>
                 <Col>
-                  <div className='tribe
-'>
+                  <div className='tribe'>
                     <img src={sp8} alt='' />
                   </div>
                 </Col>
                 <Col>
-                  <div className='tribe
-'>
+                  <div className='tribe'>
                     <img src={sp9} alt='' />
                   </div>
                 </Col>
@@ -412,7 +478,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className='bohoarea'>
+      {/* <section className='bohoarea'>
         <Container fluid>
           <Row>
             <Col md={3}>
@@ -443,18 +509,21 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
 
 
        <section className='bohoarea'>
         <Container fluid>
           <Row>
-            {products.map((product) =>{
+            {
+            products.map((product) =>{
               return(
                 <Col md={3}>
               <Link to={"/Buypage/"+product.id}>
-                <div className='bimage1'></div>
+                <div className='bimage'>
+                  <img src={product.productImages[0]} alt=""/>
+                </div>
                 <p>{product.productName}</p>
                 <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
                 <button>Add to Cart</button>
@@ -463,7 +532,8 @@ const Home = () => {
               )
             }
 
-            )}
+            )
+            }
             
 
           </Row>
@@ -529,7 +599,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className='bestarea'>
+      {/* <section className='bestarea'>
         <Container fluid>
           <Row>
             <Col md={3}>
@@ -556,6 +626,32 @@ const Home = () => {
               <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
               <button>Add to Cart</button>
             </Col>
+          </Row>
+        </Container>
+      </section> */}
+
+      <section className='bestarea'>
+        <Container fluid>
+          <Row>
+
+            {
+            bestSellers.map((product) =>{
+              return(
+                <Col md={3}>
+              <Link to={"/Buypage/"+product.id}>
+                <div className='bestproduct'>
+                  <img src={product.productImages[0]} alt=""/>
+                </div>
+              <p>{product.productName}</p>
+              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
+              <button>Add to Cart</button>
+              </Link>
+            </Col>
+              )
+            }
+
+            )
+            }
           </Row>
         </Container>
       </section>
