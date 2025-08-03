@@ -32,7 +32,7 @@ const Header = () => {
                   <ul>
                     <li><Link to="" className='customlink'>Home</Link></li>
                     <li><Link to="/about" className='customlink'>About</Link></li>
-                    <li><Link to="/fringes" className='customlink'>Fringes</Link></li>
+                    <li><Link to="/Category/fringes" className='customlink'>Fringes</Link></li>
                     <li><Link to="/women" className='customlink'>Women</Link></li>
                     <li>Men</li>
                     <li>Collections</li>

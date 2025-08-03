@@ -215,38 +215,57 @@ const Home = () => {
       "reviewers": {
         "name": "Kumkum",
         "photo": "rv1.webp"
-        }
-      },
-      {
+      }
+    },
+    {
       "id": 2,
       "reviewTitle": "Very good quality..!",
       "review": "Love the quality of products. All the product of bagh & Fiza collection bright and beautiful",
       "reviewers": {
         "name": "Srilina Basu Dutta",
         "photo": "rv2.webp"
-        }
-      },
+      }
+    },
 
-      {
+    {
       "id": 3,
       "reviewTitle": "Awesome...",
       "review": "Beautiful necklace love it!!!!",
       "reviewers": {
         "name": "Deepa Paul",
         "photo": "rv3.webp"
-        }
-      },
+      }
+    },
 
-      {
+    {
       "id": 4,
       "reviewTitle": "Woww...!!",
       "review": "Woww.. fully satisfied with this earrings loved it looks exactly same as shown in image and the main point is that very light weight andpackaging is also very good.",
       "reviewers": {
         "name": "Sheshadri",
         "photo": "rv4.webp"
-        }
       }
-   ];
+    }
+  ];
+
+  const collections = [
+    {
+      "id": 1,
+      "photo": "c1.webp"
+    },
+    {
+      "id": 2,
+      "photo": "c2.webp"
+    },
+    {
+      "id": 3,
+      "photo": "c3.webp"
+    },
+    {
+      "id": 4,
+      "photo": "c4.webp"
+    }
+  ];
 
 
   return (
@@ -395,7 +414,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      <section className='launcharea'>
+      {/* <section className='launcharea'>
         <Container fluid>
           <Row>
             <Col>
@@ -460,7 +479,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <section>
         <Container fluid className='linearea'>
@@ -480,32 +499,32 @@ const Home = () => {
 
 
 
-       <section className='bohoarea'>
+      <section className='bohoarea'>
         <Container fluid>
           <Row>
             {
-            products.map((product) =>{
-              return(
-                <Col md={3}>
-              <Link to={"/Buypage/"+product.id}>
-                <div className='bimage'>
-                  <img src={product.productImages[0]} alt=""/>
-                </div>
-                <p>{product.productName}</p>
-                <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-                <button>Add to Cart</button>
-              </Link>
-            </Col>
+              products.map((product) => {
+                return (
+                  <Col md={3}>
+                    <Link to={"/Buypage/" + product.id}>
+                      <div className='bimage'>
+                        <img src={product.productImages[0]} alt="" />
+                      </div>
+                      <p>{product.productName}</p>
+                      <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+                      <button>Add to Cart</button>
+                    </Link>
+                  </Col>
+                )
+              }
+
               )
             }
 
-            )
-            }
-            
 
           </Row>
         </Container>
-      </section> 
+      </section>
 
       <section>
         <Container fluid className='linearea'>
@@ -526,26 +545,20 @@ const Home = () => {
       <section className='collectionarea'>
         <Container fluid>
           <Row>
-            <Col md={3}>
-              <div className='collect1'>
-                <img src={c1} alt='' className='img-fluid' />
-              </div>
-            </Col>
-            <Col md={3}>
-              <div className='collect2'>
-                <img src={c2} alt='' className='img-fluid' />
-              </div>
-            </Col>
-            <Col md={3}>
-              <div className='collect3'>
-                <img src={c3} alt='' className='img-fluid' />
-              </div>
-            </Col>
-            <Col md={3}>
-              <div className='collect4'>
-                <img src={c4} alt='' className='img-fluid' />
-              </div>
-            </Col>
+            {
+              collections.map((product) => {
+                return (
+                  <Col md={3}>
+                    <Link to={"/Buypage/" + product.id}>
+                    <div className='collect1'>
+                      <img src={product.photo} alt='' className='img-fluid' />
+                    </div>
+                    </Link>
+                  </Col>
+                )
+              })
+            }
+
           </Row>
         </Container>
       </section>
@@ -602,22 +615,22 @@ const Home = () => {
           <Row>
 
             {
-            bestSellers.map((product) =>{
-              return(
-                <Col md={3}>
-              <Link to={"/Buypage/"+product.id}>
-                <div className='bestproduct'>
-                  <img src={product.productImages[0]} alt=""/>
-                </div>
-              <p>{product.productName}</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
-              <button>Add to Cart</button>
-              </Link>
-            </Col>
-              )
-            }
+              bestSellers.map((product) => {
+                return (
+                  <Col md={3}>
+                    <Link to={"/Buypage/" + product.id}>
+                      <div className='bestproduct'>
+                        <img src={product.productImages[0]} alt="" />
+                      </div>
+                      <p>{product.productName}</p>
+                      <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
+                      <button>Add to Cart</button>
+                    </Link>
+                  </Col>
+                )
+              }
 
-            )
+              )
             }
           </Row>
         </Container>
@@ -717,7 +730,7 @@ const Home = () => {
         </Container>
       </section>
 
-       {/* <section className='reviewarea'>
+      {/* <section className='reviewarea'>
         <Container>
           <Row>
             <Col md={3}>
@@ -755,11 +768,11 @@ const Home = () => {
             {
               reviews.map((feedback) => {
                 return (
-                   <Col md={3}>
-                      <img src={feedback.reviewers.photo} alt='' className='img-fluid' />
-                      <h6>{feedback.reviewTitle}</h6>
-                      <p>{feedback.review}</p>
-                      <h4>{feedback.reviewers.name}</h4>
+                  <Col md={3}>
+                    <img src={feedback.reviewers.photo} alt='' className='img-fluid' />
+                    <h6>{feedback.reviewTitle}</h6>
+                    <p>{feedback.review}</p>
+                    <h4>{feedback.reviewers.name}</h4>
                   </Col>
                 )
               }

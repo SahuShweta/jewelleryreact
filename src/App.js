@@ -16,6 +16,8 @@ import Login from './components/Login';
 import Account from './components/Account';
 import CreateAccount from './components/CreateAccount';
 import Payment from './components/Payment';
+import Category from './components/Category';
+
 
 
 
@@ -33,6 +35,8 @@ function App() {
       <Route path="/women" element={<Women/>}/>
       <Route path="/Jsr" element={<Jsr/>}/>
       <Route path="/Buypage/:productId" element={<Buypage/>} />
+      <Route path="/Category/:categoryName" element={<Category/>} />
+
       <Route path="/ranchi" element={<Ranchi />} />
       <Route path="/Login" element={<Login/>} />
       <Route path="/Account" element={<Account/>} />

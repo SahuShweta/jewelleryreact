@@ -623,3 +623,53 @@
 
 }
 
+.buyarea{
+  text-align: center;
+}
+.cart{
+  display: flex;
+}
+.cart button{
+  width:150px;
+  background-color: rgb(4, 4, 48);
+  color: #fff;
+  border-radius: 5px;
+  margin-left:40px;
+}
+
+.cart button:hover{
+  background-color: gray;
+  color: rgb(4, 4, 48);
+  box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
+}
+
+.buy1 button{
+  margin:50px 0;
+  width:500px;
+  height:50px;
+  background-color: rgb(4, 4, 48);
+  color: #fff;
+  border-radius: 5px;
+  margin-left:40px;
+}
+.buy1 button:hover{
+  background-color: gray;
+  color: rgb(4, 4, 48);
+  box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
+}
+
+.accordian{
+  text-align: left;
+
+}
+.accordian button{
+  background: none;
+  color: none;
+}
+
+.fringearea{
+  text-align: center;
+}
+.fringearea p{
+  color: inherit;
+}
