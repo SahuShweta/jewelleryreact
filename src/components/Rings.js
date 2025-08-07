@@ -1,20 +1,16 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import slide3 from '../images/slide3.webp';
+import Earringslide from '../images/Earringslide.webp';
 
 
-
-
-const Category = () => {
-    const products = [
+const Rings = () => {
+    const rings = [
         {
             "id": 1,
-            "photo": [
-                "f1.webp", "f2.webp",
-            ],
-            "name": "Aham bramhasmi moksh rudracks beads",
-            "productCategory": "fringes",
+            "photo": "e1.webp",
+            "name": "Fringes Bloom In Fringe Statement Choker Set",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -25,15 +21,12 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-
         },
         {
             "id": 2,
-            "photo": [
-                "f3.webp", "f4.webp",
-            ],
+            "photo": "e2.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -47,11 +40,9 @@ const Category = () => {
         },
         {
             "id": 3,
-            "photo": [
-                "f5.webp", "f6.webp",
-            ],
-            "name": " Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "photo": "e3.webp",
+            "name": "Fringes Bloom In Fringe Statement Choker Set",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -65,11 +56,9 @@ const Category = () => {
         },
         {
             "id": 4,
-            "photo": [
-                "f7.webp", "f8.webp",
-            ],
+            "photo": "e4.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -83,11 +72,9 @@ const Category = () => {
         },
         {
             "id": 5,
-            "photo": [
-                "f9.webp", "f10.webp",
-            ],
+            "photo": "e5.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -101,11 +88,9 @@ const Category = () => {
         },
         {
             "id": 6,
-            "photo": [
-                "f11.webp", "f12.webp",
-            ],
+            "photo": "e6.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -115,15 +100,13 @@ const Category = () => {
             "discountPercent": 10,
             "rating": 4.5,
             "reviewCount": 120,
-            "isAvailable": false,
+            "isAvailable": true,
         },
         {
             "id": 7,
-            "photo": [
-                "f13.webp", "f14.webp",
-            ],
+            "photo": "e7.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -137,11 +120,9 @@ const Category = () => {
         },
         {
             "id": 8,
-            "photo": [
-                "f15.webp", "f16.webp",
-            ],
+            "photo": "e8.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -151,15 +132,13 @@ const Category = () => {
             "discountPercent": 10,
             "rating": 4.5,
             "reviewCount": 120,
-            "isAvailable": false,
+            "isAvailable": true,
         },
         {
             "id": 9,
-            "photo": [
-                "f17.webp", "f18.webp",
-            ],
+            "photo": "e9.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -173,11 +152,9 @@ const Category = () => {
         },
         {
             "id": 10,
-            "photo": [
-                "f19.webp", "f20.webp",
-            ],
+            "photo": "e10.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -191,11 +168,9 @@ const Category = () => {
         },
         {
             "id": 11,
-            "photo": [
-                "f21.webp", "f22.webp",
-            ],
+            "photo": "e11.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -209,11 +184,9 @@ const Category = () => {
         },
         {
             "id": 12,
-            "photo": [
-                "f23.webp", "f24.webp",
-            ],
+            "photo": "e12.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -227,15 +200,14 @@ const Category = () => {
         },
         {
             "id": 13,
-            "photo": [
-                "f25.webp", "f26.webp",
-            ],
+            "photo": "e13.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "earring",
+            "productCategory": "Earrings",
             "productForGender": "Female",
+            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
             "price2": 929,
-            "material": "finely worked stone",
+            "material": "Gold-plated brass",
             "occasion": "Wedding",
             "discountPercent": 10,
             "rating": 4.5,
@@ -244,11 +216,9 @@ const Category = () => {
         },
         {
             "id": 14,
-            "photo": [
-                "f27.webp", "f28.webp",
-            ],
+            "photo": "e14.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -262,11 +232,9 @@ const Category = () => {
         },
         {
             "id": 15,
-            "photo": [
-                "f29.webp", "f30.webp",
-            ],
+            "photo": "e15.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -280,189 +248,9 @@ const Category = () => {
         },
         {
             "id": 16,
-            "photo": [
-                "f31.webp", "f32.webp",
-            ],
+            "photo": "e16.webp",
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 17,
-            "photo": [
-                "f33.webp", "f34.webp",
-            ],
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 18,
-            "photo": "f18.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 19,
-            "photo": "f19.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 20,
-            "photo": "f20.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 21,
-            "photo": "f21.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 22,
-            "photo": "f22.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 23,
-            "photo": "f23.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 24,
-            "photo": "f24.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 25,
-            "photo": "f25.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 26,
-            "photo": "f26.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
-            "productForGender": "Female",
-            "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
-            "price1": 1029,
-            "price2": 929,
-            "material": "Gold-plated brass",
-            "occasion": "Wedding",
-            "discountPercent": 10,
-            "rating": 4.5,
-            "reviewCount": 120,
-            "isAvailable": true,
-        },
-        {
-            "id": 27,
-            "photo": "f27.webp",
-            "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "fringes",
+            "productCategory": "Earrings",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "price1": 1029,
@@ -474,16 +262,11 @@ const Category = () => {
             "reviewCount": 120,
             "isAvailable": true,
         }
-
-
+        
     ]
-
-    
-    const { categoryName } = useParams();
-    return (
-        <div>
-
-            <section>
+  return (
+    <div>
+      <section>
                 <Container fluid>
                     <Row>
                         <Col>
@@ -542,25 +325,21 @@ const Category = () => {
 
                             <Row className='bg-info'>
                                 {
-                                    products.filter(product => product.productCategory.toLowerCase().includes(categoryName)).map((product) => {
+                                    rings.filter(product => product.productCategory.toLowerCase().includes(categoryName)).map((product) => {
                                         return (
                                             <Col md={3} className='morecategory'>
-                                                <Link to={"/Buypage/" + product.id + product.name}>
+                                                <Link to={"/Buypage/" + product.id}>
                                                     <div className='productf'>
-                                                        <div className='fringe1'>
-                                                            <img src={"/" + product.photo[0]} alt='' className='img-fluid' />
-                                                        </div>
-                                                        <div className='fringe2'>
-                                                            <img src={"/" + product.photo[1]} alt='' className='img-fluid' />
-                                                        </div>
+                                                        <img src={"/" + product.photo} alt='' className='img-fluid' />
+
                                                         <h6>{product.name}</h6>
                                                         <Row>
-                                                            <Col>
-                                                                <h5>Ratings= {product.rating}</h5>
-                                                            </Col>
-                                                            <Col>
-                                                                <p>{product.isAvailable ? 'Available' : 'Out of the Stock'}</p>
-                                                            </Col>
+                                                        <Col>
+                                                        <h5>Ratings= {product.rating}</h5>
+                                                        </Col>
+                                                        <Col>
+                                                            <p>{product.isAvailable ? 'Available' : 'Out of the Stock'}</p>
+                                                        </Col>
                                                         </Row>
                                                         <Row>
                                                             <div className='pricearea'>
@@ -583,18 +362,8 @@ const Category = () => {
                     </Row>
                 </Container>
             </section>
-
-            <section>
-                <Container>
-                    <Row>
-                        <Col>
-                        
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-        </div>
-    )
+    </div>
+  )
 }
 
-export default Category
+export default Rings

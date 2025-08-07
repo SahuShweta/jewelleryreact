@@ -17,6 +17,11 @@ import Account from './components/Account';
 import CreateAccount from './components/CreateAccount';
 import Payment from './components/Payment';
 import Category from './components/Category';
+import Earrings from './components/Earrings';
+import New from './components/New';
+import Mens from './components/Mens';
+
+
 
 
 
@@ -42,6 +47,12 @@ function App() {
       <Route path="/Account" element={<Account/>} />
       <Route path="/CreateAccount" element={<CreateAccount/>} />
       <Route path="/Payment" element={<Payment/>} />
+      {/* <Route path="/Earrings" element={<Earrings/>} /> */}
+      <Route path="/New" element={<New/>} />
+      <Route path="/Mens" element={<Mens/>} />
+
+
+
 
 
 

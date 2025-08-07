@@ -69,7 +69,7 @@ const Home = () => {
       "id": 1,
       "title": "earing",
       "photo": "earrings.webp",
-      "link": " "
+      "link": "/Category/earring"
     },
 
     {
@@ -267,6 +267,8 @@ const Home = () => {
     }
   ];
 
+  
+
 
   return (
     <div>
@@ -322,10 +324,12 @@ const Home = () => {
               data.map((item) => {
                 return (
                   <Col md={2}>
+                    <Link to={item.link}>
                     <div className='cat1'>
                       <img src={item.photo} alt='' className='img-fluid' />
                       <h3>{item.title}</h3>
                     </div>
+                     </Link>
                   </Col>
                 )
               }
@@ -337,27 +341,6 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-
-      {/* <section>
-        <Container>
-          <Row>
-            {
-              data.map((item) => {
-                return (
-                  <Col md={2}>
-                    <div className='cat1'>
-                      <img src={item.photo} alt='' className='img-fluid' />
-                      <h3>{item.title}</h3>
-                    </div>
-                  </Col>
-                )
-              }
-
-              )
-            }
-          </Row>
-        </Container>
-      </section> */}
 
 
       <Carousel data-bs-theme="dark">
@@ -414,7 +397,9 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      {/* <section className='launcharea'>
+      
+      
+       <section className='launcharea'>
         <Container fluid>
           <Row>
             <Col>
@@ -479,7 +464,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section> */}
+      </section> 
 
       <section>
         <Container fluid className='linearea'>
@@ -507,12 +492,17 @@ const Home = () => {
                 return (
                   <Col md={3}>
                     <Link to={"/Buypage/" + product.id}>
-                      <div className='bimage'>
+                      <div className='bbox'>
+                        <div className='bimage'>
                         <img src={product.productImages[0]} alt="" />
+                      </div>
+                      <div className='bimage2'>
+                        <img src={product.productImages[1]} alt="" />
                       </div>
                       <p>{product.productName}</p>
                       <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
                       <button>Add to Cart</button>
+                      </div>
                     </Link>
                   </Col>
                 )
@@ -579,36 +569,6 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* <section className='bestarea'>
-        <Container fluid>
-          <Row>
-            <Col md={3}>
-              <div className='t1'></div>
-              <p>Fringes bloom in fringe statement choker set</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-              <button>Add to Cart</button>
-            </Col>
-            <Col md={3}>
-              <div className='t2'></div>
-              <p>Fringes bloom in fringe statement choker set</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-              <button>Add to Cart</button>
-            </Col>
-            <Col md={3}>
-              <div className='t3'></div>
-              <p>Fringes bloom in fringe statement choker set</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-              <button>Add to Cart</button>
-            </Col>
-            <Col md={3}>
-              <div className='t4'></div>
-              <p>Fringes bloom in fringe statement choker set</p>
-              <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-              <button>Add to Cart</button>
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
 
       <section className='bestarea'>
         <Container fluid>
@@ -619,12 +579,17 @@ const Home = () => {
                 return (
                   <Col md={3}>
                     <Link to={"/Buypage/" + product.id}>
+                    <div className='bbest'>
                       <div className='bestproduct'>
                         <img src={product.productImages[0]} alt="" />
+                      </div>
+                      <div className='bestproduct2'>
+                        <img src={product.productImages[1]} alt="" />
                       </div>
                       <p>{product.productName}</p>
                       <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
                       <button>Add to Cart</button>
+                      </div>
                     </Link>
                   </Col>
                 )

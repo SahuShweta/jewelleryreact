@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 .toparea{
   background: silver;
   text-align: center;
@@ -125,7 +127,10 @@
   color: rgb(4, 4, 48);
   box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
 }
+.bbox{
+  width:100%;
 
+}
 .bimage{
   width:350px;
   height:350px;
@@ -137,10 +142,26 @@
   width:100%;
   height:100%;
 }
-
+.bimage2{
+  display: none;
+}
+.bimage2 img{
+  width:100%;
+}
+.bbox:hover .bimage{
+  display: none;
+}
+.bbox:hover .bimage2{
+  display: block;
+} 
 .bestproduct{
   width:350px;
-  height:350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+.bestproduct2{
+  width:350px;
   background-size: cover;
   background-position: center;
   border-radius: 5px;
@@ -148,6 +169,7 @@
 .bestproduct img{
   width:100%;
   height:100%;
+  border-radius: 5px;
 }
 
 .bimage1{
@@ -217,6 +239,27 @@
   background-color: silver;
   color: rgb(4, 4, 48);
   box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
+}
+.bbest{
+  width: 100%;
+}
+.bbest:hover .bestproduct{
+  display: none;
+}
+.bbest:hover .bestproduct2{
+  display: block;
+}
+.bestproduct img{
+  width: 100%;
+  height: 100%;
+}
+.bestproduct2{
+  display: none;
+}
+.bestproduct2 img{
+  width:100%;
+  height:100%;
+  border-radius: 5px;
 }
 
 .t1{
@@ -598,6 +641,7 @@
   margin:40px 0;
   text-align: center;
   align-items: center;
+  width:100%;
 }
 .productf button{
   width:150px;
@@ -611,6 +655,34 @@
   background-color: #fff;
   color: rgb(4, 4, 48);
   box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
+}
+.fringe1{
+  width:300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+.fringe2{
+  width:300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+.fringe1 img{
+  width:100%;
+  height:100%;
+}
+.fringe2{
+  display: none;
+}
+.fringe2 img{
+  width:100%;
+}
+.productf:hover .fringe1{
+  display: none;
+}
+.productf:hover .fringe2{
+  display: block;
 }
 
 .pricearea{
@@ -672,4 +744,18 @@
 }
 .fringearea p{
   color: inherit;
+}
+
+.morecategory a{
+  color: inherit;
+  text-decoration: none;
+}
+.morectaegory{
+  text-align: center;
+}
+.morecategory img{
+  border-radius: 10px ;
+}
+.morecategory h6{
+  margin:10px 0;
 }
