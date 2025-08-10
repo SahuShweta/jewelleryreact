@@ -13,6 +13,7 @@ import f21 from '../images/f21.webp';
 import f23 from '../images/f23.webp';
 import { Link } from 'react-router';
 import { Container, Row, Col } from 'react-bootstrap';
+import products from "./Category";
 
 
 const Fringes = () => {

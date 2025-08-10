@@ -17,6 +17,7 @@ const Header = () => {
             <p>Introducing Lab Grown Diamonds set in pure 925 sterling silver. Shop now</p>
             <h1><Link to="/Jsr">Jsr</Link></h1>
             <h1><Link to="/New">new</Link></h1>
+            <h1><Link to="/Fringes">fringess</Link></h1>
             </Col>
           </Row>
         </Container>
