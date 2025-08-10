@@ -378,8 +378,231 @@ const Category = () => {
             "isAvailable": true,
             "rating": 3.5,
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 22,
+            "photo":[
+                "m9.webp","m10.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 23,
+            "photo":[
+                "m11.webp","m12.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 24,
+            "photo":[
+                "m13.webp","m14.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 25,
+            "photo":[
+                "m15.webp","m16.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 26,
+            "photo":[
+                "m17.webp","m18.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 27,
+            "photo":[
+                "m19.webp","m20.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 28,
+            "photo":[
+                "m21.webp","m22.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 29,
+            "photo":[
+                "m23.webp","m24.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 30,
+            "photo":[
+                "m25.webp","m26.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 31,
+            "photo":[
+                "m27.webp","m28.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 32,
+            "photo":[
+                "m29.webp","m30.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 33,
+            "photo":[
+                "m31.webp","m32.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 34,
+            "photo":[
+                "m33.webp","m34.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 35,
+            "photo":[
+                "m35.webp","m36.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Mens Collections",
+            "productForGender": "Male",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         }
-
 
     ]
 
