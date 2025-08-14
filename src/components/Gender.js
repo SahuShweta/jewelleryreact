@@ -6,40 +6,7 @@ import slide3 from '../images/slide3.webp';
 
 
 
-const Category = () => {
-
-    const banners =[
-        {
-            "id":1,
-            "image":"bannerEarrings.webp",
-            "productCategory":"Earring",
-            "productForGender": "Female"
-        },
-        {
-            "id":2,
-            "image":"bannerRings.webp",
-            "productCategory":"Rings",
-            "productForGender": "Female"
-        },
-        {
-            "id":3,
-            "image":"bannerBangles.webp",
-            "productCategory":"Bangles",
-            "productForGender": "Female"
-        },
-        {
-            "id":4,
-            "image":"bannerSets.webp",
-            "productCategory":"Sets Collections",
-            "productForGender": "Female"
-        },
-        {
-            "id":5,
-            "image":"bannerNecklace.webp",
-            "productCategory":"Necklace",
-            "productForGender": "Female"
-        }
-    ]
+const Gender = () => {
     const products = [
         {
             "id": 1,
@@ -264,7 +231,7 @@ const Category = () => {
                 "f25.webp", "f26.webp",
             ],
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "Earring",
+            "productCategory": "earring",
             "productForGender": "Female",
             "price1": 1029,
             "price2": 929,
@@ -356,7 +323,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Mens collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -372,7 +339,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Mens collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -388,7 +355,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -404,7 +371,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -420,7 +387,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -436,7 +403,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -452,7 +419,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -468,7 +435,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -484,7 +451,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -500,7 +467,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -516,7 +483,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -532,7 +499,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -548,7 +515,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -564,7 +531,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -580,7 +547,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -596,7 +563,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -612,7 +579,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -628,7 +595,7 @@ const Category = () => {
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory" : "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -636,331 +603,11 @@ const Category = () => {
             "rating": 3.5,
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
-        {
-            "id": 36,
-            "photo":[
-                "r1.webp","r2.webp"
-            ],
-            "name": "Halo Essence Floral Front Open Ring",
-            "price1": 1149,
-            "price2": 689,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 37,
-            "photo":[
-                "r3.webp","r4.webp"
-            ],
-            "name": "Halo Essence Luster Floral Statement Ring",
-            "price1": 1049 ,
-            "price2": 629,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 38,
-            "photo":[
-                "r5.webp","r6.webp"
-            ],
-            "name": "Halo Essence Glory Statement Ring",
-            "price1": 1599,
-            "price2": 959,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 39,
-            "photo":[
-                "r7.webp","r8.webp"
-            ],
-            "name": "Halo Essence Statement Floral Halo Ring",
-            "price1": 2899,
-            "price2": 1739,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 40,
-            "photo":[
-                "r9.webp","r10.webp"
-            ],
-            "name": "Sparkling Elegance Regal Cut American Diamond Ring",
-            "price1": 649 ,
-            "price2": 389,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 41,
-            "photo":[
-                "r11.webp","r12.webp"
-            ],
-            "name": "Sparkling Elegance Crystal Flora American Diamond Ring",
-            "price1": 899,
-            "price2": 539,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 42,
-            "photo":[
-                "r13.webp","r14.webp"
-            ],
-            "name": "Sparkling Elegance Celestial Dome American Diamond Ring",
-            "price1": 899,
-            "price2": 539,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 43,
-            "photo":[
-                "r15.webp","r16.webp"
-            ],
-            "name": "Sparkling Elegance Crystal Crown American Diamond Ring",
-            "price1": 899,
-            "price2": 539,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 44,
-            "photo":[
-                "r17.webp","r18.webp"
-            ],
-            "name": "Madhubani Pakhi Phool Oxidised Enamel Ring",
-            "price1": 749,
-            "price2": 449,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 45,
-            "photo":[
-                "r19.webp","r20.webp"
-            ],
-            "name": "Madhubani Pakhi Oxidised Enamel Ring",
-            "price1": 849,
-            "price2": 509,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 46,
-            "photo":[
-                "r21.webp","r22.webp"
-            ],
-            "name": "Sparkling Elegance Dual-Stone Gold Ring",
-            "price1": 1174,
-            "price2": 704,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 47,
-            "photo":[
-                "r23.webp","r24.webp"
-            ],
-            "name": "Sparkling Elegance Ethereal Glow Solitaire Ring",
-            "price1": 1074,
-            "price2": 644,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 48,
-            "photo":[
-                "r25.webp","r26.webp"
-            ],
-            "name": "Tropical Wildlife Elephant Herd Band Sterling Silver Ring",
-            "price1": 2899,
-            "price2": 1739,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 49,
-            "photo":[
-                "r27.webp","r28.webp"
-            ],
-            "name": "Sparkling Elegance Glowing Grace American Diamond Solitaire Ring",
-            "price1": 974,
-            "price2": 584,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 50,
-            "photo":[
-                "r29.webp","r30.webp"
-            ],
-            "name": "Sparkling Elegance Lustre Radiance American Diamond Solitaire Ring",
-            "price1": 749,
-            "price2": 449,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 51,
-            "photo":[
-                "r31.webp","r32.webp"
-            ],
-            "name": "Sparkling Elegance Eternal Radiance American Diamond Solitaire Ring",
-            "price1": 849,
-            "price2": 509,
-            "productCategory" : "Rings",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 38,
-            "photo":[
-                "bn1.webp","bn2.webp"
-            ],
-            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
-            "price1": 598,
-            "price2": 229,
-            "productCategory" : "Bangles",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 39,
-            "photo":[
-                "bn3.webp","bn4.webp"
-            ],
-            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
-            "price1": 598,
-            "price2": 229,
-            "productCategory" : "Bangles",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 40,
-            "photo":[
-                "s1.webp","s2.webp"
-            ],
-            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
-            "price1": 598,
-            "price2": 229,
-            "productCategory" : "Sets collections",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        },
-        {
-            "id": 41,
-            "photo":[
-                "s3.webp","s4.webp"
-            ],
-            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
-            "price1": 598,
-            "price2": 229,
-            "productCategory" : "Sets Collections",
-            "productForGender": "Female",
-            "discountPercent": 10,
-            "occasion": "Casual",
-            "isAvailable": true,
-            "rating": 3.5,
-            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
-        }
 
     ]
 
     
-    const { categoryName } = useParams();
+    const { GenderName } = useParams();
     return (
         <div>
 
@@ -968,14 +615,7 @@ const Category = () => {
                 <Container fluid>
                     <Row>
                         <Col>
-                        {
-                         banners.filter(product => product.productCategory.includes(categoryName)).map((product) => {
-                            return(
-                                    <img src={"/" + product.image} alt='' className='img-fluid' />
-                            )
-                        }
-                    )
-                        }
+                            <img src={slide3} alt='' className='img-fluid' />
                         </Col>
                     </Row>
                 </Container>
@@ -984,7 +624,7 @@ const Category = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>{categoryName}</h1>
+                            <h1>{GenderName}</h1>
                         </Col>
                     </Row>
                 </Container>
@@ -1028,12 +668,9 @@ const Category = () => {
                         </Col>
                         <Col md={10}>
 
-                            <Row className='information'>
+                            <Row className='bg-info'>
                                 {
-                                    // condition ? true part : false part
-                                    products.filter(product => product.productCategory.includes(categoryName)).map((product) => {
-                                
-                                    // products.filter(product => product.productCategory.toLowerCase().includes(categoryName)).map((product) => {
+                                    products.filter(product => product.productForGender.includes(GenderName)).map((product) => {
                                         return (
                                             <Col md={3} className='morecategory'>
                                                 <Link to={"/Buypage/" + product.id + product.name}>
@@ -1067,7 +704,6 @@ const Category = () => {
                                         )
                                     }
                                     )
-                                    
                                 }
 
                             </Row>
@@ -1089,4 +725,4 @@ const Category = () => {
     )
 }
 
-export default Category
+export default Gender

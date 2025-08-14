@@ -6,7 +6,6 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
-import Women from './components/Women';
 import {Routes,Route} from 'react-router';
 import Fringes from './components/Fringes';
 import Jsr from './components/Jsr';
@@ -19,7 +18,7 @@ import Payment from './components/Payment';
 import Category from './components/Category';
 import Earrings from './components/Earrings';
 import New from './components/New';
-import Mens from './components/Mens';
+import Gender from './components/Gender';
 
 
 
@@ -37,7 +36,6 @@ function App() {
       <Route path="" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/fringes" element={<Fringes/>}/>
-      <Route path="/women" element={<Women/>}/>
       <Route path="/Jsr" element={<Jsr/>}/>
       <Route path="/Buypage/:productId" element={<Buypage/>} />
       <Route path="/Category/:categoryName" element={<Category/>} />
@@ -49,7 +47,7 @@ function App() {
       <Route path="/Payment" element={<Payment/>} />
       {/* <Route path="/Earrings" element={<Earrings/>} /> */}
       <Route path="/New" element={<New/>} />
-      <Route path="/Mens" element={<Mens/>} />
+      <Route path="/Gender/:GenderName" element={<Gender/>} />
 
 
 

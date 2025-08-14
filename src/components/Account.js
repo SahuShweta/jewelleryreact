@@ -33,22 +33,17 @@ const Account = () => {
           We'll never share your email with anyone else.
         </Form.Text>
       </Form.Group>
-        </Form>
 
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>
-            <h4>Enter your Password</h4>
-           <div className='navsearch'>
-              <input type="Password" placeholder="Password" />
-              </div> 
-        </ListGroup.Item>
-        <ListGroup.Item>
-            <button>LOGIN</button>
-        </ListGroup.Item>
-        <ListGroup.Item>
-           <p><a href=''>Forgot your password? or return to store </a></p>     
-        </ListGroup.Item>
-      </ListGroup>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+        </Form>
     </Card>
                     </Col>
                     <Col>

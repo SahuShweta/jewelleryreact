@@ -15,9 +15,9 @@ const Header = () => {
           <Row>
             <Col>
             <p>Introducing Lab Grown Diamonds set in pure 925 sterling silver. Shop now</p>
-            <h1><Link to="/Jsr">Jsr</Link></h1>
+            {/* <h1><Link to="/Jsr">Jsr</Link></h1>
             <h1><Link to="/New">new</Link></h1>
-            <h1><Link to="/Fringes">fringess</Link></h1>
+            <h1><Link to="/Fringes">fringess</Link></h1> */}
             </Col>
           </Row>
         </Container>
@@ -33,10 +33,10 @@ const Header = () => {
                 <div className='navbar'>
                   <ul>
                     <li><Link to="" className='customlink'>Home</Link></li>
-                    <li><Link to="/about" className='customlink'>About</Link></li>
+                    <li><Link to="/category/about" className='customlink'>About</Link></li>
                     <li><Link to="/Category/fringes" className='customlink'>Fringes</Link></li>
-                    <li><Link to="/women" className='customlink'>Women</Link></li>
-                    <li><Link to="/Mens" className='customlink'>Men</Link></li>
+                    <li><Link to="/Gender/Female" className='customlink'>Women</Link></li>
+                    <li><Link to="/Gender/Male" className='customlink'>Men</Link></li>
                     <li>Collections</li>
                   </ul>
               </div>

@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 
 
 const CreateAccount = () => {
@@ -14,28 +16,32 @@ const CreateAccount = () => {
             <Row>
                 <Col>
                 <Card>
-      <Card.Header as="h3">CREATE AN ACCOUNT</Card.Header>
-      <Card.Body>
-        <Card.Title>First Name</Card.Title>
-        <div className='navsearch'>
-              <input type="First Name" placeholder="" />
-              </div>
+                  <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>First Name</Form.Label>
+        <Form.Control type="First Name" placeholder="First Name" />
+      </Form.Group>
 
-              <Card.Title>Last Name</Card.Title>
-        <div className='navsearch'>
-              <input type="Last Name" placeholder="" />
-              </div>
-              <Card.Title>Your Email Address</Card.Title>
-        <div className='navsearch'>
-              <input type="Email Address" placeholder="" />
-              </div>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Label>Last Name</Form.Label>
+        <Form.Control type="Last Name" placeholder="Last Name" />
+      </Form.Group>
 
-              <Card.Title>Enter Your Password</Card.Title>
-        <div className='navsearch'>
-              <input type="password" placeholder="" />
-              </div>
-        <Button variant="primary">CREATE AN ACCOUNT</Button>
-      </Card.Body>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
     </Card>
                 </Col>
             </Row>

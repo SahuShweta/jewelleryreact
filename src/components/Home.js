@@ -64,47 +64,47 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Home = () => {
 
-  const data = [
+  const categories = [
     {
       "id": 1,
       "title": "earing",
       "photo": "earrings.webp",
-      "link": "/Category/earring"
+      "link": "/Category/Earring"
     },
 
     {
       "id": 2,
       "title": "rings",
       "photo": "ring.webp",
-      "link": " "
+      "link": "/Category/Rings"
     },
 
     {
       "id": 3,
       "title": "bangles",
       "photo": "bangles.webp",
-      "link": " "
+      "link": "/Category/Bangles"
     },
 
     {
       "id": 4,
       "title": "sets",
       "photo": "sets.webp",
-      "link": " "
+      "link": "/Category/Sets"
     },
 
     {
       "id": 5,
       "title": "necklace",
       "photo": "necklace.webp",
-      "link": " "
+      "link": "/Category/Necklace"
     },
 
     {
       "id": 6,
       "title": "hair accesories",
       "photo": "accesories.webp",
-      "link": " "
+      "link": "/Category/HairAccesories"
     }
   ];
 
@@ -273,58 +273,16 @@ const Home = () => {
   return (
     <div>
 
-      {/* <section className='category'>
-        <Container fluid>
-          <Row>
-            <Col md={2}>
-              <div className='cat1'>
-                <img src={earring} alt='' className='img-fluid' />
-                <h3>Earrings</h3>
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className='cat1'>
-                <img src={rings} alt='' className='img-fluid' />
-                <h3>Rings</h3>
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className='cat1'>
-                <img src={bangle} alt='' className='img-fluid' />
-                <h3>Bangles</h3>
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className='cat1'>
-                <img src={set} alt='' className='img-fluid' />
-                <h3>Sets</h3>
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className='cat1'>
-                <img src={necklaces} alt='' className='img-fluid' />
-                <h3>Necklace</h3>
-              </div>
-            </Col>
-            <Col md={2}>
-              <div className='cat1'>
-                <img src={accessory} alt='' className='img-fluid' />
-                <h3>Hair Accesories</h3>
-              </div>
-            </Col>
-
-          </Row>
-        </Container>
-      </section> */}
-
-      <section className='category'>
+      <section className='categories'>
         <Container fluid>
           <Row>
             {
-              data.map((item) => {
+              categories.map((item) => {
                 return (
                   <Col md={2}>
-                    <Link to={item.link}>
+                    {/* <Link to={item.link}> */}
+                      <Link to={item.link} className='customlink'> 
+
                     <div className='cat1'>
                       <img src={item.photo} alt='' className='img-fluid' />
                       <h3>{item.title}</h3>

@@ -46,11 +46,20 @@
   box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
 }
 
-.category{
+.categories{
   display: flex;
   margin-bottom: 50px;
   text-align: center;
+  color: inherit !important;
+  text-decoration: none;
+  outline: none;
+  
 }
+/* .category h3{
+  color: inherit !important;
+  text-decoration: none;
+  outline: none;
+} */
 .cat1{
   width: 250px;
   height: 250px;
@@ -746,6 +755,7 @@
   color: inherit;
 }
 
+
 .morecategory a{
   color: inherit;
   text-decoration: none;
@@ -758,4 +768,9 @@
 }
 .morecategory h6{
   margin:10px 0;
+}
+
+.information{
+  text-align: center;
+  
 }
