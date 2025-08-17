@@ -10,13 +10,13 @@ const SignupSchema = Yup.object().shape({
         .min(2, 'Too Short!')
         .max(50, 'Too Long!')
         .required('Required'),
-    //productCategory: Yup.string().required('required'),
+    productCategory: Yup.string().required('required'),
 
     productPrice: Yup.string()
         .min(2, 'Too Short!')
         .max(50, 'Too Long!')
         .required('Required'),
-    //productOccasion: Yup.string().required('required'),
+    productOccasion: Yup.string().required('required'),
         
     productDiscount: Yup.string()
         .min(2, 'Too Short!')
@@ -82,6 +82,7 @@ const AddProduct = () => {
                                         <Col>Product Category</Col>
                                         <Col>
                                             <Field name="productCategory" as="select">
+                                                <option value="">Choose Category</option>
                                                 <option value="red">Red</option>
                                                 <option value="green">Green</option>
                                                 <option value="blue">Blue</option>
@@ -108,6 +109,7 @@ const AddProduct = () => {
                                         <Col>Product for Occasions</Col>
                                         <Col>
                                             <Field name="productOccasion" as="select">
+                                                <option value="">Choose Ocassion</option>
                                                 <option value="red">Weddings</option>
                                                 <option value="green">Casuals</option>
                                                 <option value="blue">Ethnic</option>
