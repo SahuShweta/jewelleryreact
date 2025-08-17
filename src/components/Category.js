@@ -264,7 +264,7 @@ const Category = () => {
                 "f25.webp", "f26.webp",
             ],
             "name": "Fringes Bloom In Fringe Statement Choker Set",
-            "productCategory": "Earring",
+            "productCategory": "fringes",
             "productForGender": "Female",
             "price1": 1029,
             "price2": 929,
@@ -277,6 +277,234 @@ const Category = () => {
         },
         {
             "id": 14,
+            "photo": [
+                "e1.webp", "e2.webp",
+            ],
+            "name": "Halo Essence Floral Dangler Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 2399,
+            "price2": 1439,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 15,
+            "photo": [
+                "e3.webp", "e4.webp",
+            ],
+            "name": "Halo Essence Circular Disk Stud Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 1049,
+            "price2": 629,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 16,
+            "photo": [
+                "e5.webp", "e6.webp",
+            ],
+            "name": "Halo Essence Glory Statement Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 2549,
+            "price2": 1529,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 17,
+            "photo": [
+                "e7.webp", "e8.webp",
+            ],
+            "name": "Halo Essence Aureole Dangler Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 1349,
+            "price2": 809,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 18,
+            "photo": [
+                "e9.webp", "e10.webp",
+            ],
+            "name": "Halo Essence Brilliance Floral Ear Cuff Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 1399,
+            "price2": 839,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 19,
+            "photo": [
+                "e11.webp", "e12.webp",
+            ],
+            "name": "Halo Essence Aura Stud Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 1099,
+            "price2": 659,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 20,
+            "photo": [
+                "e13.webp", "e14.webp",
+            ],
+            "name": "Halo Essence Ring of Light Dangler Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 1899,
+            "price2": 1139,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 21,
+            "photo": [
+                "e15.webp", "e16.webp",
+            ],
+            "name": "Halo Essence Heart Dangler Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 2999,
+            "price2": 1799,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 22,
+            "photo": [
+                "e17.webp", "e18.webp",
+            ],
+            "name": "Halo Essence Rhombus Radiance Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 899,
+            "price2": 539,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 23,
+            "photo": [
+                "e19.webp", "e20.webp",
+            ],
+            "name": "Sparkling Elegance Sunray American Diamond Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 649,
+            "price2": 389,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 24,
+            "photo": [
+                "e21.webp", "e22.webp",
+            ],
+            "name": "Fringes Bloom In Fringe Statement Choker Set",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 1029,
+            "price2": 929,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },{
+            "id": 25,
+            "photo": [
+                "e23.webp", "e24.webp",
+            ],
+            "name": "Fringes Bloom In Fringe Statement Choker Set",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 1029,
+            "price2": 929,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },
+        {
+            "id": 26,
+            "photo": [
+                "e25.webp", "e26.webp",
+            ],
+            "name": "Halo Essence Floral Dangler Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 2399,
+            "price2": 1439,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },
+        {
+            "id": 27,
+            "photo": [
+                "e27.webp", "e28.webp",
+            ],
+            "name": "Halo Essence Floral Dangler Earrings",
+            "productCategory": "Earring",
+            "productForGender": "Female",
+            "price1": 2399,
+            "price2": 1439,
+            "material": "finely worked stone",
+            "occasion": "Wedding",
+            "discountPercent": 10,
+            "rating": 4.5,
+            "reviewCount": 120,
+            "isAvailable": true,
+        },
+        
+        {
+            "id": 27,
             "photo": [
                 "f27.webp", "f28.webp",
             ],
@@ -294,7 +522,7 @@ const Category = () => {
             "isAvailable": true,
         },
         {
-            "id": 15,
+            "id": 28,
             "photo": [
                 "f29.webp", "f30.webp",
             ],
@@ -312,7 +540,7 @@ const Category = () => {
             "isAvailable": true,
         },
         {
-            "id": 16,
+            "id": 29,
             "photo": [
                 "f31.webp", "f32.webp",
             ],
@@ -330,7 +558,7 @@ const Category = () => {
             "isAvailable": true,
         },
         {
-            "id": 17,
+            "id": 30,
             "photo": [
                 "f33.webp", "f34.webp",
             ],
@@ -349,7 +577,7 @@ const Category = () => {
         },
         
         {
-            "id": 18,
+            "id": 31,
             "photo":[
                 "m1.webp","m2.webp"
             ],
@@ -365,7 +593,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 19,
+            "id": 32,
             "photo":[
                 "m3.webp","m4.webp"
             ],
@@ -381,7 +609,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 20,
+            "id": 33,
             "photo":[
                 "m5.webp","m6.webp"
             ],
@@ -397,7 +625,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 21,
+            "id": 34,
             "photo":[
                 "m7.webp","m8.webp"
             ],
@@ -413,7 +641,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 22,
+            "id": 35,
             "photo":[
                 "m9.webp","m10.webp"
             ],
@@ -429,7 +657,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 23,
+            "id": 36,
             "photo":[
                 "m11.webp","m12.webp"
             ],
@@ -445,7 +673,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 24,
+            "id": 37,
             "photo":[
                 "m13.webp","m14.webp"
             ],
@@ -461,7 +689,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 25,
+            "id": 38,
             "photo":[
                 "m15.webp","m16.webp"
             ],
@@ -477,7 +705,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 26,
+            "id": 39,
             "photo":[
                 "m17.webp","m18.webp"
             ],
@@ -493,7 +721,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 27,
+            "id": 40,
             "photo":[
                 "m19.webp","m20.webp"
             ],
@@ -509,7 +737,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 28,
+            "id": 41,
             "photo":[
                 "m21.webp","m22.webp"
             ],
@@ -525,7 +753,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 29,
+            "id": 42,
             "photo":[
                 "m23.webp","m24.webp"
             ],
@@ -541,7 +769,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 30,
+            "id": 43,
             "photo":[
                 "m25.webp","m26.webp"
             ],
@@ -557,7 +785,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 31,
+            "id": 44,
             "photo":[
                 "m27.webp","m28.webp"
             ],
@@ -573,7 +801,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 32,
+            "id": 45,
             "photo":[
                 "m29.webp","m30.webp"
             ],
@@ -589,7 +817,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 33,
+            "id": 46,
             "photo":[
                 "m31.webp","m32.webp"
             ],
@@ -605,7 +833,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 34,
+            "id": 47,
             "photo":[
                 "m33.webp","m34.webp"
             ],
@@ -621,7 +849,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 35,
+            "id": 48,
             "photo":[
                 "m35.webp","m36.webp"
             ],
@@ -637,7 +865,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 36,
+            "id": 49,
             "photo":[
                 "r1.webp","r2.webp"
             ],
@@ -653,7 +881,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 37,
+            "id": 50,
             "photo":[
                 "r3.webp","r4.webp"
             ],
@@ -669,7 +897,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 38,
+            "id": 51,
             "photo":[
                 "r5.webp","r6.webp"
             ],
@@ -685,7 +913,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 39,
+            "id": 52,
             "photo":[
                 "r7.webp","r8.webp"
             ],
@@ -701,7 +929,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 40,
+            "id": 53,
             "photo":[
                 "r9.webp","r10.webp"
             ],
@@ -717,7 +945,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 41,
+            "id": 54,
             "photo":[
                 "r11.webp","r12.webp"
             ],
@@ -733,7 +961,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 42,
+            "id": 55,
             "photo":[
                 "r13.webp","r14.webp"
             ],
@@ -749,7 +977,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 43,
+            "id": 56,
             "photo":[
                 "r15.webp","r16.webp"
             ],
@@ -765,7 +993,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 44,
+            "id": 57,
             "photo":[
                 "r17.webp","r18.webp"
             ],
@@ -781,7 +1009,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 45,
+            "id": 58,
             "photo":[
                 "r19.webp","r20.webp"
             ],
@@ -797,7 +1025,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 46,
+            "id": 59,
             "photo":[
                 "r21.webp","r22.webp"
             ],
@@ -813,7 +1041,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 47,
+            "id": 60,
             "photo":[
                 "r23.webp","r24.webp"
             ],
@@ -829,7 +1057,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 48,
+            "id": 61,
             "photo":[
                 "r25.webp","r26.webp"
             ],
@@ -845,7 +1073,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 49,
+            "id": 62,
             "photo":[
                 "r27.webp","r28.webp"
             ],
@@ -861,7 +1089,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 50,
+            "id": 63,
             "photo":[
                 "r29.webp","r30.webp"
             ],
@@ -877,7 +1105,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 51,
+            "id": 64,
             "photo":[
                 "r31.webp","r32.webp"
             ],
@@ -893,7 +1121,39 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 38,
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Halo Essence Radiance Studded Bracelet",
+            "price1": 2899,
+            "price2": 1739,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 66,
+            "photo":[
+                "bn3.webp","bn4.webp"
+            ],
+            "name": "Halo Essence Studded Floral Bracelet",
+            "price1": 1849,
+            "price2": 1109,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
             "photo":[
                 "bn1.webp","bn2.webp"
             ],
@@ -909,9 +1169,9 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 39,
+            "id": 65,
             "photo":[
-                "bn3.webp","bn4.webp"
+                "bn1.webp","bn2.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
@@ -925,7 +1185,167 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 40,
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 65,
+            "photo":[
+                "bn1.webp","bn2.webp"
+            ],
+            "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
+            "price1": 598,
+            "price2": 229,
+            "productCategory" : "Bangles",
+            "productForGender": "Female",
+            "discountPercent": 10,
+            "occasion": "Casual",
+            "isAvailable": true,
+            "rating": 3.5,
+            "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
+        },
+        {
+            "id": 67,
             "photo":[
                 "s1.webp","s2.webp"
             ],
@@ -941,7 +1361,7 @@ const Category = () => {
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
         {
-            "id": 41,
+            "id": 68,
             "photo":[
                 "s3.webp","s4.webp"
             ],
@@ -1071,16 +1491,6 @@ const Category = () => {
                                 }
 
                             </Row>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-
-            <section>
-                <Container>
-                    <Row>
-                        <Col>
-                        
                         </Col>
                     </Row>
                 </Container>

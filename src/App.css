@@ -774,3 +774,15 @@
   text-align: center;
   
 }
+.aaa{
+  width:80%;
+  padding:10px;
+  border:solid 1px black;
+  margin:25px 0;
+}
+.aaa .row{
+  margin:5px 0;
+}
+.bbb{
+  color: #F70000 !important;
+}

@@ -9,16 +9,17 @@ import About from './components/About';
 import {Routes,Route} from 'react-router';
 import Fringes from './components/Fringes';
 import Jsr from './components/Jsr';
-import Buypage from './components/Buypage';
+// import Buypage from './components/Buypage';
 import Ranchi from './components/Ranchi';
 import Login from './components/Login';
 import Account from './components/Account';
 import CreateAccount from './components/CreateAccount';
 import Payment from './components/Payment';
 import Category from './components/Category';
-import Earrings from './components/Earrings';
 import New from './components/New';
 import Gender from './components/Gender';
+import Register from './components/Register';
+import AddProduct from './components/AddProduct';
 
 
 
@@ -37,7 +38,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/fringes" element={<Fringes/>}/>
       <Route path="/Jsr" element={<Jsr/>}/>
-      <Route path="/Buypage/:productId" element={<Buypage/>} />
+      {/* <Route path="/Category/Buypage/:productDetails" element={<Buypage/>} /> */}
       <Route path="/Category/:categoryName" element={<Category/>} />
 
       <Route path="/ranchi" element={<Ranchi />} />
@@ -45,9 +46,10 @@ function App() {
       <Route path="/Account" element={<Account/>} />
       <Route path="/CreateAccount" element={<CreateAccount/>} />
       <Route path="/Payment" element={<Payment/>} />
-      {/* <Route path="/Earrings" element={<Earrings/>} /> */}
       <Route path="/New" element={<New/>} />
       <Route path="/Gender/:GenderName" element={<Gender/>} />
+      <Route path="/Register" element={<Register/>} />
+      <Route path="/AddProduct" element={<AddProduct/>} />
 
 
 
