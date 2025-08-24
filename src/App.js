@@ -11,15 +11,16 @@ import Fringes from './components/Fringes';
 import Jsr from './components/Jsr';
 // import Buypage from './components/Buypage';
 import Ranchi from './components/Ranchi';
-import Login from './components/Login';
 import Account from './components/Account';
 import CreateAccount from './components/CreateAccount';
 import Payment from './components/Payment';
 import Category from './components/Category';
 import New from './components/New';
 import Gender from './components/Gender';
-import Register from './components/Register';
+// import Register from './components/Register';
 import AddProduct from './components/AddProduct';
+import Login from './components/Login';
+import Register2 from './components/Register2';
 
 
 
@@ -42,14 +43,15 @@ function App() {
       <Route path="/Category/:categoryName" element={<Category/>} />
 
       <Route path="/ranchi" element={<Ranchi />} />
-      <Route path="/Login" element={<Login/>} />
       <Route path="/Account" element={<Account/>} />
       <Route path="/CreateAccount" element={<CreateAccount/>} />
       <Route path="/Payment" element={<Payment/>} />
       <Route path="/New" element={<New/>} />
       <Route path="/Gender/:GenderName" element={<Gender/>} />
-      <Route path="/Register" element={<Register/>} />
+      {/* <Route path="/Register" element={<Register/>} /> */}
       <Route path="/AddProduct" element={<AddProduct/>} />
+      <Route path="/Login" element={<Login/>} />
+      <Route path="/Register2" element={<Register2/>} />
 
 
 

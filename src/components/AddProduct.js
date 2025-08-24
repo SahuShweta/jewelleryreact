@@ -12,15 +12,17 @@ const SignupSchema = Yup.object().shape({
         .required('Required'),
     productCategory: Yup.string().required('required'),
 
-    productPrice: Yup.string()
-        .min(2, 'Too Short!')
-        .max(50, 'Too Long!')
-        .required('Required'),
+    productPrice: Yup.number()
+        .positive('Price must be positive'),
+    productGender: Yup.string().required('required'),
+
     productOccasion: Yup.string().required('required'),
-        
-    productDiscount: Yup.string()
-        .min(2, 'Too Short!')
-        .max(50, 'Too Long!')
+
+    productDiscount: Yup.number()
+        .positive('Discount must be positive'),
+    productMaterial: Yup.string()
+        .required('Required'),
+    productDescription: Yup.string()
         .required('Required'),
 });
 const AddProduct = () => {
@@ -32,11 +34,11 @@ const AddProduct = () => {
                         productName: '',
                         productCategory: '',
                         productPrice: '',
+                        productGender: '',
                         productOccasion: '',
                         productDiscount: '',
-
-
-
+                        productMaterial: '',
+                        productDescription: '',
 
                     }}
                     validationSchema={SignupSchema}
@@ -62,23 +64,6 @@ const AddProduct = () => {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col>
-                                            <div id="my-radio-group">Gender</div>
-                                        </Col>
-                                        <Col>
-                                            <div role="group" aria-labelledby='my-radio-group'>
-                                                <label>
-                                                    <Field type="radio" name="gender" value="Women" />
-                                                    Women
-                                                </label>
-                                                <label>
-                                                    <Field type="radio" name="gender" value="Men" />
-                                                    Men
-                                                </label>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                    <Row>
                                         <Col>Product Category</Col>
                                         <Col>
                                             <Field name="productCategory" as="select">
@@ -93,7 +78,6 @@ const AddProduct = () => {
                                         </Col>
 
                                     </Row>
-
                                     <Row>
                                         <Col>Product Price</Col>
                                         <Col>
@@ -103,6 +87,23 @@ const AddProduct = () => {
                                             ) : null}
                                         </Col>
 
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <div id="my-radio-group">Gender</div>
+                                        </Col>
+                                        <Col>
+                                            <div role="group" aria-labelledby='my-radio-group'>
+                                                <label>
+                                                    <Field type="radio" name="productGender" value="Women" />
+                                                    Women
+                                                </label>
+                                                <label>
+                                                    <Field type="radio" name="productGender" value="Men" />
+                                                    Men
+                                                </label>
+                                            </div>
+                                        </Col>
                                     </Row>
 
                                     <Row>
@@ -120,7 +121,6 @@ const AddProduct = () => {
                                         </Col>
 
                                     </Row>
-
                                     <Row>
                                         <Col>Product Discount</Col>
                                         <Col>
@@ -131,6 +131,35 @@ const AddProduct = () => {
                                         </Col>
 
                                     </Row>
+
+
+                                    <Row>
+                                        <Col>
+                                            <div id="my-radio-group">Product Material</div>
+                                        </Col>
+                                        <Col>
+                                            <div role="group" aria-labelledby='my-radio-group'>
+                                                <label>
+                                                    <Field type="radio" name="productMaterial" value="gold" />
+                                                    Gold Plated
+                                                </label>
+                                                <label>
+                                                    <Field type="radio" name="productMaterial" value="silver" />
+                                                    Silver Plated
+                                                </label>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>Description</Col>
+                                        <Col>
+                                            <div>
+                                                <Field as="textarea" id="productDescription" name="productDescription" />
+                                            </div>
+                                        </Col>
+                                    </Row>
+
+
                                 </Container>
 
 

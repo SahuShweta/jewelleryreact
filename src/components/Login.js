@@ -1,65 +1,69 @@
-import React from 'react';
+import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import { Link } from 'react-router';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
+import './../App.css'
+
+const SignupSchema = Yup.object().shape({
+    
+    email: Yup.string().email('Invalid email').required('Required'),
+    // password: Yup.string().password('Invalid password').required('Required'),
+});
+
 
 
 const Login = () => {
-  return (
-    <div>
-
-      <section className='loginpage'>
-        <Container>
-          <Row>
-            <Col>
-              <Card style={{ width: '28rem' }}>
-
-                <Card.Body>
-                  <Card.Title><h1>Customer Login</h1></Card.Title>
-                </Card.Body>
-                <Card.Text>
-                  <Form>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Label>Email address</Form.Label>
-                      <Form.Control type="email" placeholder="Enter email" />
-                      <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                      </Form.Text>
-                    </Form.Group>
-                  </Form>
-                </Card.Text>
-
-                <ListGroup className="list-group-flush">
-                  <Form>
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
-                  </Form>
-                  <ListGroup.Item>
-                    <button><Link to="/Account" className='customlink'>LOGIN</Link></button>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <p><a href=''>Forgot your password? </a></p>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <button>Create an Account</button>
-                  </ListGroup.Item>
-                </ListGroup>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </div>
-  )
+    return (
+        <div>
+            <Container className='profile'>
+                           <Row>
+                               <Col xs={12} sm={8} md={6} lg={4}>
+                                   <h1>Sign in</h1>
+                                   <Formik
+                                       initialValues={{
+                                           
+                                           email: '',
+                                           password: '',
+                                       }}
+                                       validationSchema={SignupSchema}
+                                       onSubmit={values => {
+                                           // same shape as initial values
+                                           console.log(values);
+                                       }}
+                                   >
+                                       {({ errors, touched }) => (
+                                           <Form>
+                                               <div className='aaa'>
+                                                   
+                                               <Row>
+                                                   <Col>Email ID</Col>
+                                                   <Col>
+                                                       <Field name="email" type="email" />
+                                                       {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                                                   </Col>
+                                               </Row>
+                                               <Row>
+                                                   <Col>Password</Col>
+                                                   <Col>
+                                                       <Field name="password" type="password" />
+                                                       {errors.password && touched.password? <div>{errors.password}</div> : null}
+                                                   </Col>
+                                               </Row>
+           
+                                               <Row>
+                                                   <Col>
+                                                       <button type="submit">Submit</button>
+                                                   </Col>
+                                               </Row>
+                                               </div>
+                                           </Form>
+                                       )}
+                                   </Formik>
+                               </Col>
+                           </Row>
+                       </Container> 
+        </div>
+    )
 }
 
 export default Login

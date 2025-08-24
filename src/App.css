@@ -122,13 +122,18 @@
 .bohoarea{
   margin:50px 0;
   text-align: center;
-
+  justify-content: center;
+  display:flex;
+  gap: 10px;
+  
 }
 .bohoarea button{
+  display: inline-block;
    width:150px;
   background-color: rgb(4, 4, 48);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
 .bohoarea button:hover{
@@ -136,26 +141,43 @@
   color: rgb(4, 4, 48);
   box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
 }
+.bohoarea a {
+    color: inherit;          
+    text-decoration: none;   
+}
+
+.bohoarea a:hover,
+.bohoarea a:visited,
+.bohoarea a:active {
+    color: inherit;
+    text-decoration: none;
+}
 .bbox{
   width:100%;
-
+  border-radius: 10px;
 }
 .bimage{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .bimage img{
   width:100%;
   height:100%;
+  border-radius: 10px;
+
 }
 .bimage2{
   display: none;
+  border-radius: 10px;
+
 }
 .bimage2 img{
   width:100%;
+  border-radius: 10px;
+
 }
 .bbox:hover .bimage{
   display: none;
@@ -164,30 +186,30 @@
   display: block;
 } 
 .bestproduct{
-  width:350px;
+  width:380px;
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .bestproduct2{
-  width:350px;
+  width:380px;
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .bestproduct img{
   width:100%;
   height:100%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .bimage1{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-image: url(./images/photo1.webp);
   background-position: center;
-  border-radius: 5px;
+  border-radius: 10px;
   
 }
 .bimage1:hover{
@@ -198,36 +220,36 @@
 
 
 .bimage2{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-image: url(./images/photo2.webp);
   background-position: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .bimage2:hover{
   background-image: url(./images/photo22.webp);
 }
 
 .bimage3{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-image: url(./images/photo3.webp);
   background-position: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .bimage3:hover{
   background-image: url(./images/photo33.webp);
 }
 
 .bimage4{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-image: url(./images/photo4.webp);
   background-position: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .bimage4:hover{
   background-image: url(./images/photo44.webp);
@@ -237,11 +259,22 @@
 .bestarea{
   text-align: center;
 }
+.bestarea a {
+    color: inherit;          
+    text-decoration: none;   
+}
+
+.bestarea a:hover,
+.bestarea a:visited,
+.bestarea a:active {
+    color: inherit;
+    text-decoration: none;
+}
 .bestarea button{
    width:150px;
   background-color: rgb(4, 4, 48);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .bestarea button:hover{
@@ -268,12 +301,12 @@
 .bestproduct2 img{
   width:100%;
   height:100%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .t1{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-position: center;
 
@@ -284,8 +317,8 @@
 }
 
 .t2{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-position: center;
 
@@ -296,8 +329,8 @@
 }
 
 .t3{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-position: center;
 
@@ -308,8 +341,8 @@
 }
 
 .t4{
-  width:350px;
-  height:350px;
+  width:380px;
+  height:380px;
   background-size: cover;
   background-position: center;
 
@@ -779,10 +812,44 @@
   padding:10px;
   border:solid 1px black;
   margin:25px 0;
+  text-align: center;
 }
 .aaa .row{
   margin:5px 0;
 }
 .bbb{
   color: #F70000 !important;
+
+
+}
+
+.aaa {
+  text-align: center;   
+}
+
+.aaa button {
+  width: 150px;
+  background-color: rgb(4, 4, 48);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.aaa button:hover {
+  background-color: rgb(20, 20, 100);
+  color: #fff;
+}
+
+
+
+.profile button{
+  color:#1f1055;
+  background:gray
+}
+
+.information{
+  text-align: center;
+}
+
+.information button{
+  margin-left: 30px;
 }
