@@ -1,6 +1,6 @@
 import React from 'react'
 // import ImageGallery from "react-image-gallery";
-import { Gallery } from "react-grid-gallery";
+// import { Gallery } from "react-grid-gallery";
 
 
 
