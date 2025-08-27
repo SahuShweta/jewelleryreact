@@ -4,6 +4,8 @@ import brandlogo from '../images/brandlogo.png';
 import { Col, Container, Row} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faCartShopping} from '@fortawesome/free-solid-svg-icons';
+// import { faHeartRegular } from '@fortawesome/free-regular-svg-icons'; 
+
 import { Link } from 'react-router';
 
 
@@ -29,7 +31,7 @@ const Header = () => {
                 <Col md={2}>
                   <img src={brandlogo} alt='' className='img-fluid'/>
                 </Col>
-                <Col md={6}>
+                <Col md={5}>
                 <div className='navbar'>
                   <ul>
                     <li><Link to="" className='customlink'>Home</Link></li>
@@ -41,7 +43,7 @@ const Header = () => {
                   </ul>
               </div>
               </Col>
-              <Col md={4}>
+              <Col md={5}>
               <Row>
                 <Col>
               <div className='navsearch'>
@@ -50,16 +52,33 @@ const Header = () => {
              </div>
              </Col>
               <Col>
+              <div className='headericon'>
                   <Link to="/Login" className='customlink'>
                   <FontAwesomeIcon icon={faUser}/>
                   </Link>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;&nbsp;
+                  <FontAwesomeIcon icon={faHeart}/>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+
+                  <FontAwesomeIcon icon={faCartShopping}/>
+                  {/* <FontAwesomeIcon icon={faHeartRegular} /> */}
+                  </div>
+             </Col>
+             {/* <Col>
+             <FontAwesomeIcon icon={faHeart}/> 
              </Col>
              <Col>
-             <FontAwesomeIcon icon={faHeart}/>
-             </Col>
-             <Col>
-             <FontAwesomeIcon icon={faCartShopping}/>
-             </Col>
+             <FontAwesomeIcon icon={faCartShopping}/> 
+             </Col> */}
              
              </Row>
              </Col>

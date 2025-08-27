@@ -53,6 +53,10 @@ import video5 from '../images/video5.mp4';
 import video6 from '../images/video6.mp4';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router';
+import {faHeart} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -459,6 +463,13 @@ const Home = () => {
                       </div>
                       <p>{product.productName}</p>
                       <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+                        <FontAwesomeIcon icon={faHeart}/>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
                       <button>Add to Cart</button>
                       </div>
                     </Link>
@@ -546,6 +557,13 @@ const Home = () => {
                       </div>
                       <p>{product.productName}</p>
                       <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
+                      <FontAwesomeIcon icon={faHeart}/>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
                       <button>Add to Cart</button>
                       </div>
                     </Link>

@@ -15,7 +15,7 @@ const SignupSchema = Yup.object().shape({
 const Login = () => {
     return (
         <div>
-            <Container className='profile'>
+            <Container>
                            <Row>
                                <Col xs={12} sm={8} md={6} lg={4}>
                                    <h1>Sign in</h1>
@@ -38,14 +38,14 @@ const Login = () => {
                                                <Row>
                                                    <Col>Email ID</Col>
                                                    <Col>
-                                                       <Field name="email" type="email" />
+                                                       <Field name="email" type="email" className="inputbox"/>
                                                        {errors.email && touched.email ? <div>{errors.email}</div> : null}
                                                    </Col>
                                                </Row>
                                                <Row>
                                                    <Col>Password</Col>
                                                    <Col>
-                                                       <Field name="password" type="password" />
+                                                       <Field name="password" type="password" className="inputbox"/>
                                                        {errors.password && touched.password? <div>{errors.password}</div> : null}
                                                    </Col>
                                                </Row>

@@ -25,6 +25,37 @@ const SignupSchema = Yup.object().shape({
     productDescription: Yup.string()
         .required('Required'),
 });
+
+const categories = [
+    {
+        "id" : "1",
+        "categoryName" : "Fringes"
+    },
+    {
+        "id" : "2",
+        "categoryName" : "Earrings"
+    },
+    {
+        "id" : "3",
+        "categoryName" : "Rings"
+    },
+    {
+        "id" : "4",
+        "categoryName" : "Sets"
+    },
+    {
+        "id" : "5",
+        "categoryName" : "Necklace"
+    },
+    {
+        "id" : "6",
+        "categoryName" : "Bangles"
+    },
+    {
+        "id" : "7",
+        "categoryName" : "Mens collections"
+    }
+]
 const AddProduct = () => {
     return (
         <div>
@@ -53,24 +84,37 @@ const AddProduct = () => {
                                 <Container>
                                     <Row>
                                         <Col>
-                                            Product Name
+                                            <label>Product Name</label>
                                         </Col>
 
                                         <Col>
-                                            <Field name="productName" />
+                                            <Field name="productName" className="inputbox" />
                                             {errors.productName && touched.productName ? (
                                                 <div>{errors.productName}</div>
                                             ) : null}
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col>Product Category</Col>
                                         <Col>
-                                            <Field name="productCategory" as="select">
-                                                <option value="">Choose Category</option>
-                                                <option value="red">Red</option>
-                                                <option value="green">Green</option>
-                                                <option value="blue">Blue</option>
+                                        <label>Product Category</label>
+                                        </Col>
+                                        <Col>
+                                            <Field name="productCategory" as="select" className="inputbox">
+                                                {/* <option value="">Choose Category</option>
+                                                <option value="red">Fringes</option>
+                                                <option value="green">Earrings</option>
+                                                <option value="blue">Rings</option>
+                                                <option value="blue">Necklaces</option>
+                                                <option value="blue">Sets</option>
+                                                <option value="blue">Bangles</option>
+                                                <option value="blue">Mens Collections</option> */}
+                                                {categories.map((category)=>{
+                                                    return(
+                                                <option value={category.id}>{category.categoryName}</option>
+
+                                                    )
+                                                })
+                                                }
                                             </Field>
                                             {errors.productCategory && touched.productCategory ? (
                                                 <div>{errors.productCategory}</div>
@@ -81,7 +125,7 @@ const AddProduct = () => {
                                     <Row>
                                         <Col>Product Price</Col>
                                         <Col>
-                                            <Field name="productPrice" />
+                                            <Field name="productPrice" className="inputbox"/>
                                             {errors.productPrice && touched.productPrice ? (
                                                 <div>{errors.productPrice}</div>
                                             ) : null}
@@ -109,7 +153,7 @@ const AddProduct = () => {
                                     <Row>
                                         <Col>Product for Occasions</Col>
                                         <Col>
-                                            <Field name="productOccasion" as="select">
+                                            <Field name="productOccasion" as="select" className="inputbox">
                                                 <option value="">Choose Ocassion</option>
                                                 <option value="red">Weddings</option>
                                                 <option value="green">Casuals</option>
@@ -124,7 +168,7 @@ const AddProduct = () => {
                                     <Row>
                                         <Col>Product Discount</Col>
                                         <Col>
-                                            <Field name="productDiscount" />
+                                            <Field name="productDiscount" className="inputbox"/>
                                             {errors.productDiscount && touched.productDiscount ? (
                                                 <div>{errors.productDiscount}</div>
                                             ) : null}
@@ -144,7 +188,7 @@ const AddProduct = () => {
                                                     Gold Plated
                                                 </label>
                                                 <label>
-                                                    <Field type="radio" name="productMaterial" value="silver" />
+                                                    <Field type="radio" name="productMaterial" value="silver" className="inputbox" />
                                                     Silver Plated
                                                 </label>
                                             </div>
@@ -154,7 +198,7 @@ const AddProduct = () => {
                                         <Col>Description</Col>
                                         <Col>
                                             <div>
-                                                <Field as="textarea" id="productDescription" name="productDescription" />
+                                                <Field as="textarea" id="productDescription" name="productDescription" className="inputbox"/>
                                             </div>
                                         </Col>
                                     </Row>

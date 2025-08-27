@@ -37,27 +37,27 @@ const Register2 = () => {
                                 <Form>
                                     <div className='aaa'>
                                         <Row>
-                                            <Col>Email Id</Col>
-                                            <Col>
-                                                <Field name="email" type="email" />
+                                            <Col xs={12} md={4}>Email Id</Col>
+                                            <Col xs={12} md={8}>
+                                                <Field name="email" type="email" className="inputbox"/>
                                                 {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
                                             </Col>
 
                                         </Row>
                                         <Row>
-                                            <Col>Password</Col>
-                                            <Col>
-                                                <Field name="password" type="password" />
+                                            <Col xs={12} md={4}>Password</Col>
+                                            <Col xs={12} md={8}>
+                                                <Field name="password" type="password" className="inputbox"/>
                                                 {errors.password && touched.password ? <div>{errors.password}</div> : null}
 
                                             </Col>
 
                                         </Row>
                                         <Row>
-                                            <Col>Mobile</Col>
-                                            <Col>
-                                                <Field name="mobile" type="mobile" />
+                                            <Col xs={12} md={4}>Mobile</Col>
+                                            <Col xs={12} md={8}>
+                                                <Field name="mobile" type="mobile" className="inputbox"/>
                                                 {errors.mobile && touched.mobile ? <div>{errors.mobile}</div> : null}
 
                                             </Col>
@@ -65,7 +65,7 @@ const Register2 = () => {
                                         </Row>
            
                                         <Row>
-                                            <Col>
+                                            <Col xs={12}>
                                                 <button type="submit">Submit</button>
                                             </Col>
                                         </Row>

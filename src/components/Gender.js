@@ -2,6 +2,9 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import slide3 from '../images/slide3.webp';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 
@@ -314,16 +317,16 @@ const Gender = () => {
             "reviewCount": 120,
             "isAvailable": true,
         },
-        
+
         {
             "id": 18,
-            "photo":[
-                "m1.webp","m2.webp"
+            "photo": [
+                "m1.webp", "m2.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -333,13 +336,13 @@ const Gender = () => {
         },
         {
             "id": 19,
-            "photo":[
-                "m3.webp","m4.webp"
+            "photo": [
+                "m3.webp", "m4.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -349,13 +352,13 @@ const Gender = () => {
         },
         {
             "id": 20,
-            "photo":[
-                "m5.webp","m6.webp"
+            "photo": [
+                "m5.webp", "m6.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -365,13 +368,13 @@ const Gender = () => {
         },
         {
             "id": 21,
-            "photo":[
-                "m7.webp","m8.webp"
+            "photo": [
+                "m7.webp", "m8.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -381,13 +384,13 @@ const Gender = () => {
         },
         {
             "id": 22,
-            "photo":[
-                "m9.webp","m10.webp"
+            "photo": [
+                "m9.webp", "m10.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -397,13 +400,13 @@ const Gender = () => {
         },
         {
             "id": 23,
-            "photo":[
-                "m11.webp","m12.webp"
+            "photo": [
+                "m11.webp", "m12.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -413,13 +416,13 @@ const Gender = () => {
         },
         {
             "id": 24,
-            "photo":[
-                "m13.webp","m14.webp"
+            "photo": [
+                "m13.webp", "m14.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -429,13 +432,13 @@ const Gender = () => {
         },
         {
             "id": 25,
-            "photo":[
-                "m15.webp","m16.webp"
+            "photo": [
+                "m15.webp", "m16.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -445,13 +448,13 @@ const Gender = () => {
         },
         {
             "id": 26,
-            "photo":[
-                "m17.webp","m18.webp"
+            "photo": [
+                "m17.webp", "m18.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -461,13 +464,13 @@ const Gender = () => {
         },
         {
             "id": 27,
-            "photo":[
-                "m19.webp","m20.webp"
+            "photo": [
+                "m19.webp", "m20.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -477,13 +480,13 @@ const Gender = () => {
         },
         {
             "id": 28,
-            "photo":[
-                "m21.webp","m22.webp"
+            "photo": [
+                "m21.webp", "m22.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -493,13 +496,13 @@ const Gender = () => {
         },
         {
             "id": 29,
-            "photo":[
-                "m23.webp","m24.webp"
+            "photo": [
+                "m23.webp", "m24.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -509,13 +512,13 @@ const Gender = () => {
         },
         {
             "id": 30,
-            "photo":[
-                "m25.webp","m26.webp"
+            "photo": [
+                "m25.webp", "m26.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -525,13 +528,13 @@ const Gender = () => {
         },
         {
             "id": 31,
-            "photo":[
-                "m27.webp","m28.webp"
+            "photo": [
+                "m27.webp", "m28.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -541,13 +544,13 @@ const Gender = () => {
         },
         {
             "id": 32,
-            "photo":[
-                "m29.webp","m30.webp"
+            "photo": [
+                "m29.webp", "m30.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -557,13 +560,13 @@ const Gender = () => {
         },
         {
             "id": 33,
-            "photo":[
-                "m31.webp","m32.webp"
+            "photo": [
+                "m31.webp", "m32.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -573,13 +576,13 @@ const Gender = () => {
         },
         {
             "id": 34,
-            "photo":[
-                "m33.webp","m34.webp"
+            "photo": [
+                "m33.webp", "m34.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -589,13 +592,13 @@ const Gender = () => {
         },
         {
             "id": 35,
-            "photo":[
-                "m35.webp","m36.webp"
+            "photo": [
+                "m35.webp", "m36.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Male",
+            "productCategory": "Male",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -606,7 +609,7 @@ const Gender = () => {
 
     ]
 
-    
+
     const { GenderName } = useParams();
     return (
         <div>
@@ -695,8 +698,12 @@ const Gender = () => {
                                                                 <Col><s>₹ {product.price1}</s></Col>
                                                                 <Col>₹ {product.price2}</Col>
                                                             </div>
-                                                            <button>Add to Cart</button>
-
+                                                            <Col> <FontAwesomeIcon icon={faHeart} />
+                                                                &nbsp;
+                                                                &nbsp;
+                                                                &nbsp;
+                                                                <button>Add to Cart</button>
+                                                            </Col>
                                                         </Row>
                                                     </div>
                                                 </Link>
@@ -716,7 +723,7 @@ const Gender = () => {
                 <Container>
                     <Row>
                         <Col>
-                        
+
                         </Col>
                     </Row>
                 </Container>

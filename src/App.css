@@ -46,6 +46,10 @@
   box-shadow: 2px 2px 1px 1px rgb(4, 4, 48);
 }
 
+.headericon{
+  padding: 35px;
+}
+
 .categories{
   display: flex;
   margin-bottom: 50px;
@@ -802,6 +806,9 @@
 .morecategory h6{
   margin:10px 0;
 }
+.morecategory .productf button{
+  margin-left: 50px;
+}
 
 .information{
   text-align: center;
@@ -829,21 +836,21 @@
 
 .aaa button {
   width: 150px;
-  background-color: rgb(4, 4, 48);
+  background: rgb(4, 4, 48);
   color: #fff;
   border-radius: 5px;
 }
 
 .aaa button:hover {
-  background-color: rgb(20, 20, 100);
-  color: #fff;
+  color: rgb(4, 4, 48);
+  background: #fff;
 }
 
 
 
 .profile button{
   color:#1f1055;
-  background:gray
+  background:#fff
 }
 
 .information{
@@ -852,4 +859,24 @@
 
 .information button{
   margin-left: 30px;
+}
+
+.aaa label{
+  color: rgb(9, 9, 62);
+}
+.inputbox{
+  background: rgb(212, 210, 210);
+  border: solid 2px rgb(9, 9, 62);
+  border-radius: 10px;
+  padding:5px;
+  color: rgb(9, 9, 62);
+  width:100%;
+}
+.aaa buttom{
+  background: #1f1055;
+  color: #fff;
+}
+.aaa buttom:hover{
+  background: #fff;
+  color: #1f1055;
 }

@@ -2,6 +2,9 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import slide3 from '../images/slide3.webp';
+import {faHeart} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 
@@ -1533,8 +1536,14 @@ const Category = () => {
                                                                 <Col><s>₹ {product.price1}</s></Col>
                                                                 <Col>₹ {product.price2}</Col>
                                                             </div>
+                                                            <Col>
+                                                            <FontAwesomeIcon icon={faHeart}/>
+                                                                                  &nbsp;
+                                                                                  &nbsp;
+                                                                                  &nbsp;
+                                                                                  
                                                             <button>Add to Cart</button>
-
+                                                            </Col>
                                                         </Row>
                                                     </div>
                                                 </Link>
