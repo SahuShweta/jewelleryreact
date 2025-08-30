@@ -463,7 +463,7 @@ const Home = () => {
                       </div>
                       <p>{product.productName}</p>
                       <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-                        <FontAwesomeIcon icon={faHeart}/>
+                        <FontAwesomeIcon icon={faHeart} className='favourite'/>
                       &nbsp;
                       &nbsp;
                       &nbsp;
@@ -557,7 +557,7 @@ const Home = () => {
                       </div>
                       <p>{product.productName}</p>
                       <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
-                      <FontAwesomeIcon icon={faHeart}/>
+                      <FontAwesomeIcon icon={faHeart} className='favourite'/>
                       &nbsp;
                       &nbsp;
                       &nbsp;

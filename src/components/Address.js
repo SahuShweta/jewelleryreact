@@ -41,7 +41,7 @@ const Address = () => {
                         <div className='aaa'>
                             <Container>
                                 <Row>
-                                    <Col xs={12} md={4}>Name</Col>
+                                    <Col xs={12} md={4}><h5>Name</h5></Col>
                                     <Col xs={12} md={8}>
                                     <Field name="name" placeholder="Full Name" className="inputbox"/>
                                         {errors.name && touched.name && <div>{errors.name}</div>}
@@ -49,7 +49,7 @@ const Address = () => {
                                 </Row>
 
                                 <Row>
-                                    <Col xs={12} md={4}>Email</Col>
+                                    <Col xs={12} md={4}><h5>Email</h5></Col>
                                     <Col xs={12} md={8}>
                                     <Field name="email" type="email" placeholder="Email" className="inputbox"/>
                                         {errors.email && touched.email && <div>{errors.email}</div>}
@@ -57,7 +57,7 @@ const Address = () => {
                                 </Row>
 
                                 <Row>
-                                    <Col xs={12} md={4}> Mobile Number   </Col>
+                                    <Col xs={12} md={4}><h5> Mobile Number </h5>  </Col>
                                     <Col xs={12} md={8}>
                                     <Field name="mobile" type="tel" placeholder="Mobile" className="inputbox"/>
                                         {errors.mobile && touched.mobile && <div>{errors.mobile}</div>}
@@ -65,7 +65,7 @@ const Address = () => {
                                 </Row>
 
                                 <Row>
-                                    <Col xs={12} md={4}> Address   </Col>
+                                    <Col xs={12} md={4}><h5> Address </h5>  </Col>
                                     <Col xs={12} md={8}>
                                     <Field name="address1" placeholder="Address Line 1" className="inputbox" />
                                         {errors.address1 && touched.address1 && <div>{errors.address1}</div>}
@@ -77,7 +77,7 @@ const Address = () => {
                                 </Row>
 
                                 <Row>
-                                    <Col xs={12} md={4}> City   </Col>
+                                    <Col xs={12} md={4}><h5> City </h5>  </Col>
                                     <Col xs={12} md={8}>
                                     <Field name="city" placeholder="City" className="inputbox"/>
                                         {errors.city && touched.city && <div>{errors.city}</div>}
@@ -85,7 +85,7 @@ const Address = () => {
                                 </Row>
 
                                 <Row>
-                                    <Col xs={12} md={4}> State   </Col>
+                                    <Col xs={12} md={4}> <h5>State </h5>  </Col>
                                     <Col xs={12} md={8}>
                                     <Field name="state" placeholder="State" className="inputbox" />
                                         {errors.state && touched.state && <div>{errors.state}</div>}
@@ -93,7 +93,7 @@ const Address = () => {
                                 </Row>
 
                                 <Row>
-                                    <Col xs={12} md={4}>Pin Code</Col>
+                                    <Col xs={12} md={4}><h5>Pin Code</h5></Col>
                                     <Col xs={12} md={8}><Field name="pin" placeholder="PIN / pin Code" className="inputbox"/>
                                         {errors.pin && touched.pin && <div>{errors.pin}</div>}
                                     </Col>

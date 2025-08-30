@@ -1537,7 +1537,7 @@ const Category = () => {
                                                                 <Col>₹ {product.price2}</Col>
                                                             </div>
                                                             <Col>
-                                                            <FontAwesomeIcon icon={faHeart}/>
+                                                            <FontAwesomeIcon icon={faHeart} className='favourite'/>
                                                                                   &nbsp;
                                                                                   &nbsp;
                                                                                   &nbsp;

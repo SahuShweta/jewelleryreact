@@ -133,7 +133,8 @@
 }
 .bohoarea button{
   display: inline-block;
-   width:150px;
+   width:200px;
+   height:40px;
   background-color: rgb(4, 4, 48);
   color: #fff;
   border-radius: 10px;
@@ -872,11 +873,21 @@
   color: rgb(9, 9, 62);
   width:100%;
 }
-.aaa buttom{
+.aaa button{
   background: #1f1055;
   color: #fff;
+  border-radius: 10px;
 }
-.aaa buttom:hover{
-  background: #fff;
+.aaa button:hover{
+  background: silver;
   color: #1f1055;
+}
+
+.favourite{
+  color: grey;
+  font-size: 40px;
+  margin-top:10px;
+}
+.favourite:hover{
+  color:#E72C92
 }
