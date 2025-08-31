@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import slide3 from '../images/slide3.webp';
-import {faHeart} from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -11,41 +11,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Category = () => {
 
-    const banners =[
+    const banners = [
         {
-            "id":1,
-            "image":"bannerEarrings.webp",
-            "productCategory":"Earring",
+            "id": 1,
+            "image": "bannerEarrings.webp",
+            "productCategory": "Earring",
             "productForGender": "Female"
         },
         {
-            "id":2,
-            "image":"bannerRings.webp",
-            "productCategory":"Rings",
+            "id": 2,
+            "image": "bannerRings.webp",
+            "productCategory": "Rings",
             "productForGender": "Female"
         },
         {
-            "id":3,
-            "image":"bannerBangles.webp",
-            "productCategory":"Bangles",
+            "id": 3,
+            "image": "bannerBangles.webp",
+            "productCategory": "Bangles",
             "productForGender": "Female"
         },
         {
-            "id":4,
-            "image":"bannerSets.webp",
-            "productCategory":"Sets Collections",
+            "id": 4,
+            "image": "bannerSets.webp",
+            "productCategory": "Sets Collections",
             "productForGender": "Female"
         },
         {
-            "id":5,
-            "image":"bannerNecklace.webp",
-            "productCategory":"Necklace",
+            "id": 5,
+            "image": "bannerNecklace.webp",
+            "productCategory": "Necklace",
             "productForGender": "Female"
         },
         {
-            "id":6,
-            "image":"manbanner.webp",
-            "productCategory":"Mens Collections",
+            "id": 6,
+            "image": "manbanner.webp",
+            "productCategory": "Mens Collections",
             "productForGender": "Male"
         }
     ]
@@ -300,7 +300,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 15,
             "photo": [
                 "e3.webp", "e4.webp",
@@ -316,7 +316,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 16,
             "photo": [
                 "e5.webp", "e6.webp",
@@ -332,7 +332,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 17,
             "photo": [
                 "e7.webp", "e8.webp",
@@ -348,7 +348,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 18,
             "photo": [
                 "e9.webp", "e10.webp",
@@ -364,7 +364,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 19,
             "photo": [
                 "e11.webp", "e12.webp",
@@ -380,7 +380,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 20,
             "photo": [
                 "e13.webp", "e14.webp",
@@ -396,7 +396,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 21,
             "photo": [
                 "e15.webp", "e16.webp",
@@ -412,7 +412,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 22,
             "photo": [
                 "e17.webp", "e18.webp",
@@ -428,7 +428,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 23,
             "photo": [
                 "e19.webp", "e20.webp",
@@ -444,7 +444,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 24,
             "photo": [
                 "e21.webp", "e22.webp",
@@ -460,7 +460,7 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        },{
+        }, {
             "id": 25,
             "photo": [
                 "e23.webp", "e24.webp",
@@ -511,7 +511,7 @@ const Category = () => {
             "reviewCount": 120,
             "isAvailable": true,
         },
-        
+
         {
             "id": 27,
             "photo": [
@@ -584,16 +584,16 @@ const Category = () => {
             "reviewCount": 120,
             "isAvailable": true,
         },
-        
+
         {
             "id": 31,
-            "photo":[
-                "m1.webp","m2.webp"
+            "photo": [
+                "m1.webp", "m2.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Mens collections",
+            "productCategory": "Mens collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -603,13 +603,13 @@ const Category = () => {
         },
         {
             "id": 32,
-            "photo":[
-                "m3.webp","m4.webp"
+            "photo": [
+                "m3.webp", "m4.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Mens collections",
+            "productCategory": "Mens collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -619,13 +619,13 @@ const Category = () => {
         },
         {
             "id": 33,
-            "photo":[
-                "m5.webp","m6.webp"
+            "photo": [
+                "m5.webp", "m6.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 1029,
             "price2": 598,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -635,13 +635,13 @@ const Category = () => {
         },
         {
             "id": 34,
-            "photo":[
-                "m7.webp","m8.webp"
+            "photo": [
+                "m7.webp", "m8.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -651,13 +651,13 @@ const Category = () => {
         },
         {
             "id": 35,
-            "photo":[
-                "m9.webp","m10.webp"
+            "photo": [
+                "m9.webp", "m10.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -667,13 +667,13 @@ const Category = () => {
         },
         {
             "id": 36,
-            "photo":[
-                "m11.webp","m12.webp"
+            "photo": [
+                "m11.webp", "m12.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -683,13 +683,13 @@ const Category = () => {
         },
         {
             "id": 37,
-            "photo":[
-                "m13.webp","m14.webp"
+            "photo": [
+                "m13.webp", "m14.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -699,13 +699,13 @@ const Category = () => {
         },
         {
             "id": 38,
-            "photo":[
-                "m15.webp","m16.webp"
+            "photo": [
+                "m15.webp", "m16.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -715,13 +715,13 @@ const Category = () => {
         },
         {
             "id": 39,
-            "photo":[
-                "m17.webp","m18.webp"
+            "photo": [
+                "m17.webp", "m18.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -731,13 +731,13 @@ const Category = () => {
         },
         {
             "id": 40,
-            "photo":[
-                "m19.webp","m20.webp"
+            "photo": [
+                "m19.webp", "m20.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -747,13 +747,13 @@ const Category = () => {
         },
         {
             "id": 41,
-            "photo":[
-                "m21.webp","m22.webp"
+            "photo": [
+                "m21.webp", "m22.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -763,13 +763,13 @@ const Category = () => {
         },
         {
             "id": 42,
-            "photo":[
-                "m23.webp","m24.webp"
+            "photo": [
+                "m23.webp", "m24.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -779,13 +779,13 @@ const Category = () => {
         },
         {
             "id": 43,
-            "photo":[
-                "m25.webp","m26.webp"
+            "photo": [
+                "m25.webp", "m26.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -795,13 +795,13 @@ const Category = () => {
         },
         {
             "id": 44,
-            "photo":[
-                "m27.webp","m28.webp"
+            "photo": [
+                "m27.webp", "m28.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -811,13 +811,13 @@ const Category = () => {
         },
         {
             "id": 45,
-            "photo":[
-                "m29.webp","m30.webp"
+            "photo": [
+                "m29.webp", "m30.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -827,13 +827,13 @@ const Category = () => {
         },
         {
             "id": 46,
-            "photo":[
-                "m31.webp","m32.webp"
+            "photo": [
+                "m31.webp", "m32.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -843,13 +843,13 @@ const Category = () => {
         },
         {
             "id": 47,
-            "photo":[
-                "m33.webp","m34.webp"
+            "photo": [
+                "m33.webp", "m34.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -859,13 +859,13 @@ const Category = () => {
         },
         {
             "id": 48,
-            "photo":[
-                "m35.webp","m36.webp"
+            "photo": [
+                "m35.webp", "m36.webp"
             ],
             "name": "Eclipse Golden Dominion American Diamond Men's Necklace",
             "price1": 598,
             "price2": 229,
-            "productCategory" : "Mens Collections",
+            "productCategory": "Mens Collections",
             "productForGender": "Male",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -875,13 +875,13 @@ const Category = () => {
         },
         {
             "id": 49,
-            "photo":[
-                "r1.webp","r2.webp"
+            "photo": [
+                "r1.webp", "r2.webp"
             ],
             "name": "Halo Essence Floral Front Open Ring",
             "price1": 1149,
             "price2": 689,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -891,13 +891,13 @@ const Category = () => {
         },
         {
             "id": 50,
-            "photo":[
-                "r3.webp","r4.webp"
+            "photo": [
+                "r3.webp", "r4.webp"
             ],
             "name": "Halo Essence Luster Floral Statement Ring",
-            "price1": 1049 ,
+            "price1": 1049,
             "price2": 629,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -907,13 +907,13 @@ const Category = () => {
         },
         {
             "id": 51,
-            "photo":[
-                "r5.webp","r6.webp"
+            "photo": [
+                "r5.webp", "r6.webp"
             ],
             "name": "Halo Essence Glory Statement Ring",
             "price1": 1599,
             "price2": 959,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -923,13 +923,13 @@ const Category = () => {
         },
         {
             "id": 52,
-            "photo":[
-                "r7.webp","r8.webp"
+            "photo": [
+                "r7.webp", "r8.webp"
             ],
             "name": "Halo Essence Statement Floral Halo Ring",
             "price1": 2899,
             "price2": 1739,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -939,13 +939,13 @@ const Category = () => {
         },
         {
             "id": 53,
-            "photo":[
-                "r9.webp","r10.webp"
+            "photo": [
+                "r9.webp", "r10.webp"
             ],
             "name": "Sparkling Elegance Regal Cut American Diamond Ring",
-            "price1": 649 ,
+            "price1": 649,
             "price2": 389,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -955,13 +955,13 @@ const Category = () => {
         },
         {
             "id": 54,
-            "photo":[
-                "r11.webp","r12.webp"
+            "photo": [
+                "r11.webp", "r12.webp"
             ],
             "name": "Sparkling Elegance Crystal Flora American Diamond Ring",
             "price1": 899,
             "price2": 539,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -971,13 +971,13 @@ const Category = () => {
         },
         {
             "id": 55,
-            "photo":[
-                "r13.webp","r14.webp"
+            "photo": [
+                "r13.webp", "r14.webp"
             ],
             "name": "Sparkling Elegance Celestial Dome American Diamond Ring",
             "price1": 899,
             "price2": 539,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -987,13 +987,13 @@ const Category = () => {
         },
         {
             "id": 56,
-            "photo":[
-                "r15.webp","r16.webp"
+            "photo": [
+                "r15.webp", "r16.webp"
             ],
             "name": "Sparkling Elegance Crystal Crown American Diamond Ring",
             "price1": 899,
             "price2": 539,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1003,13 +1003,13 @@ const Category = () => {
         },
         {
             "id": 57,
-            "photo":[
-                "r17.webp","r18.webp"
+            "photo": [
+                "r17.webp", "r18.webp"
             ],
             "name": "Madhubani Pakhi Phool Oxidised Enamel Ring",
             "price1": 749,
             "price2": 449,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1019,13 +1019,13 @@ const Category = () => {
         },
         {
             "id": 58,
-            "photo":[
-                "r19.webp","r20.webp"
+            "photo": [
+                "r19.webp", "r20.webp"
             ],
             "name": "Madhubani Pakhi Oxidised Enamel Ring",
             "price1": 849,
             "price2": 509,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1035,13 +1035,13 @@ const Category = () => {
         },
         {
             "id": 59,
-            "photo":[
-                "r21.webp","r22.webp"
+            "photo": [
+                "r21.webp", "r22.webp"
             ],
             "name": "Sparkling Elegance Dual-Stone Gold Ring",
             "price1": 1174,
             "price2": 704,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1051,13 +1051,13 @@ const Category = () => {
         },
         {
             "id": 60,
-            "photo":[
-                "r23.webp","r24.webp"
+            "photo": [
+                "r23.webp", "r24.webp"
             ],
             "name": "Sparkling Elegance Ethereal Glow Solitaire Ring",
             "price1": 1074,
             "price2": 644,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1067,13 +1067,13 @@ const Category = () => {
         },
         {
             "id": 61,
-            "photo":[
-                "r25.webp","r26.webp"
+            "photo": [
+                "r25.webp", "r26.webp"
             ],
             "name": "Tropical Wildlife Elephant Herd Band Sterling Silver Ring",
             "price1": 2899,
             "price2": 1739,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1083,13 +1083,13 @@ const Category = () => {
         },
         {
             "id": 62,
-            "photo":[
-                "r27.webp","r28.webp"
+            "photo": [
+                "r27.webp", "r28.webp"
             ],
             "name": "Sparkling Elegance Glowing Grace American Diamond Solitaire Ring",
             "price1": 974,
             "price2": 584,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1099,13 +1099,13 @@ const Category = () => {
         },
         {
             "id": 63,
-            "photo":[
-                "r29.webp","r30.webp"
+            "photo": [
+                "r29.webp", "r30.webp"
             ],
             "name": "Sparkling Elegance Lustre Radiance American Diamond Solitaire Ring",
             "price1": 749,
             "price2": 449,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1115,13 +1115,13 @@ const Category = () => {
         },
         {
             "id": 64,
-            "photo":[
-                "r31.webp","r32.webp"
+            "photo": [
+                "r31.webp", "r32.webp"
             ],
             "name": "Sparkling Elegance Eternal Radiance American Diamond Solitaire Ring",
             "price1": 849,
             "price2": 509,
-            "productCategory" : "Rings",
+            "productCategory": "Rings",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1131,13 +1131,13 @@ const Category = () => {
         },
         {
             "id": 65,
-            "photo":[
-                "bn1.webp","bn2.webp"
+            "photo": [
+                "bn1.webp", "bn2.webp"
             ],
             "name": "Halo Essence Radiance Studded Bracelet",
             "price1": 2899,
             "price2": 1739,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1147,13 +1147,13 @@ const Category = () => {
         },
         {
             "id": 66,
-            "photo":[
-                "bn3.webp","bn4.webp"
+            "photo": [
+                "bn3.webp", "bn4.webp"
             ],
             "name": "Halo Essence Studded Floral Bracelet",
             "price1": 1849,
             "price2": 1109,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1163,13 +1163,13 @@ const Category = () => {
         },
         {
             "id": 67,
-            "photo":[
-                "bn5.webp","bn6.webp"
+            "photo": [
+                "bn5.webp", "bn6.webp"
             ],
             "name": "Gold Elegance Nazaakat Bangles",
             "price1": 2199,
             "price2": 1329,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1179,13 +1179,13 @@ const Category = () => {
         },
         {
             "id": 68,
-            "photo":[
-                "bn7.webp","bn8.webp"
+            "photo": [
+                "bn7.webp", "bn8.webp"
             ],
             "name": "Gold Elegance Nazaakat Bangles",
             "price1": 1598,
             "price2": 1629,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1195,13 +1195,13 @@ const Category = () => {
         },
         {
             "id": 69,
-            "photo":[
-                "bn9.webp","bn10.webp"
+            "photo": [
+                "bn9.webp", "bn10.webp"
             ],
             "name": "Madhubani Vihang Vibes Oxidised Enamel Necklace Set",
             "price1": 1598,
             "price2": 929,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1211,13 +1211,13 @@ const Category = () => {
         },
         {
             "id": 70,
-            "photo":[
-                "bn11.webp","bn12.webp"
+            "photo": [
+                "bn11.webp", "bn12.webp"
             ],
             "name": "Madhubani Pakhi Phool Oxidised Enamel Bangle",
             "price1": 998,
             "price2": 569,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1227,13 +1227,13 @@ const Category = () => {
         },
         {
             "id": 71,
-            "photo":[
-                "bn13.webp","bn14.webp"
+            "photo": [
+                "bn13.webp", "bn14.webp"
             ],
             "name": "Tropical Wildlife Wings Of Butterfly Sterling Silver Bracelet",
             "price1": 3449,
             "price2": 2069,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1243,13 +1243,13 @@ const Category = () => {
         },
         {
             "id": 72,
-            "photo":[
-                "bn15.webp","bn16.webp"
+            "photo": [
+                "bn15.webp", "bn16.webp"
             ],
             "name": "Boho Tribe Evil Eye Oxidised Enamel Bracelet",
             "price1": 749,
             "price2": 449,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1259,13 +1259,13 @@ const Category = () => {
         },
         {
             "id": 73,
-            "photo":[
-                "bn17.webp","bn18.webp"
+            "photo": [
+                "bn17.webp", "bn18.webp"
             ],
             "name": "Boho Tribe Flower Turquoise Cuff Bangle",
             "price1": 1149,
             "price2": 689,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1275,13 +1275,13 @@ const Category = () => {
         },
         {
             "id": 74,
-            "photo":[
-                "bn19.webp","bn20.webp"
+            "photo": [
+                "bn19.webp", "bn20.webp"
             ],
             "name": "Boho Tribe Butterfly Oxidised Cuff Bangle",
             "price1": 1148,
             "price2": 689,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1291,13 +1291,13 @@ const Category = () => {
         },
         {
             "id": 75,
-            "photo":[
-                "bn21.webp","bn22.webp"
+            "photo": [
+                "bn21.webp", "bn22.webp"
             ],
             "name": "Royal Romance Victoria Bangles",
             "price1": 4699,
             "price2": 2819,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1307,13 +1307,13 @@ const Category = () => {
         },
         {
             "id": 76,
-            "photo":[
-                "bn23.webp","bn24.webp"
+            "photo": [
+                "bn23.webp", "bn24.webp"
             ],
             "name": "Royal Romance Blossom Statement Bracelet",
             "price1": 6449,
             "price2": 3869,
-            "productCategory" : "Bangles",
+            "productCategory": "Bangles",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1321,16 +1321,16 @@ const Category = () => {
             "rating": 3.5,
             "description": "Elevate your style with this exquisite men's bracelet from Voylla. Crafted from high-quality alloy and plated with luxurious yellow gold, this bracelet is designed to make a statement. The intricate design features interlocking links adorned with sparkling American diamonds, adding a touch of elegance and sophistication. Perfect for party wear, wedding wear, or as a thoughtful gift for special occasions like Valentine's Day, Diwali, Rakshabandhan, or as a gift for your brother, lover, boyfriend, or husband.This bracelet is not just an accessory but a symbol of timeless style and grace."
         },
-        
+
         {
             "id": 77,
-            "photo":[
-                "s1.webp","s2.webp"
+            "photo": [
+                "s1.webp", "s2.webp"
             ],
             "name": "Kundan Elegance Polki Noor Pendant Set",
             "price1": 6099,
             "price2": 3659,
-            "productCategory" : "Sets collections",
+            "productCategory": "Sets collections",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1340,13 +1340,13 @@ const Category = () => {
         },
         {
             "id": 78,
-            "photo":[
-                "s3.webp","s4.webp"
+            "photo": [
+                "s3.webp", "s4.webp"
             ],
             "name": "Kundan Elegance Noor-e-Nazakat Necklace Set",
             "price1": 6699,
             "price2": 4019,
-            "productCategory" : "Sets Collections",
+            "productCategory": "Sets Collections",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1356,13 +1356,13 @@ const Category = () => {
         },
         {
             "id": 79,
-            "photo":[
-                "s5.jpg","s6.webp"
+            "photo": [
+                "s5.jpg", "s6.webp"
             ],
             "name": "Kundan Elegance Noor-e-Nazakat Necklace Set",
             "price1": 6699,
             "price2": 4019,
-            "productCategory" : "Sets Collections",
+            "productCategory": "Sets Collections",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1372,13 +1372,13 @@ const Category = () => {
         },
         {
             "id": 80,
-            "photo":[
-                "s7.webp","s8.webp"
+            "photo": [
+                "s7.webp", "s8.webp"
             ],
             "name": "Kundan Elegance Noor-e-Nazakat Necklace Set",
             "price1": 6699,
             "price2": 4019,
-            "productCategory" : "Sets Collections",
+            "productCategory": "Sets Collections",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1388,13 +1388,13 @@ const Category = () => {
         },
         {
             "id": 81,
-            "photo":[
-                "s9.webp","s10.webp"
+            "photo": [
+                "s9.webp", "s10.webp"
             ],
             "name": "Kundan Elegance Noor-e-Nazakat Necklace Set",
             "price1": 6699,
             "price2": 4019,
-            "productCategory" : "Sets Collections",
+            "productCategory": "Sets Collections",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1404,13 +1404,13 @@ const Category = () => {
         },
         {
             "id": 78,
-            "photo":[
-                "s3.webp","s4.webp"
+            "photo": [
+                "s3.webp", "s4.webp"
             ],
             "name": "Kundan Elegance Noor-e-Nazakat Necklace Set",
             "price1": 6699,
             "price2": 4019,
-            "productCategory" : "Sets Collections",
+            "productCategory": "Sets Collections",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1420,13 +1420,13 @@ const Category = () => {
         },
         {
             "id": 78,
-            "photo":[
-                "s3.webp","s4.webp"
+            "photo": [
+                "s3.webp", "s4.webp"
             ],
             "name": "Kundan Elegance Noor-e-Nazakat Necklace Set",
             "price1": 6699,
             "price2": 4019,
-            "productCategory" : "Sets Collections",
+            "productCategory": "Sets Collections",
             "productForGender": "Female",
             "discountPercent": 10,
             "occasion": "Casual",
@@ -1437,7 +1437,7 @@ const Category = () => {
 
     ]
 
-    
+
     const { categoryName } = useParams();
     return (
         <div>
@@ -1446,14 +1446,14 @@ const Category = () => {
                 <Container fluid>
                     <Row>
                         <Col>
-                        {
-                         banners.filter(product => product.productCategory.includes(categoryName)).map((product) => {
-                            return(
-                                    <img src={"/" + product.image} alt='' className='img-fluid' />
-                            )
-                        }
-                    )
-                        }
+                            {
+                                banners.filter(product => product.productCategory.includes(categoryName)).map((product) => {
+                                    return (
+                                        <img src={"/" + product.image} alt='' className='img-fluid' />
+                                    )
+                                }
+                                )
+                            }
                         </Col>
                     </Row>
                 </Container>
@@ -1510,8 +1510,8 @@ const Category = () => {
                                 {
                                     // condition ? true part : false part
                                     products.filter(product => product.productCategory.includes(categoryName)).map((product) => {
-                                
-                                    // products.filter(product => product.productCategory.toLowerCase().includes(categoryName)).map((product) => {
+
+                                        // products.filter(product => product.productCategory.toLowerCase().includes(categoryName)).map((product) => {
                                         return (
                                             <Col md={3} className='morecategory'>
                                                 <Link to={"/Buypage/" + product.id + product.name}>
@@ -1537,12 +1537,10 @@ const Category = () => {
                                                                 <Col>₹ {product.price2}</Col>
                                                             </div>
                                                             <Col>
-                                                            <FontAwesomeIcon icon={faHeart} className='favourite'/>
-                                                                                  &nbsp;
-                                                                                  &nbsp;
-                                                                                  &nbsp;
-                                                                                  
-                                                            <button>Add to Cart</button>
+                                                                <div className="actions">
+                                                                    <FontAwesomeIcon icon={faHeart} className='favourite' />
+                                                                    <button className="cart-btn">Add to Cart</button>
+                                                                </div>
                                                             </Col>
                                                         </Row>
                                                     </div>
@@ -1551,7 +1549,7 @@ const Category = () => {
                                         )
                                     }
                                     )
-                                    
+
                                 }
 
                             </Row>

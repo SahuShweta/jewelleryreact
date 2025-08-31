@@ -53,7 +53,7 @@ import video5 from '../images/video5.mp4';
 import video6 from '../images/video6.mp4';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router';
-import {faHeart} from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -271,7 +271,7 @@ const Home = () => {
     }
   ];
 
-  
+
 
 
   return (
@@ -285,13 +285,13 @@ const Home = () => {
                 return (
                   <Col md={2}>
                     {/* <Link to={item.link}> */}
-                      <Link to={item.link} className='customlink'> 
+                    <Link to={item.link} className='customlink'>
 
-                    <div className='cat1'>
-                      <img src={item.photo} alt='' className='img-fluid' />
-                      <h3>{item.title}</h3>
-                    </div>
-                     </Link>
+                      <div className='cat1'>
+                        <img src={item.photo} alt='' className='img-fluid' />
+                        <h3>{item.title}</h3>
+                      </div>
+                    </Link>
                   </Col>
                 )
               }
@@ -359,74 +359,77 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      
-      
-       <section className='launcharea'>
-        <Container fluid>
-          <Row>
-            <Col>
-              <img src={p1} alt='' className='img-fluid' />
-              <Row className='panchi'>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp1} alt='' />
-                  </div>
-                </Col>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp2} alt='' />
-                  </div>
-                </Col>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp3} alt='' />
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            <Col>
-              <img src={p2} alt='' className='img-fluid' />
-              <Row className='panchi'>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp4} alt='' />
-                  </div>
-                </Col>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp5} alt='' />
-                  </div>
-                </Col>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp6} alt='' />
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            <Col>
-              <img src={p3} alt='' className='img-fluid' />
-              <Row className='panchi'>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp7} alt='' />
-                  </div>
-                </Col>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp8} alt='' />
-                  </div>
-                </Col>
-                <Col>
-                  <div className='tribe'>
-                    <img src={sp9} alt='' />
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </section> 
+
+
+      <section className='launcharea'>
+        <Link to="/Gender/Female">
+
+          <Container fluid>
+            <Row>
+              <Col>
+                <img src={p1} alt='' className='img-fluid' />
+                <Row className='panchi'>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp1} alt='' />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp2} alt='' />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp3} alt='' />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <img src={p2} alt='' className='img-fluid' />
+                <Row className='panchi'>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp4} alt='' />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp5} alt='' />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp6} alt='' />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <img src={p3} alt='' className='img-fluid' />
+                <Row className='panchi'>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp7} alt='' />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp8} alt='' />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className='tribe'>
+                      <img src={sp9} alt='' />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+        </Link>
+      </section>
 
       <section>
         <Container fluid className='linearea'>
@@ -456,21 +459,19 @@ const Home = () => {
                     <Link to={"/Buypage/" + product.id}>
                       <div className='bbox'>
                         <div className='bimage'>
-                        <img src={product.productImages[0]} alt="" />
-                      </div>
-                      <div className='bimage2'>
-                        <img src={product.productImages[1]} alt="" />
-                      </div>
-                      <p>{product.productName}</p>
-                      <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-                        <FontAwesomeIcon icon={faHeart} className='favourite'/>
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      <button>Add to Cart</button>
+                          <img src={product.productImages[0]} alt="" />
+                        </div>
+                        <div className='bimage2'>
+                          <img src={product.productImages[1]} alt="" />
+                        </div>
+                        <p>{product.productName}</p>
+                        <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+
+
+                        <div className="actions">
+                          <FontAwesomeIcon icon={faHeart} className='favourite' />
+                          <button className="cart-btn">Add to Cart</button>
+                        </div>
                       </div>
                     </Link>
                   </Col>
@@ -509,9 +510,9 @@ const Home = () => {
                 return (
                   <Col md={3}>
                     <Link to={"/Buypage/" + product.id}>
-                    <div className='collect1'>
-                      <img src={product.photo} alt='' className='img-fluid' />
-                    </div>
+                      <div className='collect1'>
+                        <img src={product.photo} alt='' className='img-fluid' />
+                      </div>
                     </Link>
                   </Col>
                 )
@@ -522,7 +523,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section>
+      <section >
         <Container fluid className='linearea'>
           <Row>
             <Col md={4}>
@@ -548,23 +549,24 @@ const Home = () => {
                 return (
                   <Col md={3}>
                     <Link to={"/Buypage/" + product.id}>
-                    <div className='bbest'>
-                      <div className='bestproduct'>
-                        <img src={product.productImages[0]} alt="" />
-                      </div>
-                      <div className='bestproduct2'>
-                        <img src={product.productImages[1]} alt="" />
-                      </div>
-                      <p>{product.productName}</p>
-                      <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
-                      <FontAwesomeIcon icon={faHeart} className='favourite'/>
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      <button>Add to Cart</button>
+                      <div className='bbest'>
+                        <div className='bestproduct'>
+                          <img src={product.productImages[0]} alt="" />
+                        </div>
+                        <div className='bestproduct2'>
+                          <img src={product.productImages[1]} alt="" />
+                        </div>
+                        <p>{product.productName}</p>
+                        <h5><s>₹ 849</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
+
+
+                        <div className="actions">
+                          <FontAwesomeIcon icon={faHeart} className='favourite' />
+
+                          <button className="cart-btn">Add to Cart</button>
+
+                        </div>
+
                       </div>
                     </Link>
                   </Col>
@@ -581,20 +583,25 @@ const Home = () => {
         <Container>
           <Row>
             <Col md={6}>
-              <div className='gimage1'>
-                <img src={g1} alt='' className='img-fluid' />
-              </div>
-              <h3>Gift for her</h3>
-              <p>For the woman who deserves all the sparkle in the world!</p>
-              <button>GIFT NOW</button>
+              <Link to="/Gender/Female">
+                <div className='gimage1'>
+
+                  <img src={g1} alt='' className='img-fluid' />
+                </div>
+                <h3>Gift for her</h3>
+                <p>For the woman who deserves all the sparkle in the world!</p>
+                <button>GIFT NOW</button>
+              </Link>
             </Col>
             <Col md={6}>
-              <h3>Gift for him</h3>
-              <p>The Perfect Gift for the Perfect Man!</p>
-              <button>GIFT NOW</button>
-              <div className='gimage2'>
-                <img src={g2} alt='' className='img-fluid' />
-              </div>
+              <Link to="/Gender/Male">
+                <h3>Gift for him</h3>
+                <p>The Perfect Gift for the Perfect Man!</p>
+                <button>GIFT NOW</button>
+                <div className='gimage2'>
+                  <img src={g2} alt='' className='img-fluid' />
+                </div>
+              </Link>
             </Col>
           </Row>
         </Container>
@@ -724,7 +731,7 @@ const Home = () => {
         </Container>
       </section>
 
-    </div>
+    </div >
   )
 }
 
