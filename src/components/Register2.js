@@ -4,6 +4,8 @@ import { Formik, Field, Form } from 'formik';
 import { Col, Container, Row } from 'react-bootstrap';
 import * as Yup from 'yup';
 import '../App.css'
+import InputMask from 'react-input-mask';
+
 
 
 
@@ -14,9 +16,9 @@ const SignupSchema = Yup.object().shape({
     // mobile: Yup.number().mobile('Invalid mobile').required('Required'),
 });
 const Register2 = () => {
-  return (
-    <div>
-      <Container className='profile'>
+    return (
+        <div>
+            <Container className='profile'>
                 <Row>
                     <Col>
                         <h1>Register your ID</h1>
@@ -39,7 +41,7 @@ const Register2 = () => {
                                         <Row>
                                             <Col xs={12} md={4}>Email Id</Col>
                                             <Col xs={12} md={8}>
-                                                <Field name="email" type="email" className="inputbox"/>
+                                                <Field name="email" type="email" className="inputbox" />
                                                 {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
                                             </Col>
@@ -48,7 +50,7 @@ const Register2 = () => {
                                         <Row>
                                             <Col xs={12} md={4}>Password</Col>
                                             <Col xs={12} md={8}>
-                                                <Field name="password" type="password" className="inputbox"/>
+                                                <Field name="password" type="password" className="inputbox" />
                                                 {errors.password && touched.password ? <div>{errors.password}</div> : null}
 
                                             </Col>
@@ -57,13 +59,15 @@ const Register2 = () => {
                                         <Row>
                                             <Col xs={12} md={4}>Mobile</Col>
                                             <Col xs={12} md={8}>
-                                                <Field name="mobile" type="mobile" className="inputbox"/>
+                                                {/* <Field name="mobile" type="mobile" className="inputbox"/> */}
+                                                <InputMask mask="9999999999" maskChar={null} name="mobile" placeholder="Mobile" className="inputbox" />
+
                                                 {errors.mobile && touched.mobile ? <div>{errors.mobile}</div> : null}
 
                                             </Col>
 
                                         </Row>
-           
+
                                         <Row>
                                             <Col xs={12}>
                                                 <button type="submit">Submit</button>
@@ -76,8 +80,8 @@ const Register2 = () => {
                     </Col>
                 </Row>
             </Container>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Register2

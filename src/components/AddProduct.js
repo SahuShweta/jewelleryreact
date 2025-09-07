@@ -188,7 +188,7 @@ const AddProduct = () => {
                                                     Gold Plated
                                                 </label>
                                                 <label>
-                                                    <Field type="radio" name="productMaterial" value="silver" className="inputbox" />
+                                                    <Field type="radio" name="productMaterial" value="silver"  />
                                                     Silver Plated
                                                 </label>
                                             </div>
