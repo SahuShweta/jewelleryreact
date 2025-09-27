@@ -9,7 +9,7 @@ import About from './components/About';
 import {Routes,Route} from 'react-router';
 import Fringes from './components/Fringes';
 import Jsr from './components/Jsr';
-// import Buypage from './components/Buypage';
+import Buypage from './components/Buypage';
 import Ranchi from './components/Ranchi';
 import Account from './components/Account';
 import CreateAccount from './components/CreateAccount';
@@ -22,6 +22,7 @@ import AddProduct from './components/AddProduct';
 import Login from './components/Login';
 import Register2 from './components/Register2';
 import Address from './components/Address';
+import Trial from './components/Trial';
 
 
 
@@ -40,7 +41,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/fringes" element={<Fringes/>}/>
       <Route path="/Jsr" element={<Jsr/>}/>
-      {/* <Route path="/Category/Buypage/:productDetails" element={<Buypage/>} /> */}
+      <Route path="/Category/Buypage/:productDetails" element={<Buypage/>} /> 
       <Route path="/Category/:categoryName" element={<Category/>} />
 
       <Route path="/ranchi" element={<Ranchi />} />
@@ -54,6 +55,7 @@ function App() {
       <Route path="/Login" element={<Login/>} />
       <Route path="/Register2" element={<Register2/>} />
       <Route path="/Address" element={<Address/>} />
+      <Route path="/Trial" element={<Trial/>} />
 
 
 
