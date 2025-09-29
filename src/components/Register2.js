@@ -113,6 +113,22 @@ const Register2 = () => {
                         </Formik>
                     </Col>
                 </Row>
+                <Row>
+            <Col>
+              {message && (
+                <div className="form-group">
+                  <div
+                    className={
+                      successful ? "alert alert-success" : "alert alert-danger"
+                    }
+                    role="alert"
+                  >
+                    {message}
+                  </div>
+                </div>
+              )}
+            </Col>
+          </Row>
             </Container>
         </div>
     )
