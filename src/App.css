@@ -821,6 +821,8 @@
 }
 .morecategory h6{
   margin:10px 0;
+  margin-right: 30px;
+  text-align: center;
 }
 .morecategory .productf button{
   margin-left: 50px;
@@ -1011,5 +1013,26 @@
   color: #000033 !important;
   border-radius:5px #000033 !important;
   box-shadow: 1px 2px 2px 2px #000033;
+}
+
+.icon-style{
+  display:flex;
+  align-items: center;
+  gap:5px;
+}
+
+.feedback{
+  color:gold;
+  font: size 1.2em;
+}
+
+.icon-style p {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.heading h1{
+  text-align: center;
 }
 

@@ -41,7 +41,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/fringes" element={<Fringes/>}/>
       <Route path="/Jsr" element={<Jsr/>}/>
-      <Route path="/Category/Buypage/:productDetails" element={<Buypage/>} /> 
+      <Route path="/Buypage/:productId" element={<Buypage/>} /> 
       <Route path="/Category/:categoryName" element={<Category/>} />
 
       <Route path="/ranchi" element={<Ranchi />} />

@@ -4,13 +4,16 @@ import { Link, useParams } from 'react-router-dom';
 import slide3 from '../images/slide3.webp';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Star from "./Star";
 
 
 
 
 
-const Gender = () => {
-    const products = [
+
+
+// const Gender = () => {
+   export const products = [
         {
             "id": 1,
             "photo": [
@@ -608,7 +611,7 @@ const Gender = () => {
         },
 
     ]
-
+    const Gender = () => {
 
     const { GenderName } = useParams();
     return (
@@ -626,8 +629,8 @@ const Gender = () => {
             <section>
                 <Container>
                     <Row>
-                        <Col>
-                            <h1>{GenderName}</h1>
+                        <Col className='heading'>
+                            <h1 className='headingtext-center'>{GenderName}</h1>
                         </Col>
                     </Row>
                 </Container>
@@ -676,7 +679,9 @@ const Gender = () => {
                                     products.filter(product => product.productForGender.includes(GenderName)).map((product) => {
                                         return (
                                             <Col md={3} className='morecategory'>
-                                                <Link to={"/Buypage/" + product.id + product.name}>
+                                                {/* <Link to={"/Buypage/" + product.id + product.name}> */}
+                                                <Link to={`/Buypage/${product.id}`}>
+
                                                     <div className='productf'>
                                                         <div className='fringe1'>
                                                             <img src={"/" + product.photo[0]} alt='' className='img-fluid' />
@@ -687,6 +692,7 @@ const Gender = () => {
                                                         <h6>{product.name}</h6>
                                                         <Row>
                                                             <Col>
+                                                            <Star stars={product.rating} reviews={product.rating} />
                                                                 <h5>Ratings= {product.rating}</h5>
                                                             </Col>
                                                             <Col>
