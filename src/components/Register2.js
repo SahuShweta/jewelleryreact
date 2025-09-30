@@ -23,7 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 const SignupSchema = Yup.object().shape({
-    mobile: Yup.string()
+    username: Yup.string()
         .matches(/^[6-9]\d{9}$/, "Enter a valid 10 Digit Mobile No. ")
         .required("Mobile No. is Mandetory!"),
     email: Yup.string().email("Invalid email").required("E-Mail Id Required"),
@@ -47,11 +47,11 @@ const Register2 = () => {
 
 
     const handleRegister = (formValue) => {
-        const { mobile, email, password } = formValue;
+        const { username, email, password } = formValue;
 
         setSuccessful(false);
 
-        dispatch(register({ mobile, email, password }))
+        dispatch(register({ username, email, password }))
             .unwrap()
             .then(() => {
                 setSuccessful(true);
@@ -77,7 +77,7 @@ const Register2 = () => {
                             </Row>
                             <Formik
                                 initialValues={{
-                                    mobile: "",
+                                    username: "",
                                     email: "",
                                     password: "",
                                 }}
@@ -96,7 +96,7 @@ const Register2 = () => {
                                                     <b>Mobile</b>
                                                 </Col>
                                                 <Col md={9}>
-                                                    <Field name="mobile" className="bbb" />
+                                                    <Field name="username" className="bbb" />
                                                     {/*<InputMask mask="9999999999" maskChar={null} name="mobile" className='boxes' /> */}
 
                                                     <div className="error">

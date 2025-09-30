@@ -74,24 +74,25 @@ const Login = () => {
                     <Formik
                         initialValues={{
 
-                            email: '',
+                            username: '',
                             password: '',
                         }}
                         validationSchema={LoginSchema}
-                        onSubmit={values => {
-                            // same shape as initial values
-                            console.log(values);
-                        }}
+                        // onSubmit={values => {
+                        //     // same shape as initial values
+                        //     console.log(values);
+                        // }}
+                        onSubmit={handleLogin}
                     >
                         {({ errors, touched }) => (
                             <Form>
                                 <div className='aaa'>
 
                                     <Row>
-                                        <Col>Email ID</Col>
+                                        <Col>Mobile</Col>
                                         <Col>
-                                            <Field name="email" type="email" className="inputbox" />
-                                            {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                                            <Field name="username" className="inputbox" />
+                                            {errors.username && touched.username ? <div>{errors.username}</div> : null}
                                         </Col>
                                     </Row>
                                     <Row>

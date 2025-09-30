@@ -8,8 +8,19 @@ import { faUser, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-ico
 
 import { Link } from 'react-router';
 
+import { logout } from "../slices/auth";
+import { useSelector, useDispatch } from "react-redux";
 
 const Header = () => {
+  
+  const dispatch = useDispatch();
+  const { user: currentUser } = useSelector((state) => state.auth);
+  console.log(currentUser);
+  const handleLogout = () => {
+    dispatch(logout());
+    // navigate('/login'); // Redirect to login page
+    window.location.reload();
+  };
   return (
     <div>
       <header className='toparea'>
@@ -21,6 +32,9 @@ const Header = () => {
             <h1><Link to="/New">new</Link></h1>
             <h1><Link to="/Fringes">fringess</Link></h1> */}
             <h1><Link to="/Trial">Trial</Link></h1>
+            {
+              currentUser ? <p>Welcome {currentUser.email}</p> :""
+            }
             </Col>
           </Row>
         </Container>
@@ -40,6 +54,9 @@ const Header = () => {
                   <li><Link to="/Category/fringes" className='customlink'>Fringes</Link></li>
                   <li><Link to="/Gender/Female" className='customlink'>Women</Link></li>
                   <li><Link to="/Gender/Male" className='customlink'>Men</Link></li>
+                  {
+                    currentUser ? <li><Link onClick={handleLogout} className='customlink'>Logout</Link></li> :""
+                  }
                   <li>Collections</li>
                 </ul>
               </div>
