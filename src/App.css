@@ -1036,3 +1036,8 @@
   text-align: center;
 }
 
+.error{
+  color: #F70000;
+  font-size: 14px;
+}
+

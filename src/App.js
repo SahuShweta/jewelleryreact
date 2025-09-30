@@ -23,6 +23,7 @@ import Login from './components/Login';
 import Register2 from './components/Register2';
 import Address from './components/Address';
 import Trial from './components/Trial';
+import Account2 from './components/Account2';
 
 
 
@@ -56,6 +57,7 @@ function App() {
       <Route path="/Register2" element={<Register2/>} />
       <Route path="/Address" element={<Address/>} />
       <Route path="/Trial" element={<Trial/>} />
+      <Route path="/Account2" element={<Account2/>} />
 
 
 
