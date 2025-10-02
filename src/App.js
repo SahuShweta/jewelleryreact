@@ -20,10 +20,10 @@ import Gender from './components/Gender';
 // import Register from './components/Register';
 import AddProduct from './components/AddProduct';
 import Login from './components/Login';
-import Register2 from './components/Register2';
+import Register from './components/Register';
 import Address from './components/Address';
-import Trial from './components/Trial';
-import Account2 from './components/Account2';
+// import Trial from './components/Trial';
+import AccountDetails from './components/AccountDetails';
 
 
 
@@ -54,10 +54,10 @@ function App() {
       {/* <Route path="/Register" element={<Register/>} /> */}
       <Route path="/AddProduct" element={<AddProduct/>} />
       <Route path="/Login" element={<Login/>} />
-      <Route path="/Register2" element={<Register2/>} />
+      <Route path="/Register" element={<Register/>} />
       <Route path="/Address" element={<Address/>} />
-      <Route path="/Trial" element={<Trial/>} />
-      <Route path="/Account2" element={<Account2/>} />
+      {/* <Route path="/Trial" element={<Trial/>} /> */}
+      <Route path="/AccountDetails" element={<AccountDetails/>} />
 
 
 

@@ -57,7 +57,7 @@ const Login = () => {
 
         return (
             <div>
-                <Container>
+                <Container className='login'>
                     <Row>
                         <Col xs={12} sm={8} md={6} lg={4}>
                             <h1>Sign in</h1>
@@ -91,7 +91,7 @@ const Login = () => {
                                     <Row>
                                         <Col>Mobile</Col>
                                         <Col>
-                                            <Field name="username" className="inputbox" />
+                                            <Field name="username" className="inputbox" autoComplete="off" />
                                             {errors.username && touched.username ? <div>{errors.username}</div> : null}
                                         </Col>
                                     </Row>

@@ -51,7 +51,7 @@ const Account = () => {
 
                     <p>Register with us for faster checkout,</p>
                     <p>to track the status of your order and more.</p>
-                    <button><Link to="/CreateAccount" className='customlink'>CREATE AN ACCOUNT</Link></button>
+                    <button><Link to="/Register" className='customlink'>CREATE AN ACCOUNT</Link></button>
                     </Col>
 
                 </Row>

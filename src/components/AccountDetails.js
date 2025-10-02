@@ -2,9 +2,9 @@ import React from "react";
 import { Navigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
-const Account2 = () => {
+const AccountDetails = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
-
+console.log(currentUser)
   if (!currentUser) {
     return <Navigate to="/login" />;
   }
@@ -35,4 +35,4 @@ const Account2 = () => {
   );
 };
 
-export default Account2;
+export default AccountDetails;

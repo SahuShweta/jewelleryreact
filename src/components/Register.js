@@ -35,7 +35,7 @@ const SignupSchema = Yup.object().shape({
 
 
 
-const Register2 = () => {
+const Register = () => {
     const [successful, setSuccessful] = useState(false);
 
     const { message } = useSelector((state) => state.message);
@@ -262,5 +262,5 @@ const Register2 = () => {
     )
 }
 
-export default Register2
+export default Register
 

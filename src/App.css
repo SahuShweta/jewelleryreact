@@ -1040,4 +1040,12 @@
   color: #F70000;
   font-size: 14px;
 }
+.login{
+  text-align: center;
+  box-shadow: #1f1055;
+}
+.login h1{
+  margin-left: 200px;
+  text-align: center;
+}
 
