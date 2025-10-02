@@ -1,62 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import './../App.css'
+import axios from 'axios';
+import './../App.css';
 
-
+import { Navigate } from 'react-router-dom';
+import { useSelector } from "react-redux";
 const SignupSchema = Yup.object().shape({
     productName: Yup.string()
         .min(2, 'Too Short!')
         .max(50, 'Too Long!')
         .required('Required'),
-    productCategory: Yup.string().required('required'),
-
-    productPrice: Yup.number()
-        .positive('Price must be positive'),
-    productGender: Yup.string().required('required'),
-
-    productOccasion: Yup.string().required('required'),
-
-    productDiscount: Yup.number()
-        .positive('Discount must be positive'),
-    productMaterial: Yup.string()
-        .required('Required'),
-    productDescription: Yup.string()
-        .required('Required'),
+    productCategory: Yup.string().required('Required'),
+    productPrice: Yup.number().positive('Price must be positive'),
+    productGender: Yup.string().required('Required'),
+    productOccasion: Yup.string().required('Required'),
+    productDiscount: Yup.number().positive('Discount must be positive'),
+    productMaterial: Yup.string().required('Required'),
+    productDescription: Yup.string().required('Required'),
 });
 
 const categories = [
-    {
-        "id" : "1",
-        "categoryName" : "Fringes"
-    },
-    {
-        "id" : "2",
-        "categoryName" : "Earrings"
-    },
-    {
-        "id" : "3",
-        "categoryName" : "Rings"
-    },
-    {
-        "id" : "4",
-        "categoryName" : "Sets"
-    },
-    {
-        "id" : "5",
-        "categoryName" : "Necklace"
-    },
-    {
-        "id" : "6",
-        "categoryName" : "Bangles"
-    },
-    {
-        "id" : "7",
-        "categoryName" : "Mens collections"
-    }
-]
+    { id: "1", categoryName: "Fringes" },
+    { id: "2", categoryName: "Earrings" },
+    { id: "3", categoryName: "Rings" },
+    { id: "4", categoryName: "Sets" },
+    { id: "5", categoryName: "Necklace" },
+    { id: "6", categoryName: "Bangles" },
+    { id: "7", categoryName: "Mens collections" }
+];
+
 const AddProduct = () => {
+    const [selectedImages, setSelectedImages] = useState([]);
+    
+    const handleFileChange = (e) => {
+        setSelectedImages(e.target.files);
+    };
+const { user: currentUser } = useSelector((state) => state.auth);
+console.log(currentUser)
+  if (!currentUser) {
+    return <Navigate to="/login" />;
+  }
     return (
         <div>
             <Container>
@@ -70,153 +55,150 @@ const AddProduct = () => {
                         productDiscount: '',
                         productMaterial: '',
                         productDescription: '',
-
                     }}
                     validationSchema={SignupSchema}
-                    onSubmit={values => {
-                        // same shape as initial values
-                        console.log(values);
-                    }}
+                    onSubmit={async (values, { resetForm }) => {
+    const formData = new FormData();
+
+    // ✅ Append userId from Redux store
+    formData.append("userId", currentUser.id);
+
+    // ✅ Append other form fields
+    Object.keys(values).forEach((key) => {
+        formData.append(key, values[key]);
+    });
+
+    // ✅ Append image files
+    for (let i = 0; i < selectedImages.length; i++) {
+        formData.append("images", selectedImages[i]);
+    }
+
+    try {
+        const res = await axios.post("http://localhost:8090/api/ssproducts", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        });
+        console.log("Upload success:", res.data);
+        alert("Product added successfully!");
+        resetForm();
+        setSelectedImages([]);
+    } catch (err) {
+        console.error("Upload failed:", err);
+        alert("Failed to add product");
+    }
+}}
+
                 >
                     {({ errors, touched }) => (
                         <Form>
                             <div className='aaa'>
                                 <Container>
                                     <Row>
-                                        <Col>
-                                            <label>Product Name</label>
-                                        </Col>
-
+                                        <Col><label>Product Name</label></Col>
                                         <Col>
                                             <Field name="productName" className="inputbox" />
-                                            {errors.productName && touched.productName ? (
-                                                <div>{errors.productName}</div>
-                                            ) : null}
+                                            {errors.productName && touched.productName && <div>{errors.productName}</div>}
                                         </Col>
                                     </Row>
+
                                     <Row>
-                                        <Col>
-                                        <label>Product Category</label>
-                                        </Col>
+                                        <Col><label>Product Category</label></Col>
                                         <Col>
                                             <Field name="productCategory" as="select" className="inputbox">
-                                                {/* <option value="">Choose Category</option>
-                                                <option value="red">Fringes</option>
-                                                <option value="green">Earrings</option>
-                                                <option value="blue">Rings</option>
-                                                <option value="blue">Necklaces</option>
-                                                <option value="blue">Sets</option>
-                                                <option value="blue">Bangles</option>
-                                                <option value="blue">Mens Collections</option> */}
-                                                {categories.map((category)=>{
-                                                    return(
-                                                <option value={category.id}>{category.categoryName}</option>
-
-                                                    )
-                                                })
-                                                }
+                                                <option value="">Select Category</option>
+                                                {categories.map((category) => (
+                                                    <option key={category.id} value={category.categoryName}>
+                                                        {category.categoryName}
+                                                    </option>
+                                                ))}
                                             </Field>
-                                            {errors.productCategory && touched.productCategory ? (
-                                                <div>{errors.productCategory}</div>
-                                            ) : null}
+                                            {errors.productCategory && touched.productCategory && <div>{errors.productCategory}</div>}
                                         </Col>
-
                                     </Row>
+
                                     <Row>
                                         <Col>Product Price</Col>
                                         <Col>
-                                            <Field name="productPrice" className="inputbox"/>
-                                            {errors.productPrice && touched.productPrice ? (
-                                                <div>{errors.productPrice}</div>
-                                            ) : null}
-                                        </Col>
-
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <div id="my-radio-group">Gender</div>
-                                        </Col>
-                                        <Col>
-                                            <div role="group" aria-labelledby='my-radio-group'>
-                                                <label>
-                                                    <Field type="radio" name="productGender" value="Women" />
-                                                    Women
-                                                </label>
-                                                <label>
-                                                    <Field type="radio" name="productGender" value="Men" />
-                                                    Men
-                                                </label>
-                                            </div>
+                                            <Field name="productPrice" className="inputbox" />
+                                            {errors.productPrice && touched.productPrice && <div>{errors.productPrice}</div>}
                                         </Col>
                                     </Row>
 
                                     <Row>
-                                        <Col>Product for Occasions</Col>
+                                        <Col><label>Gender</label></Col>
+                                        <Col>
+                                            <label><Field type="radio" name="productGender" value="Women" /> Women</label>
+                                            <label><Field type="radio" name="productGender" value="Men" /> Men</label>
+                                        </Col>
+                                    </Row>
+
+                                    <Row>
+                                        <Col>Product Occasion</Col>
                                         <Col>
                                             <Field name="productOccasion" as="select" className="inputbox">
-                                                <option value="">Choose Ocassion</option>
-                                                <option value="red">Weddings</option>
-                                                <option value="green">Casuals</option>
-                                                <option value="blue">Ethnic</option>
+                                                <option value="">Choose Occasion</option>
+                                                <option value="Weddings">Weddings</option>
+                                                <option value="Casuals">Casuals</option>
+                                                <option value="Ethnic">Ethnic</option>
                                             </Field>
-                                            {errors.productOccasion && touched.productOccasion ? (
-                                                <div>{errors.productOccasion}</div>
-                                            ) : null}
+                                            {errors.productOccasion && touched.productOccasion && <div>{errors.productOccasion}</div>}
                                         </Col>
-
                                     </Row>
+
                                     <Row>
                                         <Col>Product Discount</Col>
                                         <Col>
-                                            <Field name="productDiscount" className="inputbox"/>
-                                            {errors.productDiscount && touched.productDiscount ? (
-                                                <div>{errors.productDiscount}</div>
-                                            ) : null}
+                                            <Field name="productDiscount" className="inputbox" />
+                                            {errors.productDiscount && touched.productDiscount && <div>{errors.productDiscount}</div>}
                                         </Col>
-
                                     </Row>
-
 
                                     <Row>
+                                        <Col>Product Material</Col>
                                         <Col>
-                                            <div id="my-radio-group">Product Material</div>
-                                        </Col>
-                                        <Col>
-                                            <div role="group" aria-labelledby='my-radio-group'>
-                                                <label>
-                                                    <Field type="radio" name="productMaterial" value="gold" />
-                                                    Gold Plated
-                                                </label>
-                                                <label>
-                                                    <Field type="radio" name="productMaterial" value="silver"  />
-                                                    Silver Plated
-                                                </label>
-                                            </div>
+                                            <label><Field type="radio" name="productMaterial" value="Gold" /> Gold Plated</label>
+                                            <label><Field type="radio" name="productMaterial" value="Silver" /> Silver Plated</label>
+                                            {errors.productMaterial && touched.productMaterial && <div>{errors.productMaterial}</div>}
                                         </Col>
                                     </Row>
+
                                     <Row>
                                         <Col>Description</Col>
                                         <Col>
-                                            <div>
-                                                <Field as="textarea" id="productDescription" name="productDescription" className="inputbox"/>
-                                            </div>
+                                            <Field as="textarea" name="productDescription" className="inputbox" />
+                                            {errors.productDescription && touched.productDescription && <div>{errors.productDescription}</div>}
                                         </Col>
                                     </Row>
 
+                                    <Row>
+                                        <Col>Upload Images</Col>
+                                        <Col>
+                                            <input
+                                                type="file"
+                                                multiple
+                                                accept="image/*"
+                                                onChange={handleFileChange}
+                                            />
+                                            {selectedImages.length > 0 && (
+                                                <div>{selectedImages.length} image(s) selected</div>
+                                            )}
+                                        </Col>
+                                    </Row>
 
+                                    <Row className="mt-3">
+                                        <Col>
+                                            <button type="submit" className="btn btn-primary">Submit</button>
+                                        </Col>
+                                    </Row>
                                 </Container>
-
-
-
-
-                                <button type="submit">Submit</button>
                             </div>
                         </Form>
                     )}
                 </Formik>
             </Container>
         </div>
-    )
-}
+    );
+};
 
-export default AddProduct
+export default AddProduct;
