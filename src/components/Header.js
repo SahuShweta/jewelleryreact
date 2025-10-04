@@ -4,6 +4,9 @@ import brandlogo from '../images/brandlogo.png';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { IoLogOut } from "react-icons/io5";
+
+
 // import { faHeartRegular } from '@fortawesome/free-regular-svg-icons'; 
 
 import { Link } from 'react-router';
@@ -58,9 +61,9 @@ const Header = () => {
                     <li><Link to="/Category/fringes" className='customlink'>Fringes</Link></li>
                     <li><Link to="/Gender/Female" className='customlink'>Women</Link></li>
                     <li><Link to="/Gender/Male" className='customlink'>Men</Link></li>
-                    {
+                    {/* {
                       currentUser ? <li><Link onClick={handleLogout} className='customlink'>Logout</Link></li> : ""
-                    }
+                    } */}
                     <li>Collections</li>
                   </ul>
                 </div>
@@ -82,16 +85,22 @@ const Header = () => {
                       &nbsp;
                       &nbsp;
                       &nbsp;
-                      &nbsp;&nbsp;
-                      <FontAwesomeIcon icon={faHeart} className='icons' />
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
+                      <Link to="/Wishlist" className='customlink'>
 
+                      <FontAwesomeIcon icon={faHeart} className='icons' />
+                      </Link>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
                       <FontAwesomeIcon icon={faCartShopping} className='icons' />
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      {
+                      currentUser ? <Link onClick={handleLogout} className='customlink'><IoLogOut className='logout'/></Link> : ""
+                    }
                     </div>
                   </Col>
                 </Row>

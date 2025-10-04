@@ -1,15 +1,18 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import{ faFacebook } from '@fortawesome/free-solid-svg-icons';
-import{ faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-// import{ faTwitter } from '@fortawesome/free-brands-svg-icons';
-// import{ faFacebook } from '@fortawesome/free-brands-svg-icons';
-// import{ faFacebook } from '@fortawesome/free-brands-svg-icons';
-// import{ faFacebook } from '@fortawesome/free-brands-svg-icons';
+import{ faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-//import { faWhatsapp } from '@fortawesome/free-solid-svg-icons';
 import { Row, Container, Col, } from 'react-bootstrap';
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaPinterestP } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
+
+
+
 
 
 const Footer = () => {
@@ -64,19 +67,19 @@ const Footer = () => {
                   <Row>
                     <div className='socialarea'>
                     <Col>
-                      <div className='social1'><FontAwesomeIcon icon={faFacebook} className='s1' /></div>
+                      <div className='social1'><FaFacebookF className='s1' /></div>
                     </Col>
                     <Col>
-                        <div className='social2'><FontAwesomeIcon icon={faFacebook} className='s2' /></div>
+                        <div className='social2'><FaTwitter  className='s2' /></div>
                     </Col>
                     <Col>
-                        <div className='social3'><FontAwesomeIcon icon={faFacebook} className='s3' /></div>
+                        <div className='social3'><FaInstagram className='s3'/></div>
                     </Col>
                     <Col>
-                        <div className='social4'><FontAwesomeIcon icon={faFacebook} className='s4' /></div>
+                        <div className='social4'><FaPinterestP className='s4' /></div>
                     </Col>
                     <Col>
-                        <div className='social5'><FontAwesomeIcon icon={faFacebook} className='s5' /></div>
+                        <div className='social5'><FaYoutube className='s5' /></div>
                     </Col>
                     </div>
                   </Row>

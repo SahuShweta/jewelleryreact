@@ -45,6 +45,12 @@
   color: #1f1055;
   box-shadow: 2px 2px 1px 1px #1f1055;
 }
+.logout{
+  margin-bottom : 15px;
+  width : 40px;
+  height : 40px;
+  color: #F70000;
+}
 
 .headericon{
   padding: 35px;
@@ -575,8 +581,10 @@
   background: rgb(4, 4, 48);
 }
 .s1{
-  width: 100%;
-  height:100%;
+  align-items: center;
+   width: 80%;
+   height:80%;
+   margin-top: 5px;
 }
 
 .social1:hover{
@@ -594,8 +602,10 @@
   background:rgb(4, 4, 48);
 }
 .s2{
-  width: 100%;
-  height:100%;
+  width: 80%;
+  height: 80%;
+  margin-top : 5px;
+
 }
 
 .social2:hover{
@@ -613,8 +623,10 @@
   background:rgb(4, 4, 48);
 }
 .s3{
-  width: 100%;
-  height:100%;
+  width: 80%;
+  height: 80%;
+  margin-top : 5px;
+
 }
 .social3:hover{
   background:linear-gradient(to bottom, #5F2690 0%, #E72C92 50%, #F7BD01 100%);
@@ -632,8 +644,10 @@
   background:rgb(4, 4, 48);
 }
 .s4{
-  width: 100%;
-  height:100%;
+  width: 80%;
+  height: 80%;
+  margin-top : 5px;
+
 }
 .social4:hover{
   background: #C51F26;
@@ -651,8 +665,9 @@
   background:rgb(4, 4, 48);
 }
 .s5{
-  width: 100%;
-  height:100%;
+  margin-top : 5px;
+  width: 80%;
+  height: 80%;
 }
 .social5:hover{
   background: #F70000;
