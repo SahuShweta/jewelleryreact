@@ -5,6 +5,11 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { IoLogOut } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
+import { BsCart4 } from "react-icons/bs";
+import { TbLogout } from "react-icons/tb";
+
 
 
 // import { faHeartRegular } from '@fortawesome/free-regular-svg-icons'; 
@@ -79,7 +84,7 @@ const Header = () => {
                   <Col>
                     <div className='headericon'>
                       <Link to="/Login" className='customlink'>
-                        <FontAwesomeIcon icon={faUser} className='icons' />
+                        <FaRegUser  className='icon'/>
                       </Link>
                       &nbsp;
                       &nbsp;
@@ -87,19 +92,19 @@ const Header = () => {
                       &nbsp;
                       <Link to="/Wishlist" className='customlink'>
 
-                      <FontAwesomeIcon icon={faHeart} className='icons' />
+                      <FaRegHeart className='icon'/>
                       </Link>
                       &nbsp;
                       &nbsp;
                       &nbsp;
                       &nbsp;
-                      <FontAwesomeIcon icon={faCartShopping} className='icons' />
+                      <BsCart4 className='icon'/>
                       &nbsp;
                       &nbsp;
                       &nbsp;
                       &nbsp;
                       {
-                      currentUser ? <Link onClick={handleLogout} className='customlink'><IoLogOut className='logout'/></Link> : ""
+                      currentUser ? <Link onClick={handleLogout} className='customlink'><TbLogout className='icon'/></Link> : ""
                     }
                     </div>
                   </Col>

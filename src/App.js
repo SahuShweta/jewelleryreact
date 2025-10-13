@@ -28,6 +28,9 @@ import Star from './components/Star';
 import Wishlist from './components/Wishlist';
 import AddCategory from './components/AddCategory';
 import AdminDashboard from './components/AdminDashboard';
+import AdminProducts from './components/AdminProducts';
+import AllProducts from './components/AllProducts';
+import Carts from './components/Carts';
 
 
 
@@ -66,7 +69,10 @@ function App() {
       <Route path="/Star" element={<Star/>} />
       <Route path="/Wishlist" element={<Wishlist/>} />
       <Route path="/AddCategory" element={<AddCategory/>} />
+      <Route path="/AdminProducts" element={<AdminProducts/>} />
       <Route path="/AdminDashboard" element={<AdminDashboard/>} />
+      <Route path="/AllProducts" element={<AllProducts/>} />
+      <Route path="/Carts" element={<Carts/>} />
 
 
 

@@ -55,7 +55,7 @@ const Category = () => {
             "photo": [
                 "f1.webp", "f2.webp",
             ],
-            "name": "Aham bramhasmi moksh rudracks beads",
+            "name": "Fringes Thrill Statement Dangler Earrings",
             "productCategory": "fringes",
             "productForGender": "Female",
             "description": "Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
@@ -426,6 +426,7 @@ const Category = () => {
             "occasion": "Wedding",
             "discountPercent": 10,
             "rating": 4.5,
+            "description":"Delicate oxidised silver jhumkas that blend tradition and trend. Ideal for daily wear or casual festive occasions. Handcrafted to add a bold statement to your look.",
             "reviewCount": 120,
             "isAvailable": true,
         }, {
@@ -444,7 +445,8 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        }, {
+        }, 
+        {
             "id": 24,
             "photo": [
                 "e21.webp", "e22.webp",
@@ -460,7 +462,8 @@ const Category = () => {
             "rating": 4.5,
             "reviewCount": 120,
             "isAvailable": true,
-        }, {
+        },
+         {
             "id": 25,
             "photo": [
                 "e23.webp", "e24.webp",

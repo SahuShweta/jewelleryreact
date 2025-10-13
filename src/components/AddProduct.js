@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
@@ -7,6 +7,9 @@ import './../App.css';
 
 import { Navigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
+
+
+
 const SignupSchema = Yup.object().shape({
     productName: Yup.string()
         .min(2, 'Too Short!')
@@ -21,27 +24,36 @@ const SignupSchema = Yup.object().shape({
     productDescription: Yup.string().required('Required'),
 });
 
-const categories = [
-    { id: "1", categoryName: "Fringes" },
-    { id: "2", categoryName: "Earrings" },
-    { id: "3", categoryName: "Rings" },
-    { id: "4", categoryName: "Sets" },
-    { id: "5", categoryName: "Necklace" },
-    { id: "6", categoryName: "Bangles" },
-    { id: "7", categoryName: "Mens collections" }
-];
+// const categories = [
+//     { id: "1", categoryName: "Fringes" },
+//     { id: "2", categoryName: "Earrings" },
+//     { id: "3", categoryName: "Rings" },
+//     { id: "4", categoryName: "Sets" },
+//     { id: "5", categoryName: "Necklace" },
+//     { id: "6", categoryName: "Bangles" },
+//     { id: "7", categoryName: "Mens collections" }
+// ];
 
 const AddProduct = () => {
     const [selectedImages, setSelectedImages] = useState([]);
-    
+    const [categories, setCategories] = useState();
+
+    useEffect(() => {
+        axios.get('http://localhost:8090/api/cats').then((response) => {
+            console.log(response.data);
+            setCategories(response.data)
+        })
+    }, []);
+
+
     const handleFileChange = (e) => {
         setSelectedImages(e.target.files);
     };
-const { user: currentUser } = useSelector((state) => state.auth);
-console.log(currentUser)
-  if (!currentUser) {
-    return <Navigate to="/login" />;
-  }
+    const { user: currentUser } = useSelector((state) => state.auth);
+    console.log(currentUser)
+    if (!currentUser) {
+        return <Navigate to="/login" />;
+    }
     return (
         <div>
             <Container>
@@ -58,36 +70,36 @@ console.log(currentUser)
                     }}
                     validationSchema={SignupSchema}
                     onSubmit={async (values, { resetForm }) => {
-    const formData = new FormData();
+                        const formData = new FormData();
 
-    // ✅ Append userId from Redux store
-    formData.append("userId", currentUser.id);
+                        // ✅ Append userId from Redux store
+                        formData.append("userId", currentUser.id);
 
-    // ✅ Append other form fields
-    Object.keys(values).forEach((key) => {
-        formData.append(key, values[key]);
-    });
+                        // ✅ Append other form fields
+                        Object.keys(values).forEach((key) => {
+                            formData.append(key, values[key]);
+                        });
 
-    // ✅ Append image files
-    for (let i = 0; i < selectedImages.length; i++) {
-        formData.append("images", selectedImages[i]);
-    }
+                        // ✅ Append image files
+                        for (let i = 0; i < selectedImages.length; i++) {
+                            formData.append("images", selectedImages[i]);
+                        }
 
-    try {
-        const res = await axios.post("http://localhost:8090/api/ssproducts", formData, {
-            headers: {
-                "Content-Type": "multipart/form-data"
-            }
-        });
-        console.log("Upload success:", res.data);
-        alert("Product added successfully!");
-        resetForm();
-        setSelectedImages([]);
-    } catch (err) {
-        console.error("Upload failed:", err);
-        alert("Failed to add product");
-    }
-}}
+                        try {
+                            const res = await axios.post("http://localhost:8090/api/ssproducts", formData, {
+                                headers: {
+                                    "Content-Type": "multipart/form-data"
+                                }
+                            });
+                            console.log("Upload success:", res.data);
+                            alert("Product added successfully!");
+                            resetForm();
+                            setSelectedImages([]);
+                        } catch (err) {
+                            console.error("Upload failed:", err);
+                            alert("Failed to add product");
+                        }
+                    }}
 
                 >
                     {({ errors, touched }) => (
@@ -107,11 +119,16 @@ console.log(currentUser)
                                         <Col>
                                             <Field name="productCategory" as="select" className="inputbox">
                                                 <option value="">Select Category</option>
-                                                {categories.map((category) => (
-                                                    <option key={category.id} value={category.categoryName}>
-                                                        {category.categoryName}
-                                                    </option>
-                                                ))}
+                                                {
+                                                    categories ?
+                                                        categories.map((category, index) => {
+                                                            return(
+                                                            <option value={category.id} key={index} > {category.name} </option>
+
+                                                            )
+                                                        })
+                                                        : ""
+                                                }
                                             </Field>
                                             {errors.productCategory && touched.productCategory && <div>{errors.productCategory}</div>}
                                         </Col>

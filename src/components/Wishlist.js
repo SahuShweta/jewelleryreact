@@ -7,17 +7,17 @@ import { useState } from "react";
 
 
 const Wishlist = () => {
-   // State for wishlist items
+   
   const [wishlist, setWishlist] = useState([]);
 
-  // Example: function to add product to wishlist
+  
   const addToWishlist = (product) => {
     if (!wishlist.includes(product)) {
       setWishlist([...wishlist, product]);
     }
   };
 
-  // Example: function to remove product
+  
   const removeFromWishlist = (product) => {
     setWishlist(wishlist.filter((item) => item !== product));
   };

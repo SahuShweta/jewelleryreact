@@ -23,8 +23,8 @@ const Star = ({ stars, reviews }) => {
     return (
     
             <div className='icon-style'>
-                {ratingStar}
-                <p>({reviews} customer reviews)</p>
+                {ratingStar} 
+                {/* <p>(reviews) </p> */}
             </div>
         
     );
