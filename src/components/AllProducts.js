@@ -58,10 +58,10 @@ const AllProducts = () => {
                                         {/* <Link to={"/Buypage/" + product.id}> */}
                                             <div className='bbox'>
                                                 <div className='bimage'>
-                                                    <img src={`http://localhost:8090/uploads/${product.images[0]}`} alt="" />
+                                                    <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
                                                 </div>
                                                 <div className='bimage2'>
-                                                    <img src={`http://localhost:8090/uploads/${product.images[1]}`} alt="" />
+                                                    <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
                                                 </div>
                                                 <p>{product.productName}</p>
                                                 <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
