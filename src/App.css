@@ -1,3 +1,5 @@
+
+
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 .toparea{
@@ -199,7 +201,58 @@
 }
 .bbox:hover .bimage2{
   display: block;
-} 
+}
+
+
+
+
+
+
+.allbox{
+  width:100%;
+  border-radius: 10px;
+  gap: 50px;
+}
+.allImage{
+  /* width:400px;
+  height:400px; */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.allImage img{
+  width:100%;
+  height:100%;
+  border-radius: 10px;
+
+}
+.allImage2{
+  display: none;
+  border-radius: 10px;
+
+}
+.allImage2 img{
+  width:100%;
+  border-radius: 10px;
+
+}
+.allbox:hover .allImage{
+  display: none;
+}
+.allbox:hover .allImage2{
+  display: block;
+}
+
+
+.cartImage img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+
 .bestproduct{
   width:380px;
   background-size: cover;
@@ -317,6 +370,11 @@
   width:100%;
   height:100%;
   border-radius: 10px;
+}
+
+.error{
+  color: #F70000;
+  
 }
 
 .t1{
@@ -1088,5 +1146,25 @@
   background: silver;
   border-radius: 20px;
   box-shadow: 2px 4px 2px 2px #000033;
+}
+
+.cartIcon{
+  position: relative;
+}
+
+.iconBage{
+  position: absolute;
+  top: -30px;
+  right:-20px;
+  width:30px;
+  height:30px;
+  background: red;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 

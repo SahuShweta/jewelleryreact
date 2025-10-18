@@ -22,7 +22,7 @@ import AddProduct from './components/AddProduct';
 import Login from './components/Login';
 import Register from './components/Register';
 import Address from './components/Address';
-// import Trial from './components/Trial';
+import Trial from './components/Trial';
 import AccountDetails from './components/AccountDetails';
 import Star from './components/Star';
 import Wishlist from './components/Wishlist';
@@ -64,7 +64,7 @@ function App() {
       <Route path="/Login" element={<Login/>} />
       <Route path="/Register" element={<Register/>} />
       <Route path="/Address" element={<Address/>} />
-      {/* <Route path="/Trial" element={<Trial/>} /> */}
+       <Route path="/Trial" element={<Trial/>} /> 
       <Route path="/AccountDetails" element={<AccountDetails/>} />
       <Route path="/Star" element={<Star/>} />
       <Route path="/Wishlist" element={<Wishlist/>} />

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import slide3 from '../images/slide3.webp';
@@ -6,13 +7,18 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Star from "./Star";
 
+// import { Link } from 'react-router';
+// import { faHeart } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 
 
 
 
 
-// const Gender = () => {
+
 export const products = [
     {
         "id": 1,
@@ -239,7 +245,7 @@ export const products = [
         "name": "Fringes Bloom In Fringe Statement Choker Set",
         "productCategory": "Fringes",
         "productForGender": "Female",
-        "description":"The Dramatic Fringe Pendant Set is an exquisite blend of opulence and movement, designed for the woman who loves to make an impression. This stunning pendant set showcases a hexagonal filigree pendant, intricately crafted with delicate beadwork that lends an air of sophistication. The pendant cascades into tassel chains, creating a dynamic fringe effect that enhances its statement appeal. Matching earrings echo the pendant’s artistry with similar detailing, ensuring a cohesive look. The oxidized gold plating over high-quality brass adds a vintage charm while preserving its luxurious durability. A signature piece from the Fringes Collection, this pendant set celebrates fluidity, motion, and effortless elegance, perfect for brunch outings, cocktail evenings, festive celebrations, and chic everyday wear. Whether styled with a flowing maxi dress for a boho vibe, a structured blazer for work, or layered over a casual western ensemble, this versatile piece embodies grace in every setting. An ideal gift for sisters, girlfriends, wives, mothers, and friends, it makes for a thoughtful present for Diwali, Rakshabandhan, Christmas, New Year, Valentine's Day, and other special occasions.",
+        "description": "The Dramatic Fringe Pendant Set is an exquisite blend of opulence and movement, designed for the woman who loves to make an impression. This stunning pendant set showcases a hexagonal filigree pendant, intricately crafted with delicate beadwork that lends an air of sophistication. The pendant cascades into tassel chains, creating a dynamic fringe effect that enhances its statement appeal. Matching earrings echo the pendant’s artistry with similar detailing, ensuring a cohesive look. The oxidized gold plating over high-quality brass adds a vintage charm while preserving its luxurious durability. A signature piece from the Fringes Collection, this pendant set celebrates fluidity, motion, and effortless elegance, perfect for brunch outings, cocktail evenings, festive celebrations, and chic everyday wear. Whether styled with a flowing maxi dress for a boho vibe, a structured blazer for work, or layered over a casual western ensemble, this versatile piece embodies grace in every setting. An ideal gift for sisters, girlfriends, wives, mothers, and friends, it makes for a thoughtful present for Diwali, Rakshabandhan, Christmas, New Year, Valentine's Day, and other special occasions.",
         "price1": 1029,
         "price2": 929,
         "material": "finely worked stone",
@@ -612,9 +618,61 @@ export const products = [
     },
 
 ]
+
+
 const Gender = () => {
 
+    const [womenProducts, setWomenProducts] = useState();
+
+    const [products, setProducts] = useState();
+    useEffect(() => {
+        axios.get('http://localhost:8090/api/ssproducts/new/men').then((response) => {
+            console.log(response.data);
+            setWomenProducts(response.data)
+        })
+    }, []);
+
+    useEffect(() => {
+        axios.get('http://localhost:8090/api/ssproducts/new/women').then((response) => {
+            console.log(response.data);
+            setProducts(response.data)
+        })
+    }, []);
+
+    const AddCart = (product) => {
+        // console.log(product)
+        const data = {
+            "userId": currentUser.id,
+            "items": [
+                {
+                    "productId": product.id,
+                    "quantity": 1,
+                    "price": product.productPrice
+                }
+            ]
+        }
+        console.log(data)
+        try {
+            const res = axios.post("http://localhost:8090/api/carts", data);
+            console.log("Products add to cart:", res.data);
+            alert("Products add to cart succesfully!");
+
+
+
+        } catch (err) {
+            console.error("Failed to add to cart:", err);
+            alert("Failed to add to cart");
+        }
+
+    }
+    const { user: currentUser } = useSelector((state) => state.auth);
+    console.log(currentUser)
+
+
     const { GenderName } = useParams();
+    console.log(GenderName)
+
+
     return (
         <div>
 
@@ -677,55 +735,40 @@ const Gender = () => {
 
                             <Row>
                                 {
-                                    products.filter(product => product.productForGender.includes(GenderName)).map((product) => {
-                                        return (
-                                            <Col md={3} className='morecategory'>
-                                                {/* <Link to={"/Buypage/" + product.id + product.name}> */}
-                                                <Link to={`/Buypage/${product.id}`}>
+                                    products ?
+                                        products.map((product, index) => {
+                                            return (
+                                                <Col md={3}>
+                                                    {/* <Link to={"/Buypage/" + product.id}> */}
+                                                    <div className='allbox'>
+                                                        <div className='allImage'>
+                                                            <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
 
-                                                    <div className='productf'>
-                                                        <div className='fringe1'>
-                                                            <img src={"/" + product.photo[0]} alt='' className='img-fluid' />
                                                         </div>
-                                                        <div className='fringe2'>
-                                                            <img src={"/" + product.photo[1]} alt='' className='img-fluid' />
+                                                        <div className='allImage2'>
+                                                            <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
+
                                                         </div>
-                                                        <h6>{product.name}</h6>
-                                                        <Row className='prodStock'>
-                                                            <Col>
-                                                                <Star stars={product.rating} /> 
-                                                                {/* reviews={product.rating} /> */}
-                                                                {/* <h5>Ratings= {product.rating}</h5> */}
-                                                            </Col>
-                                                            <Col>
-                                                                <p>({product.isAvailable ? 'Available' : 'Out of the Stock'})</p>
-                                                            </Col>
-                                                        </Row>
-                                                        <Row>
-                                                            <div className='pricearea'>
-                                                                <Col className='price1'>
-                                                                    <h4><s>₹ {product.price1}</s></h4>
-                                                                    &nbsp;
-                                                                    &nbsp;
-                                                                    &nbsp;
-                                                                    &nbsp;
-                                                                    &nbsp;
-                                                                    <h4>₹ {product.price2}</h4>
-                                                                </Col>
-                                                            </div>
-                                                            <Col > <FontAwesomeIcon icon={faHeart} className='favourite1' />
-                                                                &nbsp;
-                                                                &nbsp;
-                                                                &nbsp;
-                                                                <button>Add to Cart</button>
-                                                            </Col>
-                                                        </Row>
+                                                        <p>{product.productName}</p>
+                                                        <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+
+
+                                                        <div className="actions">
+                                                            <FontAwesomeIcon icon={faHeart} className='favourite' />
+                                                            <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
+                                                        </div>
                                                     </div>
-                                                </Link>
-                                            </Col>
+                                                    {/* </Link> */}
+                                                </Col>
+                                            )
+                                        }
+
                                         )
-                                    }
-                                    )
+                                        :
+                                        <div>
+                                            Oops! No Data available.
+                                        </div>
+
                                 }
 
                             </Row>
@@ -734,17 +777,11 @@ const Gender = () => {
                 </Container>
             </section>
 
-            <section>
-                <Container>
-                    <Row>
-                        <Col>
 
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
         </div>
     )
 }
+
+
 
 export default Gender

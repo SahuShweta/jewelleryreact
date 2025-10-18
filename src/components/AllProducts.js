@@ -9,6 +9,8 @@ import { useSelector } from 'react-redux';
 
 
 const AllProducts = () => {
+    
+    
     const [products, setProducts] = useState();
     useEffect(() => {
         axios.get('http://localhost:8090/api/ssproducts').then((response) => {
@@ -56,12 +58,14 @@ const AllProducts = () => {
                                 return (
                                     <Col md={3}>
                                         {/* <Link to={"/Buypage/" + product.id}> */}
-                                            <div className='bbox'>
-                                                <div className='bimage'>
-                                                    <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
+                                            <div className='allbox'>
+                                                <div className='allImage'>
+                                                    <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
+                                                    
                                                 </div>
-                                                <div className='bimage2'>
-                                                    <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
+                                                <div className='allImage2'>
+                                                    <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
+                                                    
                                                 </div>
                                                 <p>{product.productName}</p>
                                                 <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>

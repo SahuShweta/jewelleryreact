@@ -1,7 +1,7 @@
 import React from 'react'
-import {products} from "./Gender";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
+import Gender, { products } from "./Gender"; 
 
 const Buypage = () => {
     const {productId} = useParams();

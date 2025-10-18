@@ -110,7 +110,7 @@ const AddProduct = () => {
                                         <Col><label>Product Name</label></Col>
                                         <Col>
                                             <Field name="productName" className="inputbox" />
-                                            {errors.productName && touched.productName && <div>{errors.productName}</div>}
+                                            {errors.productName && touched.productName && <div className='error'>{errors.productName}</div>}
                                         </Col>
                                     </Row>
 
@@ -130,7 +130,7 @@ const AddProduct = () => {
                                                         : ""
                                                 }
                                             </Field>
-                                            {errors.productCategory && touched.productCategory && <div>{errors.productCategory}</div>}
+                                            {errors.productCategory && touched.productCategory && <div className='error'>{errors.productCategory}</div>}
                                         </Col>
                                     </Row>
 
@@ -138,7 +138,7 @@ const AddProduct = () => {
                                         <Col>Product Price</Col>
                                         <Col>
                                             <Field name="productPrice" className="inputbox" />
-                                            {errors.productPrice && touched.productPrice && <div>{errors.productPrice}</div>}
+                                            {errors.productPrice && touched.productPrice && <div className='error'>{errors.productPrice}</div>}
                                         </Col>
                                     </Row>
 
@@ -159,7 +159,7 @@ const AddProduct = () => {
                                                 <option value="Casuals">Casuals</option>
                                                 <option value="Ethnic">Ethnic</option>
                                             </Field>
-                                            {errors.productOccasion && touched.productOccasion && <div>{errors.productOccasion}</div>}
+                                            {errors.productOccasion && touched.productOccasion && <div className='error'>{errors.productOccasion}</div>}
                                         </Col>
                                     </Row>
 
@@ -167,7 +167,7 @@ const AddProduct = () => {
                                         <Col>Product Discount</Col>
                                         <Col>
                                             <Field name="productDiscount" className="inputbox" />
-                                            {errors.productDiscount && touched.productDiscount && <div>{errors.productDiscount}</div>}
+                                            {errors.productDiscount && touched.productDiscount && <div className='error'>{errors.productDiscount}</div>}
                                         </Col>
                                     </Row>
 
@@ -176,7 +176,7 @@ const AddProduct = () => {
                                         <Col>
                                             <label><Field type="radio" name="productMaterial" value="Gold" /> Gold Plated</label>
                                             <label><Field type="radio" name="productMaterial" value="Silver" /> Silver Plated</label>
-                                            {errors.productMaterial && touched.productMaterial && <div>{errors.productMaterial}</div>}
+                                            {errors.productMaterial && touched.productMaterial && <div className='error'>{errors.productMaterial}</div>}
                                         </Col>
                                     </Row>
 
@@ -184,7 +184,7 @@ const AddProduct = () => {
                                         <Col>Description</Col>
                                         <Col>
                                             <Field as="textarea" name="productDescription" className="inputbox" />
-                                            {errors.productDescription && touched.productDescription && <div>{errors.productDescription}</div>}
+                                            {errors.productDescription && touched.productDescription && <div className='error'>{errors.productDescription}</div>}
                                         </Col>
                                     </Row>
 
