@@ -79,7 +79,7 @@ const Header = () => {
                   {/* {
                       currentUser ? <li><Link onClick={handleLogout} className='customlink'>Logout</Link></li> : ""
                     } */}
-                  <li>Collections</li>
+                  <li><Link to="AllProducts" className='customlink'>Collections</Link></li>
                 </ul>
               </div>
             </Col>
@@ -109,12 +109,12 @@ const Header = () => {
                     &nbsp;
                     &nbsp;
                     <Link to="/Carts" className='customlink'>
-                    {/* <button> */}
+                    
                         <span className='cartIcon'>
                           <BsCart4 className='icon' />
                           <span className='iconBage'>{noCartsItems}</span>
                         </span>
-                        {/* </button> */}
+                        
                     </Link>
 
                     &nbsp;
