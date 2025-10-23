@@ -1168,3 +1168,15 @@
   align-items: center;
 }
 
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+.newLaunch{
+  text-align: center;
+  margin: 30px 50px;
+}
+

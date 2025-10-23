@@ -1,12 +1,17 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
-import Gender, { products } from "./Gender"; 
+//  import Gender from "./Gender"; 
+// import Gender, { products } from "./Gender"; 
+import products from "./Gender";
+
+
+
 
 const Buypage = () => {
     const {productId} = useParams();
     const product = products.find((p)=>p.id == parseInt(productId));
-    if (!product) {
+     if (!product) {
     return <h2>Product not found</h2>;
   }
 

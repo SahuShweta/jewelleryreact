@@ -12,7 +12,7 @@ import Star from "./Star";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import { products } from './Gender';
+//  import { products } from './Gender';
 
 
 
@@ -25,20 +25,24 @@ import { products } from './Gender';
 
 const Gender = () => {
 
-    const [womenProducts, setWomenProducts] = useState();
+
+     const { GenderName } = useParams();
+     console.log(GenderName)
+
+
 
     const [products, setProducts] = useState();
     useEffect(() => {
-        axios.get('http://localhost:8090/api/ssproducts/new/men').then((response) => {
+        axios.get('http://localhost:8090/api/ssproducts/new/women').then((response) => {
             console.log(response.data);
-             setWomenProducts(response.data)
+             setProducts(response.data)
         })
     }, []);
 
     useEffect(() => {
-        axios.get('http://localhost:8090/api/ssproducts/new/women').then((response) => {
+        axios.get('http://localhost:8090/api/ssproducts/new/men').then((response) => {
             console.log(response.data);
-            // setProducts(response.data)
+             setProducts(response.data)
         })
     }, []);
 
@@ -72,8 +76,7 @@ const Gender = () => {
     console.log(currentUser)
 
 
-    const { GenderName } = useParams();
-    console.log(GenderName)
+    
 
 
     return (
@@ -92,7 +95,7 @@ const Gender = () => {
                 <Container>
                     <Row>
                         <Col className='heading'>
-                            <h1 className='headingtext-center'>{GenderName}</h1>
+                             <h1 className='headingtext-center'>{GenderName}</h1> 
                         </Col>
                     </Row>
                 </Container>
@@ -138,8 +141,8 @@ const Gender = () => {
 
                             <Row>
                                 {
-                                    setWomenProducts ?
-                                        setWomenProducts.map((product, index) => {
+                                    products ?
+                                        products.map((product, index) => {
                                             return (
                                                 <Col md={3}>
                                                     {/* <Link to={"/Buypage/" + product.id}> */}

@@ -414,11 +414,12 @@ const Home = () => {
         </Container>
       </section>
 
-      <section>
+      <section className='newLaunch'>
         <Container>
           <div>
             <Row>
-              <h1>Women New LAUNCH</h1>
+              <h1>Women New Launch</h1>
+              <div className='scroll-container'>
               {
                 womenProducts ?
                   womenProducts.map((product, index) => {
@@ -455,16 +456,19 @@ const Home = () => {
                   </div>
 
               }
+              </div>
 
             </Row>
           </div>
         </Container>
       </section>
 
-      <section>
+      <section className='newLaunch'>
         <Container>
           <Row>
-            <h1>Men New LAUNCH</h1>
+            <h1>Men New Launch</h1>
+              <div className='scroll-container'>
+
             {
               menProducts ?
                 menProducts.map((product, index) => {
@@ -501,6 +505,7 @@ const Home = () => {
                 </div>
 
             }
+            </div>
           </Row>
         </Container>
       </section>
