@@ -44,6 +44,12 @@ const Carts = () => {
         setCount(count + 1);
     }
 
+    const calculateTotal =()=>{
+       
+    return products.reduce((total, product)=>{
+        return total+(product.quantity*product.productDetails.productPrice)
+    },0)
+    }
 
 
 
@@ -132,6 +138,7 @@ const Carts = () => {
                                 }
                             </tbody>
                         </Table>
+                        <p>{calculateTotal()}</p>
 
                     </Col>
                 </Row>
