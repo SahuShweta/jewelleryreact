@@ -35,7 +35,7 @@ const Carts = () => {
     console.log(currentUser)
 
 
-    
+
     const [name, setName] = useState("");
     const decrement = () => {
         setCount(count - 1);
@@ -45,17 +45,29 @@ const Carts = () => {
     }
 
     const calculateTotal = () => {
-      return products.reduce((total, product) => {
-        return total + (product.quantity * product.productDetails.productPrice);
-      }, 0);
+        //   return products.reduce((total, product) => {
+        //     return total + (product.quantity * product.productDetails.productPrice);
+        //   }, 0);
     };
+    const subTotal = calculateTotal()
+    console.log(subTotal)
 
+    const quantityUpdate = (productId, newQuantity) => {
+        console.log(productId)
+        console.log(newQuantity)
+        if (newQuantity < 1) return;
+        axios.put(`http://localhost:8090/api/carts/user/${currentUser.id}/item/${productId}`, { quantity: newQuantity }).then(() => {
+            window.location.reload();
+
+        }).catch((error) => { console.error("Failed to update quantity", error); });
+
+    }
 
 
 
     const handleDelete = (id) => {
         if (window.confirm("Are you sure?")) {
-             axios.delete(`http://localhost:8090/api/carts/user/${currentUser.id}/item/${id}`).then((response) => {
+            axios.delete(`http://localhost:8090/api/carts/user/${currentUser.id}/item/${id}`).then((response) => {
                 console.log("Product Successfully deleted");
                 alert("Product successfully deleted");
                 window.location.reload();
@@ -77,7 +89,7 @@ const Carts = () => {
 
                 <Row>
                     <Col>
-                    <h1 className='text-center'>Number of carts items {noCartsItems}</h1>
+                        <h1 className='text-center'>Number of carts items {noCartsItems}</h1>
                     </Col>
                 </Row>
                 <Row>
@@ -110,18 +122,20 @@ const Carts = () => {
 
                                                     </td>
 
-                                                    <td>{product.quantity*product.productDetails.productPrice}</td>
-                                                    
+                                                    <td>{product.quantity * product.productDetails.productPrice}</td>
+
                                                     <td className='text-center'>
                                                         {/* <button onClick={decrement}>-</button>
                                                         <button>{count}</button>
                                                         <button onClick={increment}>+</button> */}
 
-                                                            {product.quantity}
+                                                        <button onClick={() => quantityUpdate(product.productId, product.quantity - 1)}>-</button>
+                                                         {product.quantity} 
+                                                         <button onClick={() => quantityUpdate(product.productId, product.quantity + 1)}>+</button>
                                                     </td>
 
 
-                                                    <td className='text-center'><button onClick={() => handleDelete(product.productId)}><MdDelete /></button>  </td> 
+                                                    <td className='text-center'><button onClick={() => handleDelete(product.productId)}><MdDelete /></button>  </td>
                                                     <td className='text-center'> <FaEdit /> </td>
 
                                                 </tr>
