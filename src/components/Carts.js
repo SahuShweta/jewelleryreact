@@ -10,6 +10,8 @@ import { clearMessage } from "../slices/message";
 import axios from 'axios';
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import { Link } from 'react-router';
+
 
 const Carts = () => {
 
@@ -45,12 +47,36 @@ const Carts = () => {
     }
 
     const calculateTotal = () => {
-        //   return products.reduce((total, product) => {
-        //     return total + (product.quantity * product.productDetails.productPrice);
-        //   }, 0);
+        //check products is an array or not, if products is not an array then exit
+        if (!Array.isArray(products)) return 0;
+        return products.reduce((total, product) => {
+            return total + (product.quantity * product.productDetails.productPrice);
+        }, 0);
     };
-    const subTotal = calculateTotal()
+
+    const subTotal = calculateTotal();
     console.log(subTotal)
+
+
+
+    const discount = () => {
+        let value = 0
+        if (subTotal > 5000) {
+            value = 500;
+        }
+        else if (subTotal > 2000) {
+            value = 200;
+        }
+        else {
+            value = 0;
+        }
+        return value;
+    }
+    const discountValue = discount();
+    console.log(discountValue)
+
+    const grandTotal = subTotal - discountValue;
+
 
     const quantityUpdate = (productId, newQuantity) => {
         console.log(productId)
@@ -130,8 +156,8 @@ const Carts = () => {
                                                         <button onClick={increment}>+</button> */}
 
                                                         <button onClick={() => quantityUpdate(product.productId, product.quantity - 1)}>-</button>
-                                                         {product.quantity} 
-                                                         <button onClick={() => quantityUpdate(product.productId, product.quantity + 1)}>+</button>
+                                                        {product.quantity}
+                                                        <button onClick={() => quantityUpdate(product.productId, product.quantity + 1)}>+</button>
                                                     </td>
 
 
@@ -151,8 +177,12 @@ const Carts = () => {
                                 }
                             </tbody>
                         </Table>
-                        <p>{calculateTotal}</p>
-
+                        <p>Sub Total: ₹{subTotal.toFixed(2)}</p>
+                        <p>Discount: ₹{discountValue.toFixed(2)}</p>
+                        <p>Grand Total: ₹{grandTotal.toFixed(2)}</p>
+                        <div className='nextbutton2'>
+                            <button className='nextbutton'><Link to="/Address" className='customlink'>Next </Link></button>
+                        </div>
                     </Col>
                 </Row>
             </Container>

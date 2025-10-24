@@ -915,7 +915,15 @@
 .aaa .row{
   margin:5px 0;
 }
-.bbb{
+
+.zzz{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  }
+
+
+  .bbb{
   color: #F70000 !important;
 
 
@@ -1178,5 +1186,19 @@
 .newLaunch{
   text-align: center;
   margin: 30px 50px;
+}
+
+.nextbutton{
+  background-color: #000033;
+  color: #fff;
+  width:100px;
+  height: 50px;
+  border-radius: 20px;
+  left: -500px;
+  
+}
+.nextbutton2{
+  display: flex;
+  justify-content: flex-end;
 }
 
