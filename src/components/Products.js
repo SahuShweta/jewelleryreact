@@ -26,7 +26,7 @@ const Products = () => {
             setProduct(response.data)
             console.log(product.productName)
         })
-    }, []);
+    }, [productId]);
 
 
 
@@ -36,7 +36,7 @@ const Products = () => {
                 <Container fluid>
                     <Row>
                         <Col>
-                        <h2>{product ? product.productName : ""}</h2>
+                        <h2>{  product?.productName || "loading"}</h2>
                         </Col>
                     </Row>
                     <Row>
