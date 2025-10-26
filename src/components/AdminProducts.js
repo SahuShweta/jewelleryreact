@@ -66,7 +66,7 @@ const AddCategory = () => {
   <Container>
                 <Row>
                     <Col>
-
+                            <h1>Admin Products</h1>
                         <Table striped bordered hover>
                             <thead>
                                 <tr>

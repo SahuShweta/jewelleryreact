@@ -9,7 +9,6 @@ import About from './components/About';
 import {Routes,Route} from 'react-router';
 import Fringes from './components/Fringes';
 import Jsr from './components/Jsr';
-import Buypage from './components/Buypage';
 import Ranchi from './components/Ranchi';
 import Account from './components/Account';
 import CreateAccount from './components/CreateAccount';
@@ -31,6 +30,7 @@ import AdminDashboard from './components/AdminDashboard';
 import AdminProducts from './components/AdminProducts';
 import AllProducts from './components/AllProducts';
 import Carts from './components/Carts';
+import Products from './components/Products';
 
 
 
@@ -50,7 +50,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/fringes" element={<Fringes/>}/>
       <Route path="/Jsr" element={<Jsr/>}/>
-      <Route path="/Buypage/:productId" element={<Buypage/>} /> 
+      <Route path="/Products/:productId" element={<Products/>} /> 
       <Route path="/Category/:categoryName" element={<Category/>} />
 
       <Route path="/ranchi" element={<Ranchi />} />

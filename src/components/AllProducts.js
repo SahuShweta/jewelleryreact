@@ -74,6 +74,8 @@ const AllProducts = () => {
                                                 <div className="actions">
                                                     <FontAwesomeIcon icon={faHeart} className='favourite' />
                                                     <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
+                                                    <Link to={`/products/${product.id}`} className="btn btn-primary">View</Link>
+                                                    
                                                 </div>
                                             </div>
                                         {/* </Link> */}

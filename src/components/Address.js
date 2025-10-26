@@ -91,7 +91,7 @@ const Address = () => {
                 {({ errors, touched }) => (
                     <Form>
                         <div className='aaa'>
-                            <Container>
+                            <Container fluid>
                                 <Row>
                                     <Col xs={12} md={4}><h5>Name</h5></Col>
                                     <Col xs={12} md={8}>

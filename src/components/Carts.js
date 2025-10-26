@@ -177,7 +177,7 @@ const Carts = () => {
                                 }
                             </tbody>
                         </Table>
-                        <p>Sub Total: ₹{subTotal.toFixed(2)}</p>
+                        <h4>Sub Total: ₹{subTotal.toFixed(2)}</h4>
                         <p>Discount: ₹{discountValue.toFixed(2)}</p>
                         <p>Grand Total: ₹{grandTotal.toFixed(2)}</p>
                         <div className='nextbutton2'>

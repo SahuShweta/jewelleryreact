@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Breadcrumb } from 'react-bootstrap';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import './../App.css';
 
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
 
@@ -57,6 +57,17 @@ const AddProduct = () => {
     return (
         <div>
             <Container>
+
+                <Row>
+                    <Col>
+                        <h1>Add Product</h1>
+                        <Breadcrumb>
+                            <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/AdminDashboard" }}>Dashboard</Breadcrumb.Item>
+
+                            <Breadcrumb.Item active>Add Product</Breadcrumb.Item>
+                        </Breadcrumb>
+                    </Col>
+                </Row>
                 <Formik
                     initialValues={{
                         productName: '',
@@ -106,6 +117,7 @@ const AddProduct = () => {
                         <Form>
                             <div className='aaa'>
                                 <Container>
+
                                     <Row>
                                         <Col><label>Product Name</label></Col>
                                         <Col>
@@ -122,8 +134,8 @@ const AddProduct = () => {
                                                 {
                                                     categories ?
                                                         categories.map((category, index) => {
-                                                            return(
-                                                            <option value={category.id} key={index} > {category.name} </option>
+                                                            return (
+                                                                <option value={category.id} key={index} > {category.name} </option>
 
                                                             )
                                                         })

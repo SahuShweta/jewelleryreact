@@ -1,10 +1,30 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Breadcrumb } from 'react-bootstrap'
 import { Link } from 'react-router'
 import Dropdown from 'react-bootstrap/Dropdown';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { ComposedChart, Area, Bar } from 'recharts';
+// import { LineChart, Line, XAxis, YAxis, CartesianGrid,  Legend } from 'recharts';
+// import { ComposedChart, Area, Bar } from 'recharts';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
+
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 
 
@@ -55,53 +75,94 @@ const firstData = [
 ];
 
 
-const data = [
-  {
-    name: 'Page A',
-    uv: 590,
-    pv: 800,
-    amt: 1400,
-  },
-  {
-    name: 'Page B',
-    uv: 868,
-    pv: 967,
-    amt: 1506,
-  },
-  {
-    name: 'Page C',
-    uv: 1397,
-    pv: 1098,
-    amt: 989,
-  },
-  {
-    name: 'Page D',
-    uv: 1480,
-    pv: 1200,
-    amt: 1228,
-  },
-  {
-    name: 'Page E',
-    uv: 1520,
-    pv: 1108,
-    amt: 1100,
-  },
-  {
-    name: 'Page F',
-    uv: 1400,
-    pv: 680,
-    amt: 1700,
-  },
-];
+// const data = [
+//   {
+//     name: 'Page A',
+//     uv: 590,
+//     pv: 800,
+//     amt: 1400,
+//   },
+//   {
+//     name: 'Page B',
+//     uv: 868,
+//     pv: 967,
+//     amt: 1506,
+//   },
+//   {
+//     name: 'Page C',
+//     uv: 1397,
+//     pv: 1098,
+//     amt: 989,
+//   },
+//   {
+//     name: 'Page D',
+//     uv: 1480,
+//     pv: 1200,
+//     amt: 1228,
+//   },
+//   {
+//     name: 'Page E',
+//     uv: 1520,
+//     pv: 1108,
+//     amt: 1100,
+//   },
+//   {
+//     name: 'Page F',
+//     uv: 1400,
+//     pv: 680,
+//     amt: 1700,
+//   },
+// ];
 
+
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: true,
+      text: 'Chart.js Bar Chart',
+    },
+  },
+};
+
+// const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+export const data = {
+  labels: ["January", "February", "March", "April", "May"],
+  datasets: [
+    {
+      label: "Sales",
+      data: [12000, 19000, 3000, 5000, 2000],
+      backgroundColor: "rgba(75, 192, 192, 0.5)",
+      borderColor: "rgba(75, 192, 192, 1)",
+      borderWidth: 1
+    }
+  ]
+};
 
 const AdminDashboard = () => {
   return (
     <div>
 
-      <Container>
+
+      <Container fluid>
         <Row>
-          <Col md={2}>
+          <Col>
+            <h1>Admin Dashboard</h1>
+            <Breadcrumb>
+              <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+              
+              <Breadcrumb.Item active>Data</Breadcrumb.Item>
+            </Breadcrumb>
+          </Col>
+        </Row>
+        <Row>
+
+          <Col md={2} className='dashboard-sidebar'>
 
             <p><Link to={'/AddCategory'} >Add Category</Link></p>
             <p><Link to={'/AdminProducts'} >Admin Products</Link></p>
@@ -119,22 +180,24 @@ const AdminDashboard = () => {
 
           </Col>
           <Col md={10}>
-            <Row>
-              <Col><h1>Dashboard</h1></Col>
-              <Col>
-                <Dropdown>
-                  <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    This month
-                  </Dropdown.Toggle>
+            <div className='dashboard-header'>
+              <Row>
+                <Col><h1>Dashboard</h1></Col>
+                <Col>
+                  <Dropdown>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                      This month
+                    </Dropdown.Toggle>
 
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Last 45 days</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Last 90 days</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Last 6 months</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </Col>
-            </Row>
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#/action-1">Last 45 days</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Last 90 days</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Last 6 months</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </Col>
+              </Row>
+            </div>
 
             <Row className='dashboard'>
               <Col md={2} className='d1'>
@@ -159,8 +222,10 @@ const AdminDashboard = () => {
                 <p>10% last month</p>
               </Col>
             </Row>
-            <Row>
-              <Col>
+            {/* <Row className='graph-section'>
+              <Col md={7}>
+              <div className='graph-card'>
+                <h5> Sales Overview</h5>
                 <LineChart
                   style={{ width: '100%', maxWidth: '700px', maxHeight: '70vh', aspectRatio: 1.618 }}
                   responsive
@@ -180,9 +245,11 @@ const AdminDashboard = () => {
                   <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
                   <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                 </LineChart>
-
+                  </div>
               </Col>
-              <Col>
+              <Col md={5}>
+              <div className='graph-card'>
+                <h5>Performance Comparision</h5>
                 <ComposedChart
                   layout="vertical"
                   style={{ width: '100%', maxWidth: '300px', maxHeight: '70vh', aspectRatio: 1 / 1.618 }}
@@ -204,14 +271,21 @@ const AdminDashboard = () => {
                   <Bar dataKey="pv" barSize={20} fill="#413ea0" />
                   <Line dataKey="uv" stroke="#ff7300" />
                 </ComposedChart>
+                </div>
               </Col>
-            </Row>
+            </Row> */}
             <Row>
               <Col></Col>
               <Col></Col>
 
             </Row>
 
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <Bar options={options} data={data} />
           </Col>
         </Row>
 

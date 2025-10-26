@@ -1150,10 +1150,56 @@
 .dashboard{
   gap: 40px;
 }
-.dashboard .d1{
-  background: silver;
+ .d1{
+  background: #ffff;
   border-radius: 20px;
-  box-shadow: 2px 4px 2px 2px #000033;
+  box-shadow: 0px 4px 12px  #000033;
+  padding: 20px;
+  margin:10px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+}
+.d1:hover{
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.d1 h6{
+  color: #1e3a8a;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.d1 h3{
+  color:#1e3a8a ;
+  font-size: 22px;
+  font-weight: 600;
+}
+.d1 p{
+  color: #16a34a;
+  font-size: 13px;
+
+}
+
+.graph-section{
+  margin-top: 40px;
+}
+.graph-card{
+  background: #ffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.graph-card:hover{
+  transition: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.8);
+}
+.graph-card h5{
+  font-weight: 600;
+  color:#1e3a8a ;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 .cartIcon{
@@ -1201,4 +1247,36 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.dashboard-sidebar{
+  padding: 20px;
+  border-right: 1px solid #e2e8f0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top:0;
+}
+
+.dashboard-sidebar p, .dashboard-sidebar h4{
+  margin: 10px 0;
+  cursor:pointer;
+  color:334155;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.dashboard-sidebar p:hover, .dashboard-sidebar h4:hover{
+  color:#1d4ed8;
+  transition: translateX(4px);
+}
+.dashboard-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 20px;
+}
+.dashboard-header h1{
+  font-size: 26px;
+  font-weight: 600;
+}
+
 
