@@ -1,133 +1,102 @@
 import React from 'react'
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown';
-// import { LineChart, Line, XAxis, YAxis, CartesianGrid,  Legend } from 'recharts';
-// import { ComposedChart, Area, Bar } from 'recharts';
+
+import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
-  CategoryScale,
+  LineElement,
+  PointElement,
   LinearScale,
-  BarElement,
+  CategoryScale,
+  ArcElement,
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+} from "chart.js";
 
+import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 
 ChartJS.register(
-  CategoryScale,
+  ArcElement,
+  Tooltip,
+  Legend,
+  Title,
+  LineElement,
+  PointElement,
   LinearScale,
-  BarElement,
+  CategoryScale,
   Title,
   Tooltip,
-  Legend
-);
+  Legend);
 
 
 
 
-const firstData = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
-
-
-// const data = [
-//   {
-//     name: 'Page A',
-//     uv: 590,
-//     pv: 800,
-//     amt: 1400,
-//   },
-//   {
-//     name: 'Page B',
-//     uv: 868,
-//     pv: 967,
-//     amt: 1506,
-//   },
-//   {
-//     name: 'Page C',
-//     uv: 1397,
-//     pv: 1098,
-//     amt: 989,
-//   },
-//   {
-//     name: 'Page D',
-//     uv: 1480,
-//     pv: 1200,
-//     amt: 1228,
-//   },
-//   {
-//     name: 'Page E',
-//     uv: 1520,
-//     pv: 1108,
-//     amt: 1100,
-//   },
-//   {
-//     name: 'Page F',
-//     uv: 1400,
-//     pv: 680,
-//     amt: 1700,
-//   },
-// ];
 
 
 
-export const options = {
+
+
+
+// ChartJS.register(
+//   LineElement,
+//   PointElement,
+//   LinearScale,
+//   CategoryScale,
+//   Title,
+//   Tooltip,
+//   Legend
+// );
+
+const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top',
+      position: "top",
     },
     title: {
       display: true,
-      text: 'Chart.js Bar Chart',
+      text: "Sales Chart",
     },
   },
 };
+
+
+export const doughnutData = {
+  labels: ["Electronics", "Clothes", "Shoes", "Accessories"],
+  datasets: [
+    {
+      label: "Sales",
+      data: [300, 150, 200, 100],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.6)",
+        "rgba(54, 162, 235, 0.6)",
+        "rgba(255, 206, 86, 0.6)",
+        "rgba(75, 192, 192, 0.6)"
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+
+export const doughnutOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    title: {
+      display: true,
+      text: "Chart.js Doughnut Chart",
+    },
+  },
+};
+
+
 
 // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
@@ -144,18 +113,46 @@ export const data = {
   ]
 };
 
+export const pieData = {
+  labels: ["Red", "Blue", "Yellow", "Green"],
+  datasets: [
+    {
+      label: "Visitors",
+      data: [300, 150, 200, 100],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.6)",
+        "rgba(54, 162, 235, 0.6)",
+        "rgba(255, 206, 86, 0.6)",
+        "rgba(75, 192, 192, 0.6)"
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+
+export const pieOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    title: {
+      display: true,
+      text: "Chart.js Pie Chart",
+    },
+  },
+};
+
 const AdminDashboard = () => {
   return (
     <div>
-
-
       <Container fluid>
         <Row>
           <Col>
             <h1>Admin Dashboard</h1>
             <Breadcrumb>
               <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
-              
+
               <Breadcrumb.Item active>Data</Breadcrumb.Item>
             </Breadcrumb>
           </Col>
@@ -164,10 +161,10 @@ const AdminDashboard = () => {
 
           <Col md={2} className='dashboard-sidebar'>
 
-            <p><Link to={'/AddCategory'} >Add Category</Link></p>
+            {/* <p><Link to={'/AddCategory'} >Add Category</Link></p>
             <p><Link to={'/AdminProducts'} >Admin Products</Link></p>
             <p><Link to={'/AdminOrders'} >Admin Orders</Link></p>
-            <p><Link to={'/AddProducts'} >Admin Products</Link></p>
+            <p><Link to={'/AddProduct'} >Admin Products</Link></p>
             <h2>My Ecommerce</h2>
             <h4>Dashboard</h4>
             <h4>Orders</h4>
@@ -175,7 +172,19 @@ const AdminDashboard = () => {
             <h4>Sales</h4>
             <h4>Products</h4>
             <h4>Settings</h4>
-            <h4>Help center</h4>
+            <h4>Help center</h4> */}
+
+            <ul>
+              <li><h4><Link to={'/AddCategory'} >Add Category</Link></h4></li>
+              <li><h4><Link to={'/AdminProducts'} >Admin Products</Link></h4></li>
+              <li><h4><Link to={'/AdminOrders'} >Admin Orders</Link></h4></li>
+              <li><h4><Link to={'/AddProduct'} >Admin Products</Link></h4></li>
+              <li><h4>Dashboard</h4></li>
+              <li><h4>Orders</h4></li>
+              <li><h4>Sales</h4></li>
+              <li><h4>Total Profit</h4></li>
+              <li><h4>New Customers</h4></li>
+            </ul>
 
 
           </Col>
@@ -203,7 +212,7 @@ const AdminDashboard = () => {
               <Col md={2} className='d1'>
 
                 <h6>Total Sales</h6>
-                <h3>$116358</h3>
+                <h3>₹16,358</h3>
                 <p>50% last month</p>
               </Col>
               <Col md={2} className='d1'>
@@ -213,7 +222,7 @@ const AdminDashboard = () => {
               </Col>
               <Col md={2} className='d1'>
                 <h6>Total Profit</h6>
-                <h3>$503625</h3>
+                <h3>₹50,625</h3>
                 <p>30% last month</p>
               </Col>
               <Col md={2} className='d1'>
@@ -222,70 +231,33 @@ const AdminDashboard = () => {
                 <p>10% last month</p>
               </Col>
             </Row>
-            {/* <Row className='graph-section'>
+            <Row className='graph-section'>
               <Col md={7}>
-              <div className='graph-card'>
-                <h5> Sales Overview</h5>
-                <LineChart
-                  style={{ width: '100%', maxWidth: '700px', maxHeight: '70vh', aspectRatio: 1.618 }}
-                  responsive
-                  data={firstData}
-                  margin={{
-                    top: 5,
-                    right: 0,
-                    left: 0,
-                    bottom: 5,
-                  }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis width="auto" />
-                  <Tooltip />
-                  <Legend />
-                  <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                  <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                </LineChart>
-                  </div>
+                <div className='graph-card'>
+                  <h5> Sales Overview</h5>
+                  <Line data={data} options={options} />
+                </div>
+
               </Col>
               <Col md={5}>
-              <div className='graph-card'>
-                <h5>Performance Comparision</h5>
-                <ComposedChart
-                  layout="vertical"
-                  style={{ width: '100%', maxWidth: '300px', maxHeight: '70vh', aspectRatio: 1 / 1.618 }}
-                  responsive
-                  data={data}
-                  margin={{
-                    top: 20,
-                    right: 0,
-                    bottom: 0,
-                    left: 0,
-                  }}
-                >
-                  <CartesianGrid stroke="#f5f5f5" />
-                  <XAxis type="number" />
-                  <YAxis dataKey="name" type="category" scale="band" width="auto" />
-                  <Tooltip />
-                  <Legend />
-                  <Area dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-                  <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-                  <Line dataKey="uv" stroke="#ff7300" />
-                </ComposedChart>
+                <div className='graph-card'>
+                  <h5> Orders Overview</h5>
+                  <Doughnut data={doughnutData} options={doughnutOptions} />
                 </div>
               </Col>
-            </Row> */}
+            </Row>
             <Row>
-              <Col></Col>
+              <Col md={5}>
+                <div className='graph-card'>
+                  <h5> Total Profit</h5>
+                  <Pie data={pieData} options={pieOptions} />
+
+                </div>
+              </Col>
               <Col></Col>
 
             </Row>
 
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Bar options={options} data={data} />
           </Col>
         </Row>
 

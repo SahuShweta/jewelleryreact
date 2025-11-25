@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Col, Container, Row, Table, Breadcrumb } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Navigate } from "react-router-dom";
 import { Formik, Form, Field } from 'formik';
@@ -101,7 +101,11 @@ const AddCategory = () => {
             <Container className='login'>
                 <Row>
                     <Col xs={12} sm={8} md={6} lg={4}>
-                        <h1>Add Category</h1>
+                        <h4>Add Category</h4>
+                        <Breadcrumb>
+                            <Breadcrumb.Item href="#">Add Category</Breadcrumb.Item>
+                            <Breadcrumb.Item active>Data</Breadcrumb.Item>
+                        </Breadcrumb>
                     </Col>
                 </Row>
 

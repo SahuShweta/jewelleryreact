@@ -26,25 +26,22 @@ import { useSelector } from 'react-redux';
 const Gender = () => {
 
 
-     const { GenderName } = useParams();
-     console.log(GenderName)
+    const { GenderName } = useParams();
+    console.log(GenderName)
 
 
 
     const [products, setProducts] = useState();
     useEffect(() => {
-        axios.get('http://localhost:8090/api/ssproducts/new/women').then((response) => {
+        axios.get(`http://localhost:8090/api/ssproducts/new/${GenderName}`).then((response) => {
             console.log(response.data);
              setProducts(response.data)
         })
-    }, []);
+    }, [GenderName]);
 
-    useEffect(() => {
-        axios.get('http://localhost:8090/api/ssproducts/new/men').then((response) => {
-            console.log(response.data);
-             setProducts(response.data)
-        })
-    }, []);
+    
+
+    
 
     const AddCart = (product) => {
         // console.log(product)
@@ -76,7 +73,7 @@ const Gender = () => {
     console.log(currentUser)
 
 
-    
+
 
 
     return (
@@ -85,9 +82,9 @@ const Gender = () => {
             <section>
                 <Container fluid>
                     <Row>
-                        <Col>
+                        {/* <Col>
                             <img src={slide3} alt='' className='img-fluid' />
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </section>
@@ -95,7 +92,7 @@ const Gender = () => {
                 <Container>
                     <Row>
                         <Col className='heading'>
-                             <h1 className='headingtext-center'>{GenderName}</h1> 
+                            <h1 className='headingtext-center'>{GenderName}</h1>
                         </Col>
                     </Row>
                 </Container>

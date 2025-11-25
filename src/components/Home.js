@@ -55,6 +55,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 
 
@@ -68,10 +72,13 @@ import { Col, Container, Row } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { FaArrowLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router';
 
 
 
 const Home = () => {
+let navigate = useNavigate();
 
   const [womenProducts, setWomenProducts] = useState();
   useEffect(() => {
@@ -118,7 +125,12 @@ const Home = () => {
 
   const { user: currentUser } = useSelector((state) => state.auth);
   console.log(currentUser)
-
+  if(currentUser.roles[0]==="ROLE_ADMIN"){
+    console.log(currentUser.roles[0]);
+  
+      navigate("/AdminDashboard")
+      
+    }
 
   const categories = [
     {
@@ -324,12 +336,29 @@ const Home = () => {
   ];
 
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    // nextArrow: <FaArrowRight></FaArrowRight>,
+    // prevArrow: <FaArrowLeft></FaArrowLeft>
+  };
+
+
+
+
 
 
   return (
     <div>
 
-      
+
+
+
 
       <section className='categories'>
         <Container fluid>
@@ -357,6 +386,19 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+
+
+      {/* <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+        <div><img src='' alt='' /></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+
+      </div> */}
+
+
+
 
 
       <Carousel data-bs-theme="dark">
@@ -398,6 +440,60 @@ const Home = () => {
       </Carousel>
 
 
+      <section>
+        <Row>
+          <Col>
+            <Row></Row>
+          </Col>
+
+
+          <Slider {...settings} className='pqr'>
+            {
+              womenProducts ?
+                womenProducts.map((product, index) => {
+                  return (
+                    <Col md={3}>
+
+
+                      <div className='allbox'>
+                        {/* <Link to={`/product/${product.productId}`} className="product-link"> */}
+                        <Link to={`/product/${product.id}`} className="product-link">
+                          <div className='allImage'>
+                            <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" className='img-fluid' />
+
+                          </div>
+                          <div className='allImage2'>
+                            <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" className='img-fluid' />
+
+                          </div>
+                          <p>{product.productName}</p>
+                          <h5><s>₹ {product.productPrice + product.productPrice * 10 / 100}</s>&nbsp; &nbsp; &nbsp;<b>₹ {product.productPrice}</b></h5>
+                        </Link>
+
+                        <div className="actions">
+                          <FontAwesomeIcon icon={faHeart} className='favourite' />
+                          <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
+                        </div>
+                      </div>
+
+
+                    </Col>
+                  )
+                }
+
+                )
+                :
+                <div>
+                  Oops! No Data available.
+                </div>
+
+            }
+          </Slider>
+
+
+        </Row>
+      </section>
+
       <section className='linearea'>
         <Container fluid>
           <Row>
@@ -420,42 +516,45 @@ const Home = () => {
             <Row>
               <h1>Women New Launch</h1>
               <div className='scroll-container'>
-              {
-                womenProducts ?
-                  womenProducts.map((product, index) => {
-                    return (
-                      <Col md={3}>
-                        {/* <Link to={"/Buypage/" + product.id}> */}
-                        <div className='allbox'>
-                          <div className='allImage'>
-                            <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
+                {
+                  womenProducts ?
+                    womenProducts.map((product, index) => {
+                      return (
+                        <Col md={3}>
 
+
+                          {/* <Link to={"/Buypage/" + product.id}> */}
+                          <div className='allbox'>
+                            <Link to={`/product/${product.id}`} className="product-link">
+                              <div className='allImage'>
+                                <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
+
+                              </div>
+                              <div className='allImage2'>
+                                <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
+
+                              </div>
+                              <p>{product.productName}</p>
+                              <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+                            </Link>
+
+                            <div className="actions">
+                              <FontAwesomeIcon icon={faHeart} className='favourite' />
+                              <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
+                            </div>
                           </div>
-                          <div className='allImage2'>
-                            <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
 
-                          </div>
-                          <p>{product.productName}</p>
-                          <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+                        </Col>
+                      )
+                    }
 
-
-                          <div className="actions">
-                            <FontAwesomeIcon icon={faHeart} className='favourite' />
-                            <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
-                          </div>
-                        </div>
-                        {/* </Link> */}
-                      </Col>
                     )
-                  }
+                    :
+                    <div>
+                      Oops! No Data available.
+                    </div>
 
-                  )
-                  :
-                  <div>
-                    Oops! No Data available.
-                  </div>
-
-              }
+                }
               </div>
 
             </Row>
@@ -467,44 +566,44 @@ const Home = () => {
         <Container>
           <Row>
             <h1>Men New Launch</h1>
-              <div className='scroll-container'>
+            <div className='scroll-container'>
 
-            {
-              menProducts ?
-                menProducts.map((product, index) => {
-                  return (
-                    <Col md={3}>
-                      {/* <Link to={"/Buypage/" + product.id}> */}
-                      <div className='allbox'>
-                        <div className='allImage'>
-                          <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
+              {
+                menProducts ?
+                  menProducts.map((product, index) => {
+                    return (
+                      <Col md={3}>
+                        <div className='allbox'>
+                          <Link to={`/product/${product.id}`} className="product-link">
+                            <div className='allImage'>
+                              <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
 
+                            </div>
+                            <div className='allImage2'>
+                              <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
+
+                            </div>
+                            <p>{product.productName}</p>
+                            <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+                          </Link>
+
+                          <div className="actions">
+                            <FontAwesomeIcon icon={faHeart} className='favourite' />
+                            <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
+                          </div>
                         </div>
-                        <div className='allImage2'>
-                          <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
 
-                        </div>
-                        <p>{product.productName}</p>
-                        <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
+                      </Col>
+                    )
+                  }
 
-
-                        <div className="actions">
-                          <FontAwesomeIcon icon={faHeart} className='favourite' />
-                          <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
-                        </div>
-                      </div>
-                      {/* </Link> */}
-                    </Col>
                   )
-                }
+                  :
+                  <div>
+                    Oops! No Data available.
+                  </div>
 
-                )
-                :
-                <div>
-                  Oops! No Data available.
-                </div>
-
-            }
+              }
             </div>
           </Row>
         </Container>
@@ -517,71 +616,81 @@ const Home = () => {
           <Container fluid>
             <Row>
               <Col>
-                <img src={p1} alt='' className='img-fluid' />
-                <Row className='panchi'>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp1} alt='' />
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp2} alt='' />
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp3} alt='' />
-                    </div>
-                  </Col>
-                </Row>
+                <Link to="/Gender/women" className='customlink'>
+                  <img src={p1} alt='' className='img-fluid' />
+                  <Row className='panchi'>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp1} alt='' />
+                      </div>
+                    </Col>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp2} alt='' />
+                      </div>
+                    </Col>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp3} alt='' />
+                      </div>
+                    </Col>
+                  </Row>
+                </Link>
               </Col>
               <Col>
-                <img src={p2} alt='' className='img-fluid' />
-                <Row className='panchi'>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp4} alt='' />
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp5} alt='' />
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp6} alt='' />
-                    </div>
-                  </Col>
-                </Row>
+                <Link to="/Gender/women" className='customlink'>
+
+                  <img src={p2} alt='' className='img-fluid' />
+                  <Row className='panchi'>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp4} alt='' />
+                      </div>
+                    </Col>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp5} alt='' />
+                      </div>
+                    </Col>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp6} alt='' />
+                      </div>
+                    </Col>
+                  </Row>
+                </Link>
               </Col>
               <Col>
-                <img src={p3} alt='' className='img-fluid' />
-                <Row className='panchi'>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp7} alt='' />
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp8} alt='' />
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className='tribe'>
-                      <img src={sp9} alt='' />
-                    </div>
-                  </Col>
-                </Row>
+                <Link to="/Gender/women" className='customlink'>
+                  <img src={p3} alt='' className='img-fluid' />
+                  <Row className='panchi'>
+
+
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp7} alt='' />
+                      </div>
+                    </Col>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp8} alt='' />
+                      </div>
+                    </Col>
+                    <Col>
+                      <div className='tribe'>
+                        <img src={sp9} alt='' />
+                      </div>
+                    </Col>
+
+                  </Row>
+                </Link>
               </Col>
             </Row>
           </Container>
         </Link>
       </section>
 
-      <section>
+      {/* <section>
         <Container fluid className='linearea'>
           <Row>
             <Col md={4}>
@@ -634,7 +743,7 @@ const Home = () => {
 
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <section>
         <Container fluid className='linearea'>
@@ -659,7 +768,8 @@ const Home = () => {
               collections.map((product) => {
                 return (
                   <Col md={3}>
-                    <Link to={"/Buypage/" + product.id}>
+                    <Link to="AllProducts" className='customlink'>
+
                       <div className='collect1'>
                         <img src={product.photo} alt='' className='img-fluid' />
                       </div>
@@ -735,21 +845,27 @@ const Home = () => {
             <Col md={6}>
               <Link to="/Gender/Female">
                 <div className='gimage1'>
-
-                  <img src={g1} alt='' className='img-fluid' />
+                  <Link to="/Gender/women" className='customlink'>
+                    <img src={g1} alt='' className='img-fluid' />
+                  </Link>
                 </div>
                 <h3>Gift for her</h3>
                 <p>For the woman who deserves all the sparkle in the world!</p>
-                <button>GIFT NOW</button>
+                <button>
+                  <Link to="/Gender/women" className='customlink'>GIFT NOW</Link>
+                </button>
               </Link>
             </Col>
             <Col md={6}>
               <Link to="/Gender/Male">
                 <h3>Gift for him</h3>
                 <p>The Perfect Gift for the Perfect Man!</p>
-                <button>GIFT NOW</button>
+                <button>
+                  <Link to="/Gender/men" className='customlink'>GIFT NOW</Link></button>
                 <div className='gimage2'>
-                  <img src={g2} alt='' className='img-fluid' />
+                  <Link to="/Gender/men" className='customlink'>
+                    <img src={g2} alt='' className='img-fluid' />
+                  </Link>
                 </div>
               </Link>
             </Col>

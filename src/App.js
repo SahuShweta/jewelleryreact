@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
-import {Routes,Route} from 'react-router';
+import {Routes,Route} from 'react-router-dom';
 import Fringes from './components/Fringes';
 import Jsr from './components/Jsr';
 import Ranchi from './components/Ranchi';
@@ -30,7 +30,9 @@ import AdminDashboard from './components/AdminDashboard';
 import AdminProducts from './components/AdminProducts';
 import AllProducts from './components/AllProducts';
 import Carts from './components/Carts';
-import Products from './components/Products';
+import Product from './components/Product';
+import AdminOrders from './components/AdminOrders';
+import Success from './components/Success';
 
 
 
@@ -50,7 +52,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/fringes" element={<Fringes/>}/>
       <Route path="/Jsr" element={<Jsr/>}/>
-      <Route path="/Products/:productId" element={<Products/>} /> 
+      <Route path="/Product/:productId" element={<Product/>} /> 
       <Route path="/Category/:categoryName" element={<Category/>} />
 
       <Route path="/ranchi" element={<Ranchi />} />
@@ -73,6 +75,8 @@ function App() {
       <Route path="/AdminDashboard" element={<AdminDashboard/>} />
       <Route path="/AllProducts" element={<AllProducts/>} />
       <Route path="/Carts" element={<Carts/>} />
+      <Route path="/AdminOrders" element={<AdminOrders/>} />
+      <Route path="/Success" element={<Success/>} />
 
 
 

@@ -59,24 +59,28 @@ const AllProducts = () => {
                                     <Col md={3}>
                                         {/* <Link to={"/Buypage/" + product.id}> */}
                                             <div className='allbox'>
+                                                <Link to={`/product/${product.id}`} className="product-link">
                                                 <div className='allImage'>
                                                     <img src={`http://localhost:8090/upload/${product.images[0]}`} alt="" />
                                                     
                                                 </div>
                                                 <div className='allImage2'>
+
                                                     <img src={`http://localhost:8090/upload/${product.images[1]}`} alt="" />
                                                     
                                                 </div>
+
                                                 <p>{product.productName}</p>
                                                 <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
-
+                                                    </Link>
 
                                                 <div className="actions">
                                                     <FontAwesomeIcon icon={faHeart} className='favourite' />
                                                     <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
-                                                    <Link to={`/products/${product.id}`} className="btn btn-primary">View</Link>
+                                                    {/* <Link to={`/product/${product.id}`} className="btn btn-primary">View</Link> */}
                                                     
                                                 </div>
+                                                
                                             </div>
                                         {/* </Link> */}
                                     </Col>

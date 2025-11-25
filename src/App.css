@@ -32,7 +32,7 @@
 }
 
 .navsearch{
-  margin-top: 40px;
+   margin-right: 30px; 
 }
 
 .navsearch button{
@@ -48,18 +48,23 @@
   box-shadow: 2px 2px 1px 1px #1f1055;
 }
 .icon{
-  margin-bottom : 15px;
+  /* margin-bottom : 15px; */
   width : 30px;
   height : 30px;
   color: #000033;
 }
 
-.headericon{
-  padding: 35px;
+.headericon ul {
+  list-style: none;
+}
+.headericon ul li{
+  float: left;
+  padding: 90px 0;
 }
 
+
 .icons{
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .categories{
@@ -211,7 +216,16 @@
 .allbox{
   width:100%;
   border-radius: 10px;
-  gap: 50px;
+  text-align: center;
+
+}
+.product-link {
+  display: block;
+  background: none !important;
+  background-color: transparent !important;
+  border: none;
+  color: inherit;
+  text-decoration: none;
 }
 .allImage{
   /* width:400px;
@@ -219,21 +233,26 @@
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  
 }
+
 .allImage img{
-  width:100%;
-  height:100%;
+  width:90%;
   border-radius: 10px;
+  margin: 5%;
 
 }
 .allImage2{
   display: none;
   border-radius: 10px;
+  background: none !important;
+
 
 }
 .allImage2 img{
-  width:100%;
+  width:90%;
   border-radius: 10px;
+  margin: 5%;
 
 }
 .allbox:hover .allImage{
@@ -241,6 +260,10 @@
 }
 .allbox:hover .allImage2{
   display: block;
+}
+
+.pqr{
+  padding: 10px;
 }
 
 
@@ -923,10 +946,18 @@
   }
 
 
-  .bbb{
+  .error{
   color: #F70000 !important;
 
 
+}
+
+.totalmoney{
+  text-align: center;
+  width: 300px;
+  border: 2px 2px 2px 2px #000033;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .aaa {
@@ -945,7 +976,51 @@
   background: #fff;
 }
 
+.address h1{
+  color: #000033;
+  text-align: center;
+}
+.addressarea{
+  text-align: center;
+  justify-content: center;
+  
+}
 
+.addressform{
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.addressform button{
+  color:#1f1055;
+  background:#fff
+}
+ .addressbutton button{
+  background: #1f1055;
+  color: #fff;
+  border-radius: 10px;
+ }
+ .addressbutton button:hover{
+  color:#1f1055;
+  background:#fff
+ }
+
+ .bbb{
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2 ease-in-out;
+  background-color: #f9f9f9;
+ }
+ .bbb:focus{
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+ }
 
 .profile button{
   color:#1f1055;
@@ -1208,7 +1283,7 @@
 
 .iconBage{
   position: absolute;
-  top: -30px;
+  top: -25px;
   right:-20px;
   width:30px;
   height:30px;
@@ -1255,16 +1330,19 @@
   position: sticky;
   top:0;
 }
+.dashboard-sidebar ul{
+  list-style: none;
+}
 
-.dashboard-sidebar p, .dashboard-sidebar h4{
-  margin: 10px 0;
+.dashboard-sidebar ul li h4{
+  margin: 30px 0;
   cursor:pointer;
   color:334155;
   font-weight: 500;
   transition: 0.3s;
 }
 
-.dashboard-sidebar p:hover, .dashboard-sidebar h4:hover{
+.dashboard-sidebar ul li h4:hover{
   color:#1d4ed8;
   transition: translateX(4px);
 }
@@ -1278,5 +1356,98 @@
   font-size: 26px;
   font-weight: 600;
 }
+
+.product-image {
+  width: 600px;
+  height: 600px;
+  
+  
+}
+.product-image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(173, 166, 166, 0.5);
+}
+
+.product-area{
+  align-items: center;
+  text-align: center;
+  display: flex;
+  
+}
+.product-area h2{
+  color: #000033;
+  
+}
+.product-area h3{
+  color: #000033;
+
+}
+.product1{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: 60px;
+}
+
+.product1 button{
+  width: 100%;
+  height: 50px;
+  background-color: #1f1055;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.product1 button:hover{
+background-color: silver;
+  color: #1f1055;
+  box-shadow: 2px 2px 1px 1px #1f1055;
+}
+
+.slick-prev, .slick-next{
+  color: #000033 !important;
+  margin: 0 50px;
+  z-index: 1000 !important;
+}
+
+.productprice{
+  display: flex;
+  margin-left: 50px;
+}
+.productprice h3{
+  margin-top: 50px;
+}
+
+.productprice h1{
+  margin: 40px 50px;
+  color: #555;
+}
+.producticon{
+  width: 40px;
+  height: 40px;
+  color: #1f1055;
+}
+.producticon:hover{
+  color: rgb(240, 12, 152);
+}
+.product-area p{
+  margin-top: 10px;
+}
+.product-area h4{
+  margin-top: 50px;
+}
+
+.addAddress{
+  background: #010150;
+  color: #fff;
+  text-align: center;
+}
+.addnewaddress{
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px silver;
+}
+
+
 
 

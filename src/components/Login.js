@@ -113,6 +113,11 @@ const Login = () => {
                                                 {loading ? 'Please wait...' : 'Continue'}
                                             </button>
                                         </Col>
+                                        <Col>
+                                             {/* <button>
+                                               if not registered  
+                                            </button> */}
+                                        </Col>
                                     </Row>
                                 </div>
                             </Form>
