@@ -538,6 +538,7 @@ let navigate = useNavigate();
                             <h5><s>₹ {product.productPrice}</s>&nbsp; &nbsp; &nbsp;<b>₹ 509</b></h5>
                           </Link>
 
+                          
                           <div className="actions">
                             <FontAwesomeIcon icon={faHeart} className='favourite' />
                             <button className="cart-btn" onClick={() => AddCart(product)}>Add to Cart</button>
