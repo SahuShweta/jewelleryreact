@@ -1,133 +1,107 @@
-import React, { useState, useEffect } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Col, Container, Row, Card } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate, Navigate, Link } from "react-router-dom";
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import './../App.css'
 import { login } from "../slices/auth";
 import { clearMessage } from "../slices/message";
+import './../App.css';
 
-// const SignupSchema = Yup.object().shape({
-
-//     email: Yup.string().email('Invalid email').required('Required'),
-//     // password: Yup.string().password('Invalid password').required('Required'),
-// });
 const LoginSchema = Yup.object().shape({
-    username: Yup.string()
-        .matches(/^[6-9]\d{9}$/, 'Enter a valid 10-digit mobile number')
-        .required('Mobile number is required'),
-    password: Yup.string()
-        .min(8, 'Password must be at least 8 characters')
-        .required('Password is required'),
+  username: Yup.string()
+    .matches(/^[6-9]\d{9}$/, 'Enter a valid 10-digit mobile number')
+    .required('Mobile number is required'),
+  password: Yup.string()
+    .min(8, 'Password must be at least 8 characters')
+    .required('Password is required'),
 });
 
-
 const Login = () => {
-        const dispatch = useDispatch();
-        const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const { isLoggedIn } = useSelector((state) => state.auth);
+  const { message } = useSelector((state) => state.message);
 
-        const [loading, setLoading] = useState(false);
-        const { isLoggedIn } = useSelector((state) => state.auth);
-        const { message } = useSelector((state) => state.message);
+  useEffect(() => {
+    dispatch(clearMessage());
+  }, [dispatch]);
 
-        useEffect(() => {
-            dispatch(clearMessage());
-        }, [dispatch]);
+  const handleLogin = (values) => {
+    const { username, password } = values;
+    setLoading(true);
 
-        const handleLogin = (formValue) => {
-            const { username, password } = formValue;
-            setLoading(true);
+    dispatch(login({ username, password }))
+      .unwrap()
+      .then(() => navigate("/home"))
+      .catch(() => setLoading(false));
+  };
 
-            dispatch(login({ username, password }))
-                .unwrap()
-                .then(() => {
-                    navigate("/home");
-                })
-                .catch(() => {
-                    setLoading(false);
-                });
-        };
+  if (isLoggedIn) return <Navigate to="/home" />;
 
-        if (isLoggedIn) {
-            return <Navigate to="/home" />;
-        }
+  return (
+    <Container className="login-container d-flex justify-content-center align-items-center">
+      <Card className="login-card shadow-lg p-4">
+        <h2 className="text-center mb-4">Sign in</h2>
 
+        {message && (
+          <div className="alert alert-danger text-center">{message}</div>
+        )}
 
+        <Formik
+          initialValues={{ username: "", password: "" }}
+          validationSchema={LoginSchema}
+          onSubmit={handleLogin}
+        >
+          {({ errors, touched }) => (
+            <Form>
 
-        return (
-            <div>
-                <Container className='login'>
-                    <Row>
-                        <Col xs={12} sm={8} md={6} lg={4}>
-                            <h1>Sign in</h1>
-                        </Col>
-                    </Row>
+              <div className="mb-3">
+                <label className="form-label">Mobile</label>
+                <Field
+                  name="username"
+                  className="form-control"
+                  autoComplete="off"
+                />
+                {errors.username && touched.username && (
+                  <div className="text-danger small">{errors.username}</div>
+                )}
+              </div>
 
-                    {message && (
-                        <Row>
-                            <Col>
-                                <div className="alert alert-danger text-center">{message}</div>
-                            </Col>
-                        </Row>
-                    )}
-                    <Formik
-                        initialValues={{
+              <div className="mb-3">
+                <label className="form-label">Password</label>
+                <Field
+                  name="password"
+                  type="password"
+                  className="form-control"
+                  autoComplete="off"
+                />
+                {errors.password && touched.password && (
+                  <div className="text-danger small">{errors.password}</div>
+                )}
+              </div>
 
-                            username: '',
-                            password: '',
-                        }}
-                        validationSchema={LoginSchema}
-                        // onSubmit={values => {
-                        //     // same shape as initial values
-                        //     console.log(values);
-                        // }}
-                        onSubmit={handleLogin}
-                    >
-                        {({ errors, touched }) => (
-                            <Form>
-                                <div className='aaa'>
+              <button
+                type="submit"
+                className="btn btn-primary w-100 mt-2"
+                disabled={loading}
+              >
+                {loading ? "Please wait..." : "Continue"}
+              </button>
 
-                                    <Row>
-                                        <Col>Mobile</Col>
-                                        <Col>
-                                            <Field name="username" className="inputbox" autoComplete="off" />
-                                            {errors.username && touched.username ? <div>{errors.username}</div> : null}
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>Password</Col>
-                                        <Col>
-                                            <Field name="password" type="password" className="inputbox" />
-                                            {errors.password && touched.password ? <div>{errors.password}</div> : null}
-                                        </Col>
-                                    </Row>
+              <div className="text-center mt-3">
+                <Link to="/Register" className="text-decoration-none">
+                  Not registered? Create an account
+                </Link>
+              </div>
 
-                                    <Row>
-                                        <Col>
-                                            <button
-                                                type="submit"
-                                                className="btn btn-primary"
-                                                disabled={loading}
-                                            >
-                                                {loading ? 'Please wait...' : 'Continue'}
-                                            </button>
-                                        </Col>
-                                        <Col>
-                                             {/* <button>
-                                               if not registered  
-                                            </button> */}
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Form>
-                        )}
-                    </Formik>
+            </Form>
+          )}
+        </Formik>
+      </Card>
+    </Container>
+  );
+};
 
-
-                </Container >
-            </div >
-        );
-    };
-
-    export default Login
+export default Login;

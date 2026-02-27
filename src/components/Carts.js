@@ -140,11 +140,17 @@ const Carts = () => {
         try {
             const res = await axios.post("http://localhost:8090/api/ssorders", orderData);
             console.log("Order successfully added:", res.data);
-            alert("Order added successfully!");
-             navigate("/home");
+            // alert("Order added successfully!");
+            axios.delete(`http://localhost:8090/api/carts/user/${currentUser.id}`).then((response) => {
+                console.log("Cart Successfully deleted");
+                // alert("Product successfully deleted");
+
+
+            })
+             navigate("/OrderConfirm");
 
             // resetForm();
-            // window.location.reload();
+            // window.location.reload();gate
 
 
         } catch (err) {
@@ -153,6 +159,15 @@ const Carts = () => {
         }
     };
 
+    // const {user:currentUser} = useSelector((state) => state.auth);
+    // console.log(currentUser)
+
+    // useEffect(() => {
+    //     if (currentUser && currentUser.roles[0] !== "ROLE_USER"){
+    //         console.log(currentUser.roles[0]);
+    //         navigate("AdminDashboard")
+    //     }
+    // },[currentUser, navigate]);
 
 
     const handleDelete = (id) => {

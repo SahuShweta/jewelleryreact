@@ -7,6 +7,8 @@ import './../App.css';
 
 import { Link, Navigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import { useNavigate } from 'react-router';
+
 
 
 
@@ -37,7 +39,9 @@ const SignupSchema = Yup.object().shape({
 const AddProduct = () => {
     const [selectedImages, setSelectedImages] = useState([]);
     const [categories, setCategories] = useState();
+    let navigate = useNavigate();
 
+    //fetch category data then store in categories
     useEffect(() => {
         axios.get('http://localhost:8090/api/cats').then((response) => {
             console.log(response.data);
@@ -46,14 +50,26 @@ const AddProduct = () => {
     }, []);
 
 
-    const handleFileChange = (e) => {
-        setSelectedImages(e.target.files);
-    };
+
+
+
+
     const { user: currentUser } = useSelector((state) => state.auth);
     console.log(currentUser)
-    if (!currentUser) {
-        return <Navigate to="/login" />;
-    }
+    useEffect(() => {
+        if (currentUser && currentUser.roles[0] !== "ROLE_ADMIN") {
+            console.log(currentUser.roles[0]);
+            navigate("/")
+        }
+    }, [currentUser, navigate]);
+
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        console.log("Selected file:", file);
+    };
+
+
     return (
         <div>
             <Container>

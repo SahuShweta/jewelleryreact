@@ -33,6 +33,8 @@ import Carts from './components/Carts';
 import Product from './components/Product';
 import AdminOrders from './components/AdminOrders';
 import Success from './components/Success';
+import Orders from './components/Orders';
+import OrderConfirm from './components/OrderConfirm';
 
 
 
@@ -77,6 +79,8 @@ function App() {
       <Route path="/Carts" element={<Carts/>} />
       <Route path="/AdminOrders" element={<AdminOrders/>} />
       <Route path="/Success" element={<Success/>} />
+      <Route path="/Orders" element={<Orders/>} />
+      <Route path="/OrderConfirm" element={<OrderConfirm/>} />
 
 
 

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Breadcrumb } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import axios from 'axios';
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -15,9 +15,11 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-
 import { Doughnut } from "react-chartjs-2";
 import { Pie } from "react-chartjs-2";
+import { useNavigate } from 'react-router';
+import { useSelector } from 'react-redux';
+
 
 
 ChartJS.register(
@@ -32,16 +34,6 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend);
-
-
-
-
-
-
-
-
-
-
 // ChartJS.register(
 //   LineElement,
 //   PointElement,
@@ -67,7 +59,7 @@ const options = {
 
 
 export const doughnutData = {
-  labels: ["Electronics", "Clothes", "Shoes", "Accessories"],
+  labels: [],         // ["Electronics", "Clothes", "Shoes", "Accessories"]
   datasets: [
     {
       label: "Sales",
@@ -143,7 +135,73 @@ export const pieOptions = {
   },
 };
 
-const AdminDashboard = () => {
+
+
+
+
+const AdminDashboard = (props) => {
+
+
+  const [chartData, setChartData] = useState({
+    labels: [],
+    datasets: [
+      {
+        label: "Sales",
+        data: [],
+        borderColor: "rgba(75, 192, 192, 1)",
+        backgroundColor: "rgba(75, 192, 192, 0.5)",
+        borderWidth: 2,
+      },
+    ],
+  });
+
+  useEffect(() => {
+    axios.get("http://localhost:8090/api/ssorders/chartdata").then((res) => {
+      console.log(res.data);
+      setChartData(res.data)
+    })
+      .catch((err) => {
+        console.log("Error:", err);
+      })
+  }, []);
+
+
+  let navigate = useNavigate();
+  const { user: currentUser } = useSelector((state) => state.auth);
+  console.log(currentUser)
+  useEffect(() => {
+    if (currentUser && currentUser.roles[0] !== "ROLE_ADMIN") {
+      console.log(currentUser.roles[0]);
+      navigate("/")
+    }
+  }, [currentUser, navigate]);
+
+
+  const [summary, setSummary] = useState();
+
+  useEffect(() => {
+    axios.get("http://localhost:8090/api/ssorders/reports/summary")
+      .then((res) => {
+        setSummary(res.data);
+      })
+      .catch((err) => {
+        console.log("Error:", err);
+      });
+  }, []);
+
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8090/api/ssorders/top-selling-products")
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div>
       <Container fluid>
@@ -152,7 +210,6 @@ const AdminDashboard = () => {
             <h1>Admin Dashboard</h1>
             <Breadcrumb>
               <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
-
               <Breadcrumb.Item active>Data</Breadcrumb.Item>
             </Breadcrumb>
           </Col>
@@ -180,7 +237,6 @@ const AdminDashboard = () => {
               <li><h4><Link to={'/AdminOrders'} >Admin Orders</Link></h4></li>
               <li><h4><Link to={'/AddProduct'} >Admin Products</Link></h4></li>
               <li><h4>Dashboard</h4></li>
-              <li><h4>Orders</h4></li>
               <li><h4>Sales</h4></li>
               <li><h4>Total Profit</h4></li>
               <li><h4>New Customers</h4></li>
@@ -210,38 +266,48 @@ const AdminDashboard = () => {
 
             <Row className='dashboard'>
               <Col md={2} className='d1'>
-
                 <h6>Total Sales</h6>
-                <h3>₹16,358</h3>
+                <h3>₹0</h3>
                 <p>50% last month</p>
               </Col>
+
               <Col md={2} className='d1'>
                 <h6>Total Orders</h6>
-                <h3>200</h3>
+                <h3>{summary?.totalOrders ?? 0}</h3>
+                <h3>₹{summary?.totalRevenue ?? 0}</h3>
+
                 <p>12% last month</p>
               </Col>
+
               <Col md={2} className='d1'>
                 <h6>Total Profit</h6>
                 <h3>₹50,625</h3>
                 <p>30% last month</p>
               </Col>
+
               <Col md={2} className='d1'>
                 <h6>New Customers</h6>
                 <h3>100+</h3>
                 <p>10% last month</p>
               </Col>
             </Row>
+
             <Row className='graph-section'>
               <Col md={7}>
                 <div className='graph-card'>
-                  <h5> Sales Overview</h5>
-                  <Line data={data} options={options} />
+                  <h5> Orders Overview</h5>
+                  {chartData?.labels?.length > 0 ? (
+                    <Line options={options} data={chartData} />
+                  ) : (
+                    <p>Loading chart...</p>
+                  )}
+
                 </div>
 
               </Col>
               <Col md={5}>
                 <div className='graph-card'>
-                  <h5> Orders Overview</h5>
+                  <h5> Sales Overview</h5>
                   <Doughnut data={doughnutData} options={doughnutOptions} />
                 </div>
               </Col>
@@ -260,6 +326,42 @@ const AdminDashboard = () => {
 
           </Col>
         </Row>
+
+
+
+
+
+        return (
+        <div style={{ padding: "20px" }}>
+          <h2 style={{ marginBottom: "15px" }}>Top Selling Products</h2>
+
+          <table border="1" width="100%" cellPadding="10" style={{ textAlign: "center" }}>
+            <thead style={{ backgroundColor: "#f2f2f2" }}>
+              <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Gender</th>
+                <th>Price (₹)</th>
+                <th>Total Sold</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {products.map((item, index) => (
+                <tr key={item._id}>
+                  <td>{index + 1}</td>
+                  <td>{item.productDetails.productName}</td>
+                  <td>{item.productDetails.productCategory}</td>
+                  <td>{item.productDetails.productGender}</td>
+                  <td>{item.productDetails.productPrice}</td>
+                  <td>{item.totalSold}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        );
 
       </Container>
     </div>

@@ -125,7 +125,7 @@ let navigate = useNavigate();
 
   const { user: currentUser } = useSelector((state) => state.auth);
   console.log(currentUser)
-  if(currentUser.roles[0]==="ROLE_ADMIN"){
+  if(currentUser && currentUser.roles[0]==="ROLE_ADMIN"){
     console.log(currentUser.roles[0]);
   
       navigate("/AdminDashboard")
@@ -176,56 +176,7 @@ let navigate = useNavigate();
     }
   ];
 
-  const products = [
-    {
-      "id": 1,
-      "productName": "Fringes bloom in fringe statement choker set",
-      "productPrice": 1349,
-      "productCategory": "boho-breeze",
-      "productImages": [
-        "photo1.webp", "photo11.webp",
-      ],
-      "productForGender": "Female"
-      // "totalOrderQuantity"
-
-    },
-    {
-      "id": 2,
-      "productName": "fringes stay connected statement rings",
-      "productPrice": 1647,
-      "productCategory": "boho-breeze",
-      "productImages": [
-        "photo2.webp", "photo22.webp",
-      ],
-      "productForGender": "Female"
-      // "totalOrderQuantity"
-
-    },
-    {
-      "id": 3,
-      "productName": "fringes stay connected statement rings",
-      "productPrice": 1647,
-      "productCategory": "boho-breeze",
-      "productImages": [
-        "photo3.webp", "photo33.webp",
-      ],
-      "productForGender": "Female"
-      // "totalOrderQuantity"
-
-    },
-    {
-      "id": 4,
-      "productName": "fringes stay connected statement rings",
-      "productPrice": 1647,
-      "productCategory": "boho-breeze",
-      "productImages": [
-        "photo4.webp", "photo44.webp",
-      ],
-      "productForGender": "Female"
-      // "totalOrderQuantity"
-
-    }
-  ]
+ 
 
   const bestSellers = [
     {
